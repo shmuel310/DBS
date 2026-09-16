@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>タイムライン &middot; つながり、勝ち取り、育て、整え、遣わす</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="イエスの約3年半の公生涯における17週間の時間的配置と背景解説。">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Hanken+Grotesk:wght@0,600;0,700;0,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../_engine/styles.css">
+<style>
+:root{
+  --cream:#ECEADD; --cream-100:#F1EFE6; --cream-300:#DEDBCB; --cream-400:#C9C5B2;
+  --white:#FFFFFF; --ink-900:#0E0E0E; --ink-700:#2B2B28; --ink-500:#5C5B54;
+  --ink-400:#8A887E; --ink-300:#B6B3A6; --ink-200:#D8D5C9;
+  --font-display:'Hanken Grotesk', system-ui, sans-serif;
+  --font-body:'Poppins', system-ui, sans-serif;
+  --connect:#1A6B6B; --win:#E8441A; --build:#7A0F2E; --train:#7B68BD; --send:#1DB37A;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ background:var(--cream); color:var(--ink-900); font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
+.wrap{ max-width:720px; margin:0 auto; padding:0 20px 90px; }
+
+/* header */
+.back{ display:inline-flex; align-items:center; gap:7px; margin:26px 0 0; font-size:13px; font-weight:500; color:var(--ink-500); text-decoration:none; }
+.back:hover{ color:var(--ink-900); }
+.eyebrow{ font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-400); }
+h1{ font-family:var(--font-display); font-weight:800; letter-spacing:-.03em; line-height:.95;
+    font-size:clamp(34px,8vw,52px); margin:10px 0 14px; }
+.lead{ font-size:15.5px; line-height:1.65; color:var(--ink-500); max-width:56ch; }
+header{ padding:22px 0 26px; }
+
+/* the strip */
+.strip-card{ background:var(--white); border:1px solid var(--cream-300); border-radius:16px; padding:20px 20px 14px; margin-bottom:14px; }
+.strip-title{ font-size:12px; font-weight:600; color:var(--ink-700); margin-bottom:18px; }
+.strip{ position:relative; height:88px; }
+.strip-line{ position:absolute; left:0; right:0; top:40px; height:2px; background:var(--cream-300); }
+.strip-final{ position:absolute; top:34px; height:14px; border-radius:7px; background:rgba(14,14,14,.09); }
+.strip-yr{ position:absolute; top:57px; font-size:9.5px; font-weight:600; color:var(--ink-400); transform:translateX(-50%); white-space:nowrap; }
+.strip-yr.start{ transform:none; left:0 !important; }
+.strip-yr i{ position:absolute; left:50%; top:-13px; width:1px; height:9px; background:var(--cream-400); }
+.strip-yr.start i{ left:2px; }
+.strip-note{ position:absolute; top:74px; right:0; font-size:9px; font-weight:600; color:var(--ink-300); white-space:nowrap; }
+.strip-dot{ position:absolute; top:34px; width:14px; height:14px; border-radius:50%; transform:translateX(-50%);
+  border:2.5px solid var(--white); cursor:pointer; transition:transform .15s; }
+.strip-dot:hover{ transform:translateX(-50%) scale(1.4); }
+.strip-lab{ position:absolute; font-size:9px; font-weight:700; color:var(--ink-400); transform:translateX(-50%); pointer-events:none; }
+.strip-hint{ font-size:10.5px; color:var(--ink-300); margin-top:6px; }
+
+/* legend + toggle */
+.bar{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:0 0 22px; padding:0 4px; }
+.lg{ display:flex; align-items:center; gap:6px; font-size:11px; font-weight:500; color:var(--ink-500); }
+.lg span{ width:9px; height:9px; border-radius:50%; }
+.toggle{ margin-left:auto; display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:500;
+  color:var(--ink-500); background:var(--white); border:1px solid var(--cream-300); border-radius:999px;
+  padding:7px 14px; cursor:pointer; font-family:var(--font-body); }
+.toggle.on{ background:var(--ink-900); color:var(--cream); border-color:var(--ink-900); }
+
+/* the story */
+.section-head{ display:flex; align-items:baseline; gap:10px; margin:30px 0 12px; flex-wrap:wrap; }
+.section-head h2{ font-family:var(--font-display); font-weight:700; font-size:17px; letter-spacing:-.02em; }
+.section-head p{ font-size:12px; color:var(--ink-400); }
+
+.gap{ display:flex; align-items:center; gap:11px; padding:9px 0 9px 26px; }
+.gap i{ width:1px; height:22px; border-left:2px dotted var(--cream-400); }
+.gap span{ font-size:11.5px; font-weight:500; color:var(--ink-400); font-style:italic; }
+
+.week{ position:relative; background:var(--white); border:1px solid var(--cream-300); border-radius:14px;
+  padding:15px 18px 15px 20px; border-left-width:4px; border-left-style:solid; }
+.week-top{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.wnum{ font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-300); }
+.wtitle{ font-family:var(--font-display); font-weight:700; font-size:19px; letter-spacing:-.02em; flex:1; min-width:0; }
+.stage{ font-size:9.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; padding:3px 9px; border-radius:999px; color:var(--white); }
+.wref{ font-size:14px; font-weight:600; margin-top:5px; }
+.wwhen{ display:inline-flex; align-items:center; gap:7px; margin-top:8px;
+  background:var(--cream-100); border:1px solid var(--cream-300); border-radius:999px; padding:4px 12px; }
+.wwhen b{ font-size:12px; font-weight:600; color:var(--ink-900); }
+.wwhen i{ font-size:11.5px; font-style:normal; color:var(--ink-400); }
+.wsum{ font-size:13px; line-height:1.6; color:var(--ink-500); margin-top:10px; }
+
+.reads{ margin:8px 0 0 26px; border-left:2px solid var(--cream-300); padding:2px 0 2px 16px; }
+.reads-lab{ font-size:9.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-300); margin:8px 0 6px; }
+.read{ display:flex; gap:10px; align-items:baseline; padding:5px 0; }
+.read-ref{ font-size:12.5px; font-weight:600; color:var(--ink-700); white-space:nowrap; }
+.read-desc{ font-size:12px; color:var(--ink-400); line-height:1.5; }
+.read-when{ font-size:11px; color:var(--ink-300); margin-left:auto; white-space:nowrap; padding-left:8px; }
+.read-when.mark{ color:var(--ink-500); font-weight:600; }
+.reads.hide{ display:none; }
+@media (max-width:560px){
+  .read{ flex-wrap:wrap; gap:4px; }
+  .read-when{ margin-left:0; padding-left:0; width:100%; }
+}
+
+/* footer note */
+.note{ background:var(--cream-100); border:1px solid var(--cream-300); border-radius:16px; padding:20px 22px; margin-top:34px; }
+.note h3{ font-family:var(--font-display); font-weight:700; font-size:15px; margin-bottom:9px; }
+.note p{ font-size:13px; line-height:1.65; color:var(--ink-500); margin-bottom:9px; }
+.note p:last-child{ margin-bottom:0; }
+.note a{ color:var(--ink-900); font-weight:500; text-decoration:underline; text-underline-offset:2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:20px;">
+  <a class="back" href="index.html#journey" style="margin-top:0;">&larr; ジャーニーに戻る</a>
+  <div class="lang-switcher" style="margin-bottom:16px;">
+    <span>🌐</span>
+    <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+      <option value="../../../studies/multiplying-disciples/timeline.html">English</option>
+      <option value="../../../zh-hk/studies/multiplying-disciples/timeline.html">繁體中文（香港）</option>
+      <option value="../../../zh-cn/studies/multiplying-disciples/timeline.html">简体中文</option>
+      <option value="../../../ja/studies/multiplying-disciples/timeline.html" selected>日本語</option>
+    </select>
+  </div>
+</div>
+
+<header>
+  <div class="eyebrow">つながり &middot; 勝ち取り &middot; 育て &middot; 整え &middot; 遣わす</div>
+  <h1>タイムライン</h1>
+  <p class="lead">このコースの17週間は、イエスの約3年半にわたる公生涯に散らばっており、このページはそれぞれが概ねどの時期にあたるかを示しています。ヨハネの福音書には4回の過越の祭りといくつかの明確な祭りの記述があり、福音書の記者が「その翌日」や「6日の後」と記している箇所もあるため、それらのポイントはかなり確実です。その間の出来事の順序は明確ですが、間隔は推定です。正確な日付の記録というよりも、イエスの歩みがどのように展開していったかを知るガイドとしてお読みください。カレンダーの日付ではなく、バプテスマを受けた時を起点としています。</p>
+</header>
+
+<div class="strip-card">
+  <div class="strip-title">3年半の公生涯における17週間</div>
+  <div class="strip" id="strip"></div>
+  <div class="strip-hint">丸印にカーソルを合わせるとセッション名が表示され、クリックするとその箇所へジャンプします。</div>
+</div>
+
+<div class="bar" id="bar"></div>
+
+<div id="story"></div>
+
+<div class="note">
+  <h3>順序と年代測定の根拠について</h3>
+  <p>出来事の順序は、Cox と Easley による『福音書合参』（Harmony of the Gospels）に従っており、本コース自体が採用している順序と同じです。マタイ、マルコ、ルカ、ヨハネの4つの福音書にわたる全184の出来事を並べた完全な合参は、<a href="https://harmony.darrenrowse.com" target="_blank" rel="noopener noreferrer">harmony.darrenrowse.com</a> で公開されています。</p>
+  <p>福音書には西暦の日付が記されておらず、学者間でも暦年の見解に最大で3年ほどの開きがあるため、このタイムラインでは西暦の日付を一切記載していません。すべての記述が物語の始まりとして一致している「バプテスマ」を起点として日数を計算しています。</p>
+  <p>期間の長さはヨハネの福音書に基づいています。ヨハネは3回の過越の祭りを明記しています（宮きよめ、五千人の給食、そして十字架の時の最後の過越）。また、5章でも祭りに言及しており（名称は特定されていません）、その期間に4回目の過越の祭りが入ると考える妥当な理由があります。これにより、公生涯の期間が2年半ではなく約3年半となります。これらのポイントに加えて、7章の仮庵の祭りや10章の冬の祭り（宮きよめの祭り）が、全体の柱となっています。</p>
+  <p>年代の計算は、同書の付録にある Harold Hoehner の年代記に従っており、ある年の夏または秋にバプテスマを受け、3年半後の金曜日に十字架に架けられたとしています。合参の編集者自身は、Hoehner よりも約3年早い十字架を支持していることも知っておく価値があります。1冊の本の中に2つの見解があることは、この問題の現状をよく表しており、本ページが特定の日付ではなくバプテスマからの日数で数えているもうひとつの理由でもあります。</p>
+  <p>これらの節目の中での出来事の順序は確かなものですが、間隔は推定です。「約2年9か月」とある場合、確定した日付ではなく「物語のこのあたりの時期」としてお読みください。各週の間の間隔や出来事の順序こそが、教えを受ける上で最も価値のある部分です。</p>
+</div>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+const CROSS = 1284, ASCENSION = 1325, ENTRY = 1279;
+
+const SESSION_T = {
+  1:47, 2:212, 3:453, 4:508, 5:537, 6:606, 7:614, 8:796, 9:1015,
+  10:1023, 11:1025, 12:1046, 13:1054, 14:1112,
+  15:1283.2, 16:1304, 17:1315
+};
+
+const SESSION_MARK = {
+  15:'十字架の前夜',
+  16:'復活後の数週間',
+  17:'昇天の直前'
+};
+
+const READ_T = {
+  1:  [ {t:139}, {t:197, mark:'最初の過越の祭り'} ],
+  2:  [ {t:267} ],
+  3:  [ {t:475}, {t:490}, {t:497} ],
+  4:  [ {t:515}, {t:522}, {t:533} ],
+  5:  [ {t:553, mark:'エルサレムの祭り'}, {t:580, mark:'2回目の過越の祭りの頃'}, {t:591} ],
+  7:  [ {t:617}, {t:636}, {t:734} ],
+  8:  [ {t:934, mark:'3回目の過越の祭り'}, {t:938}, {t:974} ],
+  9:  [ {t:1017} ],
+  10: [ {t:1023} ],
+  11: [ {t:1037} ],
+  12: [ {t:1048} ],
+  13: [ {t:1081}, {t:1088, mark:'仮庵の祭り'}, {t:1096} ],
+  14: [ {t:1121}, {t:1234}, {t:1264}, {t:1277}, {t:1279, mark:'棕櫚の主日'} ],
+  15: [ {t:1283.3, mark:'木曜の夕方'}, {t:1283.4, mark:'木曜の夕方'},
+        {t:1283.6, mark:'木曜の夜'}, {t:1284.4, mark:'木曜深夜から金曜未明'},
+        {t:1286.5, mark:'日曜日、そしてその後の1週間'} ]
+};
+
+const PRE_MARK = [
+  '物語の始まる前',
+  '生後40日',
+  '12歳の時',
+  'バプテスマの数か月前',
+  'バプテスマ当日'
+];
+
+const STRIP_TICKS = [
+  {t:0,    lab:'バプテスマ', start:true},
+  {t:365,  lab:'1年'},
+  {t:730,  lab:'2年'},
+  {t:1095, lab:'3年'}
+];
+
+const STAGES = ['connect','win','build','train','send'];
+const STAGES_LABELS = {"connect":"つながり","win":"勝ち取り","build":"育て","train":"整え","send":"遣わす"};
+const S = window.STUDY;
+
+function inLabel(t) {
+  if(t >= ENTRY) return '最後の1週間';
+  const m = Math.round(t / 30.44);
+  if(m < 1) return '最初の数週間';
+  if(m < 12) return "約" + m + "か月目";
+  const y = Math.floor(m/12), r = m % 12;
+  return "約" + y + "年" + (r ? (r + "か月目") : "");
+}
+
+function elapsed(a, b) {
+  const d = b - a;
+  if(d <= 0.05) return '同じ場面';
+  if(d < 1) return '同じ日の後で';
+  if(d < 2) return '翌日';
+  if(d < 14) return Math.round(d) + ' 日後';
+  if(d < 60) return Math.round(d/7) + ' 週間後';
+  if(d < 730) return Math.round(d/30.44) + ' か月後';
+  return (d/365).toFixed(1) + ' 年後';
+}
+
+function el(tag, cls, html) {
+  const e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(html != null) e.innerHTML = html;
+  return e;
+}
+
+function buildStrip() {
+  const strip = document.getElementById('strip');
+  const pct = t => (t / ASCENSION * 100);
+  strip.appendChild(el('div','strip-line'));
+
+  const band = el('div','strip-final');
+  band.style.left = pct(ENTRY) + '%';
+  band.style.right = '0';
+  band.title = '最後の1週間とその先';
+  strip.appendChild(band);
+  strip.appendChild(el('div','strip-note', '最後の1週間とその先 &rarr;'));
+
+  STRIP_TICKS.forEach(t => {
+    const d = el('div', 'strip-yr' + (t.start ? ' start' : ''), '<i></i>' + t.lab);
+    d.style.left = pct(t.t) + '%';
+    strip.appendChild(d);
+  });
+
+  const width = strip.offsetWidth || 640;
+  const rows = [-999, -999];
+  S.sessions.forEach(s => {
+    const t = SESSION_T[s.id];
+    if(t == null) return;
+    const x = pct(t);
+    const d = el('div','strip-dot');
+    d.style.left = x + '%';
+    d.style.background = `var(--${s.stage})`;
+    d.title = `第 ${s.id}: ${s.title.replace(/&[a-z]+;/g,"'")} — ${SESSION_MARK[s.id] || inLabel(t)}`;
+    d.addEventListener('click', () => {
+      document.getElementById('week-' + s.id).scrollIntoView({behavior:'smooth', block:'center'});
+    });
+    strip.appendChild(d);
+
+    const xpx = x / 100 * width;
+    const row = rows.findIndex(last => xpx - last > 15);
+    if(row === -1) return;
+    rows[row] = xpx;
+    const lab = el('div','strip-lab', s.id);
+    lab.style.left = x + '%';
+    lab.style.top = (row === 0 ? 18 : 2) + 'px';
+    strip.appendChild(lab);
+  });
+}
+
+let showReads = true;
+function buildBar() {
+  const bar = document.getElementById('bar');
+  STAGES.forEach(k => bar.appendChild(el('div','lg', `<span style="background:var(--${k})"></span>${STAGES_LABELS[k] || k}`)));
+  const btn = el('button','toggle on','合間の通読箇所：表示中');
+  btn.addEventListener('click', () => {
+    showReads = !showReads;
+    btn.classList.toggle('on', showReads);
+    btn.textContent = showReads ? '合間の通読箇所：表示中' : '合間の通読箇所：非表示';
+    document.querySelectorAll('.reads').forEach(r => r.classList.toggle('hide', !showReads));
+  });
+  bar.appendChild(btn);
+}
+
+function buildStory() {
+  const story = document.getElementById('story');
+
+  const h1 = el('div','section-head');
+  h1.appendChild(el('h2', null, 'すべての始まりの前に'));
+  h1.appendChild(el('p', null, '事前の読書：5つの聖書箇所でたどる30年間'));
+  story.appendChild(h1);
+
+  const pre = el('div','reads');
+  pre.style.marginLeft = '0';
+  S.preReading.days.forEach((d, i) => {
+    const r = el('div','read');
+    r.appendChild(el('div','read-ref', d.ref));
+    r.appendChild(el('div','read-desc', d.desc));
+    r.appendChild(el('div','read-when', PRE_MARK[i] || ''));
+    pre.appendChild(r);
+  });
+  story.appendChild(pre);
+
+  const h2 = el('div','section-head');
+  h2.appendChild(el('h2', null, '17のセッション'));
+  h2.appendChild(el('p', null, '起こった順序で並べ、バプテスマからの日数で測定'));
+  story.appendChild(h2);
+
+  let prev = null;
+  S.sessions.forEach(s => {
+    const t = SESSION_T[s.id];
+    const reads = (s.betweenSessions || {}).days || [];
+    const readT = READ_T[s.id] || [];
+
+    if(prev) {
+      const g = el('div','gap');
+      g.appendChild(el('i'));
+      g.appendChild(el('span', null, elapsed(prev.t, t)));
+      story.appendChild(g);
+    }
+
+    const card = el('div','week');
+    card.id = 'week-' + s.id;
+    card.style.borderLeftColor = `var(--${s.stage})`;
+    const top = el('div','week-top');
+    top.appendChild(el('div','wnum', '第 ' + s.id));
+    top.appendChild(el('div','wtitle', s.title));
+    const tag = el('div','stage', STAGES_LABELS[s.stage] || s.stage);
+    tag.style.background = `var(--${s.stage})`;
+    top.appendChild(tag);
+    card.appendChild(top);
+    card.appendChild(el('div','wref', s.refs.join(' &middot; ')));
+
+    const when = el('div','wwhen');
+    const mark = SESSION_MARK[s.id];
+    when.appendChild(el('b', null, mark || inLabel(t)));
+    if(mark && t < CROSS) when.appendChild(el('i', null, inLabel(1278)));
+    card.appendChild(when);
+
+    if(s.summary) card.appendChild(el('div','wsum', s.summary));
+    story.appendChild(card);
+
+    if(reads.length) {
+      const box = el('div','reads');
+      box.appendChild(el('div','reads-lab', '第 ' + (+s.id + 1)));
+      reads.forEach((d, i) => {
+        const info = readT[i] || {};
+        const r = el('div','read');
+        r.appendChild(el('div','read-ref', d.ref));
+        r.appendChild(el('div','read-desc', d.desc));
+        r.appendChild(el('div','read-when' + (info.mark ? ' mark' : ''),
+          info.mark || (info.t != null ? inLabel(info.t) : '')));
+        box.appendChild(r);
+      });
+      story.appendChild(box);
+    }
+    prev = { t, id:s.id };
+  });
+}
+
+if(S && S.sessions) { buildStrip(); buildBar(); buildStory(); }
+else { document.getElementById('story').innerHTML = '<p class="lead">無法載入課程數據 (data.js)。</p>'; }
+</script>
+</body>
+</html>

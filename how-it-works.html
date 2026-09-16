@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>How This Works &middot; Discovery Bible Studies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2QZHXNM5QL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2QZHXNM5QL');
+</script>
+</head>
+<body class="wide-page">
+<div id="app"></div>
+
+<script>
+function markSvg(size, color){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="display:block;color:${color};">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="68" r="5" fill="currentColor"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <circle cx="70" cy="32" r="5" fill="currentColor"/>
+  </svg>`;
+}
+
+const ICONS = {
+  back: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/></svg>',
+  up: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-1.5-1.2-3.6-2-6-2-1 0-2 .1-3 .4v13.6c1-.3 2-.4 3-.4 2.4 0 4.5.8 6 2 1.5-1.2 3.6-2 6-2 1 0 2 .1 3 .4V5.4C20 5.1 19 5 18 5c-2.4 0-4.5.8-6 2z"/><line x1="12" y1="7" x2="12" y2="21"/></svg>',
+  forward: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 4 21 9 16 9"/></svg>'
+};
+
+document.getElementById("app").innerHTML = `
+  <div class="wrap"><nav class="top">
+    <a class="brand" href="index.html" aria-label="Home">
+      ${markSvg(38, "var(--ink-900)")}
+      <span class="brand-name">discovery bible studies</span>
+    </a>
+    <div class="nav-links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="studies.html">Studies</a>
+      <a href="bilingual.html">Bilingual</a>
+      <a href="about.html">About</a>
+      <div class="lang-switcher">
+        <span>🌐</span>
+        <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+          <option value="how-it-works.html" selected>English</option>
+          <option value="zh-hk/how-it-works.html">繁體中文（香港）</option>
+          <option value="zh-cn/how-it-works.html">简体中文</option>
+          <option value="ja/how-it-works.html">日本語</option>
+        </select>
+      </div>
+    </div>
+  </nav></div>
+  <div class="wrap"><div class="screen-light" style="padding-top:8px;">
+    <div class="eyebrow">how this works</div>
+    <div class="display lower" style="font-size:40px;margin-top:10px;">discovery bible study</div>
+    <p class="lead" style="margin-top:14px;">A simple way of reading the Bible with someone else, where the group discovers what a passage means together rather than being taught it. No expert needed, no training required, just an open Bible and a few honest questions.</p>
+
+    <!-- What it is -->
+    <div class="divider-label"><span class="line"></span><span class="txt">what it is</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">Discovery Bible Study (DBS), sometimes called Discovery Bible Reading (DBR), has been used all over the world, particularly in discipling people who are new to faith but curious about the Bible, and it&rsquo;s played a part in many people coming to faith in Jesus for the first time. Instead of one person explaining the Bible, everyone reads the same short passage and works through the same five questions together. People discover the truth for themselves, which means they remember it, own it, and are far more likely to live it out.</p>
+    <div class="memory-block" style="margin-top:16px;">
+      <div class="ml">what is a disciple?</div>
+      <div class="mv">A disciple is a prot&eacute;g&eacute;, learner, or apprentice to Jesus, who multiplies disciples by following his methods, cultivating his movement, and preparing people for his coming. In every way, a disciple is a person who is becoming more like Jesus.</div>
+      <div class="mr">Peter Roennfeldt</div>
+    </div>
+
+    <p class="lead" style="font-size:14.5px;margin-top:12px;">Every session follows the same rhythm:</p>
+
+    <div class="card" style="margin-top:14px;">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.back}Look Back</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">A warm, honest check-in. How has the week been? How did you go applying and sharing what you discovered last time?</p>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.up}Look Up</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">Read the passage aloud, retell it in your own words, then discuss it using five questions: what&rsquo;s new or stands out, what surprises you, what you don&rsquo;t understand, what you&rsquo;ll obey or apply, and who you&rsquo;ll share it with this week.</p>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.forward}Look Forward</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">Turn it into life. What will you do about this before next time? And who will you share this passage with? That question is part of every session on purpose.</p>
+    </div>
+    <p class="leader-note" style="text-align:center;">The five discovery questions above were developed by Peter Roennfeldt. <a href="https://www.following-jesus.com/resources/discovery-bible-reading/" target="_blank" rel="noopener noreferrer" style="color:inherit;">Read more about his work here &rarr;</a></p>
+
+    <!-- How to use it -->
+    <div class="divider-label"><span class="line"></span><span class="txt">how to use it</span><span class="line"></span></div>
+    <div class="card">
+      <ol>
+        <li><span class="num dot"></span><span><strong>One-on-one or a small group.</strong> Both work. Two friends over coffee, or a handful of people around a table.</span></li>
+        <li><span class="num dot"></span><span><strong>Anywhere.</strong> A cafe, a lounge room, a lunch break. All you need is this app and a Bible, or the free YouVersion app.</span></li>
+        <li><span class="num dot"></span><span><strong>No training needed.</strong> The questions do the work. You&rsquo;re not the teacher, you&rsquo;re just the person who keeps things moving.</span></li>
+        <li><span class="num dot"></span><span><strong>When you don&rsquo;t know an answer, say so.</strong> &ldquo;Great question, let&rsquo;s write it down and keep going&rdquo; is a perfectly good response. Let the passage, not you, be the authority.</span></li>
+        <li><span class="num dot"></span><span><strong>Keep coming back to the text.</strong> If discussion drifts, ask &ldquo;where do you see that in this passage?&rdquo;</span></li>
+        <li><span class="num dot"></span><span><strong>If something doesn&rsquo;t make sense yet, don&rsquo;t argue about it.</strong> Keep reading, it usually becomes clearer over time.</span></li>
+        <li><span class="num dot"></span><span><strong>Invite others to join you,</strong> and encourage them to start groups of their own too.</span></li>
+      </ol>
+    </div>
+
+    <!-- For participants -->
+    <div class="divider-label"><span class="line"></span><span class="txt">what to expect</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">You don&rsquo;t need to know anything about the Bible to take part, and you won&rsquo;t be put on the spot or asked to read aloud if you&rsquo;d rather not. There are no silly questions and no right answers to perform. Come curious, be honest, and see what you discover. Whether you&rsquo;re exploring faith for the first time or you&rsquo;ve followed Jesus for years, there&rsquo;s something here for you.</p>
+
+    <!-- Save to home screen -->
+    <div class="divider-label"><span class="line"></span><span class="txt">save it to your phone</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">You&rsquo;ll come back to this every week, so it&rsquo;s worth adding to your home screen. It opens straight up like an app, no App Store needed.</p>
+    <div class="card" style="margin-top:14px;">
+      <span class="eyebrow" style="color:var(--ink-700);">On iPhone</span>
+      <ol style="margin-top:8px;">
+        <li><span class="num dot"></span><span>In Safari, tap the <strong>Share</strong> button (the square with an arrow).</span></li>
+        <li><span class="num dot"></span><span>Scroll down and tap <strong>Add to Home Screen</strong>.</span></li>
+        <li><span class="num dot"></span><span>Tap <strong>Add</strong>.</span></li>
+      </ol>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="color:var(--ink-700);">On Android</span>
+      <ol style="margin-top:8px;">
+        <li><span class="num dot"></span><span>In Chrome, tap the <strong>menu</strong> (three dots, top right).</span></li>
+        <li><span class="num dot"></span><span>Tap <strong>Add to Home screen</strong>.</span></li>
+        <li><span class="num dot"></span><span>Tap <strong>Add</strong>.</span></li>
+      </ol>
+    </div>
+
+    <div style="flex:1;"></div>
+    <a class="pill solid" style="margin-top:28px;" href="studies.html">find a study &rarr;</a>
+    <a class="pill ghost" style="margin-top:10px;" href="about.html">about this library &rarr;</a>
+  </div></div>
+`;
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"e24e789937b74330b82dcd4dec28a4e1","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About &middot; Discovery Bible Studies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+<style>
+  .about-links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .about-link{
+    font-family:var(--font-body); font-weight:500; font-size:12.5px; color:var(--ink-700);
+    background:var(--white); border:1px solid var(--ink-200); border-radius:999px;
+    padding:8px 15px; text-decoration:none; white-space:nowrap;
+  }
+  .about-link:active{ background:var(--cream-100); }
+  .inline-link{ color:var(--ink-900); font-weight:600; text-decoration:none; border-bottom:1.5px solid var(--ink-300); }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2QZHXNM5QL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2QZHXNM5QL');
+</script>
+</head>
+<body class="wide-page">
+<div id="app"></div>
+
+<script>
+function markSvg(size, color){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="display:block;color:${color};">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="68" r="5" fill="currentColor"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <circle cx="70" cy="32" r="5" fill="currentColor"/>
+  </svg>`;
+}
+
+document.getElementById("app").innerHTML = `
+  <div class="wrap"><nav class="top">
+    <a class="brand" href="index.html" aria-label="Home">
+      ${markSvg(38, "var(--ink-900)")}
+      <span class="brand-name">discovery bible studies</span>
+    </a>
+    <div class="nav-links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="studies.html">Studies</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav></div>
+  <div class="wrap"><div class="screen-light" style="padding-top:8px;">
+    <div class="eyebrow">about</div>
+    <div class="display lower" style="font-size:40px;margin-top:10px;">about this library</div>
+
+    <p class="lead" style="margin-top:16px;font-size:15px;">I&rsquo;m Darren Rowse, a pastor at <a class="inline-link" href="https://one.org.au" target="_blank" rel="noopener noreferrer">One Church</a> in Melbourne, Australia.</p>
+
+    <p class="lead" style="margin-top:14px;font-size:15px;">A while back I wrote a Discovery Bible Study course for our church: a simple way for anyone to read the Bible with someone else and discover it together, without needing to be an expert or have any training. It&rsquo;s a method that&rsquo;s been used all over the world, particularly in discipling people who are new to faith but curious about the Bible, and it&rsquo;s played a part in many people coming to faith in Jesus for the first time.</p>
+
+    <p class="lead" style="margin-top:14px;font-size:15px;">When I showed it to friends in ministry, several of them wanted to use it with their own people. So I turned it into this: a small library any church or group can pick up and run, free, with no sign-up and nothing to install. I&rsquo;ve kept it deliberately brand-neutral so it can feel like yours, not ours.</p>
+
+    <p class="lead" style="margin-top:14px;font-size:15px;">Use it freely, adapt it to your setting, and pass it on. That&rsquo;s the whole idea.</p>
+
+    <p class="lead" style="margin-top:14px;font-size:15px;">Discovery Bible Study isn&rsquo;t something I invented. It&rsquo;s a simple, reproducible way of reading Scripture, sometimes called Discovery Bible Reading (DBR), that&rsquo;s been around for years. I&rsquo;ve just built a set of studies on top of it and tried to make them easy to use on a phone, wherever you happen to meet.</p>
+
+    <!-- Get in touch -->
+    <div class="divider-label"><span class="line"></span><span class="txt">get in touch</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">Got feedback, a fix, or an idea for a study you&rsquo;d like to see? I&rsquo;d love to hear from you.</p>
+    <div class="about-links">
+      <a class="about-link" href="mailto:darren@one.org.au">Email</a>
+      <a class="about-link" href="https://darrenrowse.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+      <a class="about-link" href="https://x.com/problogger" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+      <a class="about-link" href="https://www.threads.com/@darrenrowse" target="_blank" rel="noopener noreferrer">Threads</a>
+      <a class="about-link" href="https://ko-fi.com/darrenrowse" target="_blank" rel="noopener noreferrer">Buy me a coffee</a>
+    </div>
+
+    <!-- Also from Darren -->
+    <div class="divider-label"><span class="line"></span><span class="txt">also from darren</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">A few other Bible apps I&rsquo;ve made, all free to use:</p>
+    <div class="about-links">
+      <a class="about-link" href="https://chapterbychapter.app" target="_blank" rel="noopener noreferrer">Chapter by Chapter</a>
+      <a class="about-link" href="https://bible-adventure.pages.dev" target="_blank" rel="noopener noreferrer">Bible Adventure</a>
+      <a class="about-link" href="https://harmony.darrenrowse.com" target="_blank" rel="noopener noreferrer">Gospel Harmony</a>
+    </div>
+
+    <div style="flex:1;"></div>
+    <a class="pill solid" style="margin-top:28px;" href="studies.html">find a study &rarr;</a>
+    <a class="pill ghost" style="margin-top:10px;" href="how-it-works.html">how this works &rarr;</a>
+  </div></div>
+`;
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"e24e789937b74330b82dcd4dec28a4e1","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

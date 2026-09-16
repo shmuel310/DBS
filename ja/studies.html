@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スタディ一覧 &middot; ディスカバリー・バイブル・スタディ</title>
+<meta name="description" content="スタディを選び、自分のペースで、一人でも誰かと一緒でも進められます。どのスタディも同じシンプルなリズムです：振り返る、見上げる、前を向く。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0E0E0E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ディスカバリー・バイブル・スタディ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="スタディ一覧 &middot; ディスカバリー・バイブル・スタディ">
+<meta property="og:description" content="スタディを選び、自分のペースで、一人でも誰かと一緒でも進められます。どのスタディも同じシンプルなリズムです：振り返る、見上げる、前を向く。">
+<meta property="og:image" content="_engine/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="スタディ一覧 &middot; ディスカバリー・バイブル・スタディ">
+<meta name="twitter:description" content="スタディを選び、自分のペースで、一人でも誰かと一緒でも進められます。どのスタディも同じシンプルなリズムです：振り返る、見上げる、前を向く。">
+<meta name="twitter:image" content="_engine/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+</head>
+<body class="hub-page">
+<div id="app"></div>
+
+<script>
+const STUDIES = [
+  {
+    "id": "who-is-this",
+    "title": "この人は誰か？",
+    "subtitle": "マルコの福音書をたどる旅",
+    "audience": [
+      "まずはこちら",
+      "信仰を探求する"
+    ],
+    "categories": [
+      "福音書"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 8,
+    "time": "60&ndash;90 分",
+    "blurb": "マルコの福音書を巡る10週間の旅。毎週少しずつ読み、イエスがどのような方かを発見し、グループや1対1で共に従います。",
+    "url": "studies/who-is-this/index.html"
+  },
+  {
+    "id": "the-basics",
+    "title": "聖書のきほん",
+    "subtitle": "創造から十字架まで",
+    "audience": [
+      "まずはこちら",
+      "信仰を探求する"
+    ],
+    "categories": [
+      "聖書全体"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "創造から十字架、そしてその先へと続く聖書全体のストーリーをたどる全10回。信仰を持ち始めた方や全体像を知りたい方に最適です。",
+    "url": "studies/the-basics/index.html"
+  },
+  {
+    "id": "stories-of-hope",
+    "title": "10の希望の物語",
+    "subtitle": "10の出会い、ひとつの招き",
+    "audience": [
+      "まずはこちら",
+      "信仰を探求する"
+    ],
+    "categories": [
+      "福音書",
+      "主題別"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "取税人の家での食事から井戸端の女性まで、イエスとの10の実際の出会いを通して、本物の希望がどのようなものかを間近で見つめます。",
+    "url": "studies/stories-of-hope/index.html"
+  },
+  {
+    "id": "signs-of-john",
+    "title": "ヨハネのしるし",
+    "subtitle": "7つのしるしと空の墓",
+    "audience": [
+      "信仰を探求する"
+    ],
+    "categories": [
+      "福音書"
+    ],
+    "sessionCount": 8,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "水をぶどう酒に変える奇跡から復活そのものまで、信じるために書かれたヨハネの福音書の7つのしるしをたどる全8回。",
+    "url": "studies/signs-of-john/index.html"
+  },
+  {
+    "id": "overcoming-fear",
+    "title": "恐れに打ち勝つ",
+    "subtitle": "信仰の12の物語",
+    "audience": [
+      "信仰を探求する",
+      "新しい信者"
+    ],
+    "categories": [
+      "主題別"
+    ],
+    "sessionCount": 12,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "聖書全体から選ばれた12の物語。それぞれに約束のみことばが添えられ、恐れの代わりに神を信頼することの意味を学びます。",
+    "url": "studies/overcoming-fear/index.html"
+  },
+  {
+    "id": "philippians",
+    "title": "新しい命、本物の喜び",
+    "subtitle": "新しい信者のためのピリピ人への手紙（6週間）",
+    "audience": [
+      "新しい信者"
+    ],
+    "categories": [
+      "書簡"
+    ],
+    "sessionCount": 6,
+    "bonusCount": 0,
+    "time": "60&ndash;70 分",
+    "blurb": "新約聖書で最も温かい手紙のひとつ。イエスが誰であるか、恵みの意味、祈り方、試練の中で喜びを失わない方法を学びます。",
+    "url": "studies/philippians/index.html"
+  },
+  {
+    "id": "ruth",
+    "title": "ルツ記",
+    "subtitle": "あなたの行かれる所へ、私も行きます",
+    "audience": [
+      "新しい信者"
+    ],
+    "categories": [
+      "旧約聖書"
+    ],
+    "sessionCount": 5,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "異邦人のやもめの忠誠と、ダビデ王、そしてイエス自身の系図の隠れた始まりとなった静かな親切の行いを描く短く完全な物語。",
+    "url": "studies/ruth/index.html"
+  },
+  {
+    "id": "learn-to-follow-jesus",
+    "title": "イエスに従うことを学ぶ",
+    "subtitle": "すべての弟子のための8つの実践",
+    "audience": [
+      "新しい信者",
+      "さらに深く学ぶ"
+    ],
+    "categories": [
+      "主題別"
+    ],
+    "sessionCount": 8,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "バプテスマや祈りから聖餐、一致まで、基本的な教えと実践を結びつけ、実際に行うことでイエスに従うことを学びます。",
+    "url": "studies/learn-to-follow-jesus/index.html"
+  },
+  {
+    "id": "commands-of-jesus",
+    "title": "イエスの命令",
+    "subtitle": "イエスが命じられた14のこと",
+    "audience": [
+      "新しい信者",
+      "さらに深く学ぶ"
+    ],
+    "categories": [
+      "主題別",
+      "福音書"
+    ],
+    "sessionCount": 14,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "悔い改めて信じることから、行って弟子をつくることまで、イエスが従う者たちに求めた具体的な命令に取り組む全14回。",
+    "url": "studies/commands-of-jesus/index.html"
+  },
+  {
+    "id": "multiplying-disciples",
+    "title": "つながり、勝ち取り、育て、整え、遣わす",
+    "subtitle": "イエスはどのように運動を起こしたか",
+    "audience": [
+      "さらに深く学ぶ"
+    ],
+    "categories": [
+      "福音書",
+      "主題別"
+    ],
+    "sessionCount": 17,
+    "bonusCount": 0,
+    "time": "60&ndash;75 分",
+    "blurb": "イエスの生涯を年代順に追う17週間のスタディ。弟子をつくる弟子を育て、世界へと遣わしていった軌跡をたどります。",
+    "url": "studies/multiplying-disciples/index.html"
+  },
+  {
+    "id": "crossing-barriers",
+    "title": "障壁を越える",
+    "subtitle": "神と和解し、互いに和解する",
+    "audience": [
+      "さらに深く学ぶ"
+    ],
+    "categories": [
+      "主題別"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "神が私たちに届くために越えてくださった障壁と、私たちが越えるよう召されている障壁について学ぶ全10回。",
+    "url": "studies/crossing-barriers/index.html"
+  },
+  {
+    "id": "promises-of-comfort",
+    "title": "10の慰めの約束",
+    "subtitle": "10の約束と、それを証しする物語",
+    "audience": [
+      "信仰を探求する",
+      "新しい信者"
+    ],
+    "categories": [
+      "主題別"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "平安、備え、赦し、喜びなど、聖書全体にある神の10の約束。短いみことばと、それが生きて働いた物語を組み合わせた全10回。",
+    "url": "studies/promises-of-comfort/index.html"
+  },
+  {
+    "id": "prayer",
+    "title": "祈りを教えてください",
+    "subtitle": "本当の祈りを学ぶ10回",
+    "audience": [
+      "新しい信者",
+      "さらに深く学ぶ"
+    ],
+    "categories": [
+      "主題別"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "祈りの真の姿とは何か：イエス自身の言葉、粘り強いやもめ、危機の中で祈る教会、そしてゲツセマネで苦悶し祈るイエス。",
+    "url": "studies/prayer/index.html"
+  },
+  {
+    "id": "kingdom-of-god",
+    "title": "神の国",
+    "subtitle": "創世記から黙示録まで",
+    "audience": [
+      "さらに深く学ぶ"
+    ],
+    "categories": [
+      "聖書全体",
+      "主題別"
+    ],
+    "sessionCount": 12,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分",
+    "blurb": "アブラハムへの約束から、イエスのたとえ話、そして黙示録における最終的な到来まで、神の国の歩みをたどる全12回。",
+    "url": "studies/kingdom-of-god/index.html"
+  },
+  {
+    "id": "sermon-on-the-mount",
+    "title": "山上の垂訓",
+    "subtitle": "天の御国の倫理",
+    "audience": [
+      "信仰を探求する",
+      "新しい信者"
+    ],
+    "categories": [
+      "福音書",
+      "主題別"
+    ],
+    "sessionCount": 8,
+    "bonusCount": 0,
+    "time": "75&ndash;90 分",
+    "blurb": "マタイ5〜7章にある歴史上最も有名な教え：山上の垂訓、主の祈り、そして岩の上に人生を築くことの真の意味を学ぶ全8回。",
+    "url": "studies/sermon-on-the-mount/index.html"
+  }
+];
+const AUDIENCES = ["すべて", "まずはこちら", "信仰を探求する", "新しい信者", "さらに深く学ぶ"];
+
+function markSvg(size, color){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="display:block;color:${color};">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="68" r="5" fill="currentColor"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <circle cx="70" cy="32" r="5" fill="currentColor"/>
+  </svg>`;
+}
+
+function hasProgress(id){
+  try { return Object.keys(JSON.parse(localStorage.getItem(`dbs.${id}.ja.progress.v1`)) || {}).length > 0; }
+  catch(e){ return false; }
+}
+
+let activeAudience = "すべて";
+
+function render(){
+  const filtered = activeAudience === "すべて" ? STUDIES : STUDIES.filter(s => s.audience.includes(activeAudience));
+
+  const filterPills = AUDIENCES.map(a =>
+    `<button class="hub-pill${a === activeAudience ? ' active' : ''}" aria-pressed="${a === activeAudience}" onclick="activeAudience='${a}';render();">${a}</button>`
+  ).join("");
+
+  const cards = filtered.map(s => `
+    <a class="hub-card" href="${s.url}">
+      <div class="hc-top">
+        <div class="hc-cat">${s.categories.join(" &middot; ")}</div>
+        ${s.audience.includes("まずはこちら") ? `<span class="hc-badge">まずはこちら</span>` : ""}
+      </div>
+      <div class="hc-title lower">${s.title}</div>
+      <div class="hc-sub">${s.subtitle}</div>
+      <p class="hc-blurb">${s.blurb}</p>
+      ${hasProgress(s.id)
+        ? `<div class="hc-continue">前回の続きから再開 &rarr;</div>`
+        : `<div class="hc-meta">${s.sessionCount} ${'ja' === 'ja' ? '回' : '次聚会'}${s.bonusCount ? ` &middot; ${s.bonusCount} ${'ja' === 'ja' ? 'ボーナス' : '延伸'}` : ""} &middot; ${s.time}</div>`}
+    </a>`).join("");
+
+  document.getElementById("app").innerHTML = `
+    <div class="wrap"><nav class="top">
+      <a class="brand" href="index.html" aria-label="Home">
+        ${markSvg(38, "var(--ink-900)")}
+        <span class="brand-name">ディスカバリー・バイブル・スタディ</span>
+      </a>
+      <div class="nav-links">
+        <a href="how-it-works.html">DBSとは</a>
+        <a href="studies.html">スタディ一覧</a>
+        <a href="../bilingual.html?lang1=ja&lang2=en">バイリンガル</a>
+        <a href="about.html">このサイトについて</a>
+        <div class="lang-switcher">
+          <span>🌐</span>
+          <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+            <option value="../studies.html">English</option>
+            <option value="../zh-hk/studies.html">繁體中文（香港）</option>
+            <option value="../zh-cn/studies.html">简体中文</option>
+            <option value="../ja/studies.html" selected>日本語</option>
+          </select>
+        </div>
+      </div>
+    </nav></div>
+    <div class="hub-wrap" style="padding-top:8px;">
+      <div class="display lower" style="font-size:40px;">スタディを探す</div>
+      <p class="lead" style="margin-top:10px;max-width:480px;">スタディを選び、自分のペースで、一人でも誰かと一緒でも進められます。どのスタディも同じシンプルなリズムです：振り返る、見上げる、前を向く。</p>
+      <div style="margin-top:16px;padding:14px 18px;background:var(--white);border:1px solid var(--ink-200);border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div style="font-size:13.5px;color:var(--ink-700);">
+          <strong style="color:var(--ink-900);">多言語で一緒に聖書を学びますか？</strong> 英語・繁体字・簡体字・日本語の2言語を左右に並べて同時に学べるバイリンガルモードをご利用いただけます。
+        </div>
+        <a href="../bilingual.html?lang1=ja&lang2=en" class="btn btn-solid" style="padding:8px 18px;font-size:13px;border-radius:999px;text-decoration:none;">バイリンガルモードを開く &rarr;</a>
+      </div>
+      <div class="hub-filters">${filterPills}</div>
+      ${filtered.length ? `<div class="hub-grid">${cards}</div>` : `<p class="lead" style="margin-top:24px;">このフィルターに一致するスタディはまだありません。別の条件を試すか、上の「すべて」をご覧ください。</p>`}
+    </div>
+  `;
+}
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discovery Bible Studies &middot; Bilingual Study Mode</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Carry out Discovery Bible Studies simultaneously in two languages: English, Traditional Chinese, Simplified Chinese, or Japanese.">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+
+<style>
+  :root {
+    --bilingual-max-width: 1180px;
+    --card-radius: 16px;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--ink-900);
+    overflow-x: hidden;
+  }
+
+  /* Font Scaling */
+  body.font-large {
+    font-size: 17.5px;
+  }
+  body.font-large .lead { font-size: 17px; }
+  body.font-large .display { font-size: 1.15em; }
+  body.font-large p, body.font-large li span { font-size: 16px; }
+
+  /* App container */
+  #bilingual-app {
+    max-width: var(--bilingual-max-width);
+    margin: 0 auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-bottom: 120px;
+  }
+
+  /* Top brand bar */
+  .bi-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: calc(env(safe-area-inset-top) + 16px) 24px 16px;
+    border-bottom: 1px solid var(--ink-200);
+    background: var(--cream);
+    transition: background 0.2s, color 0.2s;
+  }
+  .bi-topbar.on-dark {
+    background: var(--black);
+    border-color: rgba(236,234,221,0.15);
+    color: var(--cream);
+  }
+
+  .bi-brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .bi-brand-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+  }
+  .bi-badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--ink-900);
+    color: var(--cream);
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .bi-topbar.on-dark .bi-badge {
+    background: var(--cream);
+    color: var(--black);
+  }
+
+  .bi-top-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13.5px;
+    font-weight: 500;
+  }
+  .bi-top-links a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+    transition: opacity 0.15s;
+  }
+  .bi-top-links a:hover { opacity: 1; text-decoration: underline; }
+
+  /* Control Panel */
+  .bi-controls {
+    background: var(--cream-100);
+    border-bottom: 1px solid var(--ink-200);
+    padding: 14px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .bi-control-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .bi-select-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--white);
+    border: 1.5px solid var(--ink-200);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-900);
+    position: relative;
+  }
+  .bi-select-wrap select {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    padding-right: 14px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .bi-select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    font-size: 11px;
+    opacity: 0.6;
+  }
+
+  .bi-btn-swap {
+    background: var(--white);
+    border: 1.5px solid var(--ink-200);
+    color: var(--ink-900);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.15s;
+    flex: none;
+  }
+  .bi-btn-swap:hover {
+    background: var(--cream-300);
+    transform: rotate(180deg);
+  }
+
+  .bi-btn-mode {
+    background: var(--white);
+    border: 1.5px solid var(--ink-200);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-700);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+  }
+  .bi-btn-mode:hover, .bi-btn-mode.active {
+    background: var(--ink-900);
+    color: var(--cream);
+    border-color: var(--ink-900);
+  }
+
+  .bi-lang-pill {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--cream-300);
+    color: var(--ink-900);
+    display: inline-block;
+  }
+
+  /* Step bar */
+  .bi-stepper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 12px 24px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--ink-200);
+    scrollbar-width: none;
+  }
+  .bi-stepper::-webkit-scrollbar { display: none; }
+  .bi-step-pill {
+    background: var(--white);
+    border: 1.5px solid var(--ink-200);
+    border-radius: 999px;
+    padding: 7px 16px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-500);
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+  }
+  .bi-step-pill:hover {
+    color: var(--ink-900);
+    border-color: var(--ink-400);
+  }
+  .bi-step-pill.active {
+    background: var(--ink-900);
+    color: var(--cream);
+    border-color: var(--ink-900);
+  }
+
+  /* Bilingual Content Grid */
+  .bi-content-area {
+    padding: 28px 24px 40px;
+  }
+
+  .bi-grid {
+    display: grid;
+    gap: 20px;
+    align-items: stretch;
+  }
+  /* Side-by-side mode */
+  .bi-grid.side-by-side {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 820px) {
+    .bi-grid.side-by-side {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Stacked mode */
+  .bi-grid.stacked {
+    grid-template-columns: 1fr;
+  }
+
+  .bi-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Card and item styling */
+  .bi-card {
+    background: var(--white);
+    border: 1px solid var(--ink-200);
+    border-radius: var(--card-radius);
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  }
+  .bi-card.on-dark {
+    background: #1c1b18;
+    border-color: rgba(236,234,221,0.15);
+    color: var(--cream);
+  }
+
+  .bi-col-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-400);
+    margin-bottom: 2px;
+  }
+  .on-dark .bi-col-header { color: var(--cream-400); }
+
+  /* Parallel Row inside single card */
+  .bi-row-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--ink-200);
+  }
+  .bi-row-item:last-child { border-bottom: none; }
+  .bi-row-content {
+    display: grid;
+    gap: 16px;
+  }
+  .side-by-side .bi-row-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 820px) {
+    .side-by-side .bi-row-content {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+  .stacked .bi-row-content {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Memory verse */
+  .bi-memory-card {
+    background: var(--cream-100);
+    border: 1.5px solid var(--cream-400);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin: 10px 0;
+  }
+  .bi-memory-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--ink-900);
+  }
+  .bi-memory-ref {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-500);
+    margin-top: 6px;
+    text-align: right;
+  }
+
+  /* Bottom sticky bar */
+  .bi-bottombar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    border-top: 1px solid var(--ink-200);
+    padding: 12px 24px calc(12px + env(safe-area-inset-bottom));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    z-index: 90;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.05);
+  }
+  .bi-bottombar-inner {
+    max-width: var(--bilingual-max-width);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  /* Modal for Journey */
+  .bi-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(14,14,14,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .bi-modal-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .bi-modal {
+    background: var(--cream);
+    max-width: 680px;
+    width: 100%;
+    max-height: 85vh;
+    border-radius: 20px;
+    overflow-y: auto;
+    padding: 28px 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .bi-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--ink-500);
+  }
+
+  /* Stage Pills */
+  .stage-pill {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    border: 1px solid currentColor;
+  }
+
+  /* CJK typography rules */
+  .cjk-zh {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang HK", "Noto Sans SC", "Noto Sans HK", "Microsoft YaHei", "Microsoft JhengHei", system-ui, sans-serif;
+  }
+  .cjk-ja {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, system-ui, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div id="bilingual-app">
+  <!-- Top Bar -->
+  <header class="bi-topbar" id="bi-topbar">
+    <a href="index.html" class="bi-brand-wrap" aria-label="DBS Home">
+      <svg width="34" height="34" viewBox="0 0 100 100" style="display:block;color:currentColor;">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="30" cy="68" r="5" fill="currentColor"/>
+        <circle cx="50" cy="50" r="5" fill="currentColor"/>
+        <circle cx="70" cy="32" r="5" fill="currentColor"/>
+      </svg>
+      <span class="bi-brand-name">discovery bible studies</span>
+      <span class="bi-badge">BILINGUAL &middot; 雙語</span>
+    </a>
+    <nav class="bi-top-links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="studies.html">Studies</a>
+      <a href="about.html">About</a>
+      <span style="opacity:0.3;">|</span>
+      <a href="index.html" title="English">EN</a>
+      <a href="zh-hk/index.html" title="繁體中文">繁</a>
+      <a href="zh-cn/index.html" title="简体中文">簡</a>
+      <a href="ja/index.html" title="日本語">日</a>
+    </nav>
+  </header>
+
+  <!-- Controls Panel -->
+  <section class="bi-controls">
+    <!-- Language Selectors -->
+    <div class="bi-control-group">
+      <div class="bi-select-wrap">
+        <span class="bi-lang-pill" id="badge-lang1">EN</span>
+        <select id="select-lang1" aria-label="Select Language 1">
+          <option value="en">English</option>
+          <option value="zh-hk">繁體中文</option>
+          <option value="zh-cn">简体中文</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+
+      <button type="button" class="bi-btn-swap" id="btn-swap-langs" title="Swap languages (S)">⇄</button>
+
+      <div class="bi-select-wrap">
+        <span class="bi-lang-pill" id="badge-lang2">繁</span>
+        <select id="select-lang2" aria-label="Select Language 2">
+          <option value="en">English</option>
+          <option value="zh-hk" selected>繁體中文</option>
+          <option value="zh-cn">简体中文</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Study & Session Selectors -->
+    <div class="bi-control-group">
+      <div class="bi-select-wrap">
+        <span style="font-size:11px;color:var(--ink-400);text-transform:uppercase;">Study</span>
+        <select id="select-study" aria-label="Select Study"></select>
+      </div>
+
+      <div class="bi-select-wrap">
+        <span style="font-size:11px;color:var(--ink-400);text-transform:uppercase;">Session</span>
+        <select id="select-session" aria-label="Select Session"></select>
+      </div>
+
+      <button type="button" class="bi-btn-mode" id="btn-journey" title="View all sessions in this study">
+        📑 <span id="label-outline">Outline</span>
+      </button>
+    </div>
+
+    <!-- Layout & Size Controls -->
+    <div class="bi-control-group">
+      <button type="button" class="bi-btn-mode" id="btn-toggle-layout" title="Toggle side-by-side / stacked layout">
+        <span id="layout-icon">☷</span> <span id="layout-text">Side by Side</span>
+      </button>
+
+      <button type="button" class="bi-btn-mode" id="btn-toggle-font" title="Adjust text size">
+        <span id="font-icon">A</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Step Navigation Bar -->
+  <nav class="bi-stepper" id="bi-stepper" aria-label="Study Steps"></nav>
+
+  <!-- Main Bilingual Content Area -->
+  <main class="bi-content-area" id="bi-main"></main>
+</div>
+
+<!-- Bottom Sticky Action Bar -->
+<div class="bi-bottombar">
+  <div class="bi-bottombar-inner">
+    <button type="button" class="pill ghost" id="btn-prev-step" style="height:48px;padding:0 22px;font-size:14px;">
+      &larr; <span id="label-btn-prev">Back</span>
+    </button>
+    <div id="step-progress-text" style="font-size:13px;font-weight:600;color:var(--ink-500);text-align:center;"></div>
+    <button type="button" class="pill solid" id="btn-next-step" style="height:48px;padding:0 28px;font-size:14.5px;">
+      <span id="label-btn-next">Next</span> &rarr;
+    </button>
+  </div>
+</div>
+
+<!-- Outline / Journey Modal -->
+<div class="bi-modal-backdrop" id="bi-modal-backdrop" onclick="if(event.target===this) closeModal();">
+  <div class="bi-modal" role="dialog" aria-labelledby="modal-title">
+    <button type="button" class="bi-modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div class="eyebrow" id="modal-eyebrow">Study Outline</div>
+    <h2 class="display" id="modal-title" style="font-size:28px;margin:8px 0 16px;">The Journey</h2>
+    <div id="modal-sessions-list" style="display:flex;flex-direction:column;gap:10px;"></div>
+  </div>
+</div>
+
+<!-- Include the compiled Bilingual Data Bundle -->
+<script src="_engine/bilingual-data.js"></script>
+
+<script>
+/* =========================================================================
+   DBS BILINGUAL RUNTIME ENGINE
+   ========================================================================= */
+
+(function(){
+  if (!window.BILINGUAL_DATA) {
+    document.getElementById('bi-main').innerHTML = `
+      <div style="padding:40px 20px;text-align:center;">
+        <h2 style="color:#C92A2A;">Failed to load bilingual study data</h2>
+        <p>Please ensure <code>_engine/bilingual-data.js</code> is present.</p>
+      </div>`;
+    return;
+  }
+
+  const DATA = window.BILINGUAL_DATA;
+  const ICONS = {
+    back: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/></svg>',
+    up: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-1.5-1.2-3.6-2-6-2-1 0-2 .1-3 .4v13.6c1-.3 2-.4 3-.4 2.4 0 4.5.8 6 2 1.5-1.2 3.6-2 6-2 1 0 2 .1 3 .4V5.4C20 5.1 19 5 18 5c-2.4 0-4.5.8-6 2z"/><line x1="12" y1="7" x2="12" y2="21"/></svg>',
+    forward: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 4 21 9 16 9"/></svg>',
+    check: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+  };
+
+  const STAGE_COLORS = {
+    connect: { light: "#2E6B7A", dark: "#6FB8C9" },
+    win:     { light: "#A8472A", dark: "#E08A62" },
+    build:   { light: "#9C7A1E", dark: "#E0BB55" },
+    train:   { light: "#454F79", dark: "#9AA3D6" },
+    send:    { light: "#3F7A3A", dark: "#8EC97F" }
+  };
+
+  function stagePill(stage, onDark) {
+    if (!stage) return "";
+    const c = STAGE_COLORS[stage.toLowerCase()];
+    const color = c ? (onDark ? c.dark : c.light) : "currentColor";
+    return `<span class="stage-pill" style="color:${color};border-color:${color};">${stage}</span>`;
+  }
+
+  const LANG_SHORT = {
+    'en': 'EN',
+    'zh-hk': '繁',
+    'zh-cn': '簡',
+    'ja': '日'
+  };
+
+  // State
+  const params = new URLSearchParams(location.search);
+  let lang1 = params.get('lang1') || localStorage.getItem('dbs.bilingual.lang1') || 'en';
+  let lang2 = params.get('lang2') || localStorage.getItem('dbs.bilingual.lang2') || 'zh-hk';
+  if (!DATA.languages.find(l => l.code === lang1)) lang1 = 'en';
+  if (!DATA.languages.find(l => l.code === lang2)) lang2 = 'zh-hk';
+
+  let currentStudyId = params.get('study') || 'the-basics';
+  if (!DATA.studiesList.includes(currentStudyId)) currentStudyId = 'the-basics';
+
+  let currentSessionId = params.get('session') || '1';
+  let currentStep = params.get('step') || 'cover'; // cover | lookback | lookup | lookforward | reading | finish
+  let layoutMode = params.get('layout') || localStorage.getItem('dbs.bilingual.layout') || (window.innerWidth >= 820 ? 'side-by-side' : 'stacked');
+  let fontSizeLarge = localStorage.getItem('dbs.bilingual.font') === 'large';
+
+  // Apply font size
+  if (fontSizeLarge) document.body.classList.add('font-large');
+
+  // DOM Elements
+  const selLang1 = document.getElementById('select-lang1');
+  const selLang2 = document.getElementById('select-lang2');
+  const badgeLang1 = document.getElementById('badge-lang1');
+  const badgeLang2 = document.getElementById('badge-lang2');
+  const btnSwap = document.getElementById('btn-swap-langs');
+  const selStudy = document.getElementById('select-study');
+  const selSession = document.getElementById('select-session');
+  const btnJourney = document.getElementById('btn-journey');
+  const btnToggleLayout = document.getElementById('btn-toggle-layout');
+  const layoutIcon = document.getElementById('layout-icon');
+  const layoutText = document.getElementById('layout-text');
+  const btnToggleFont = document.getElementById('btn-toggle-font');
+  const stepper = document.getElementById('bi-stepper');
+  const mainArea = document.getElementById('bi-main');
+  const btnPrev = document.getElementById('btn-prev-step');
+  const btnNext = document.getElementById('btn-next-step');
+  const lblPrev = document.getElementById('label-btn-prev');
+  const lblNext = document.getElementById('label-btn-next');
+  const stepProgress = document.getElementById('step-progress-text');
+
+  function getAllSessions(study) {
+    const core = study.sessions || [];
+    const bonus = study.bonusSessions || [];
+    return core.concat(bonus);
+  }
+
+  // Populate Studies dropdown
+  function populateStudyDropdown() {
+    selStudy.innerHTML = DATA.studiesList.map(id => {
+      const s1 = DATA.catalog[lang1]?.find(item => item.id === id) || { title: id };
+      const s2 = DATA.catalog[lang2]?.find(item => item.id === id) || { title: id };
+      const label = lang1 === lang2 ? s1.title : `${s1.title} / ${s2.title}`;
+      return `<option value="${id}"${id === currentStudyId ? ' selected' : ''}>${label}</option>`;
+    }).join('');
+  }
+
+  // Populate Sessions dropdown
+  function populateSessionDropdown() {
+    const study1 = DATA.studies[lang1][currentStudyId] || {};
+    const study2 = DATA.studies[lang2][currentStudyId] || {};
+    const sessions1 = getAllSessions(study1);
+    const sessions2 = getAllSessions(study2);
+
+    // Check if currentSessionId is valid
+    if (!sessions1.find(s => String(s.id) === String(currentSessionId))) {
+      currentSessionId = sessions1[0] ? String(sessions1[0].id) : '1';
+    }
+
+    selSession.innerHTML = sessions1.map((s, idx) => {
+      const s2 = sessions2[idx] || {};
+      const prefix = s.bonus ? '[Bonus] ' : '';
+      const t1 = s.title || `Session ${s.id}`;
+      const t2 = s2.title || `Session ${s2.id || s.id}`;
+      const label = lang1 === lang2 ? `${prefix}${s.id}. ${t1}` : `${prefix}${s.id}. ${t1} / ${t2}`;
+      return `<option value="${s.id}"${String(s.id) === String(currentSessionId) ? ' selected' : ''}>${label}</option>`;
+    }).join('');
+  }
+
+  function syncURL() {
+    const u = new URL(location);
+    u.searchParams.set('study', currentStudyId);
+    u.searchParams.set('session', currentSessionId);
+    u.searchParams.set('lang1', lang1);
+    u.searchParams.set('lang2', lang2);
+    u.searchParams.set('step', currentStep);
+    u.searchParams.set('layout', layoutMode);
+    history.replaceState(null, '', u.toString());
+  }
+
+  function getI18n(lang, key) {
+    return (DATA.i18n[lang] && DATA.i18n[lang][key]) || (DATA.i18n['en'] && DATA.i18n['en'][key]) || key;
+  }
+
+  function getStepsForSession(sessionData) {
+    const steps = ['cover', 'lookback', 'lookup', 'lookforward'];
+    if (sessionData && sessionData.betweenSessions) {
+      steps.push('reading');
+    }
+    return steps;
+  }
+
+  function getStepLabel(stepKey, lang) {
+    switch(stepKey) {
+      case 'cover': return getI18n(lang, 'stepCover');
+      case 'lookback': return getI18n(lang, 'stepLookBack');
+      case 'lookup': return getI18n(lang, 'stepLookUp');
+      case 'lookforward': return getI18n(lang, 'stepLookForward');
+      case 'reading': return getI18n(lang, 'stepReading');
+      case 'finish': return getI18n(lang, 'stepFinish');
+      default: return stepKey;
+    }
+  }
+
+  function renderStepper(steps) {
+    stepper.innerHTML = steps.map((st, i) => {
+      const active = st === currentStep ? ' active' : '';
+      const lbl1 = getStepLabel(st, lang1);
+      const lbl2 = getStepLabel(st, lang2);
+      const label = lang1 === lang2 ? lbl1 : `${lbl1} · ${lbl2}`;
+      let icon = '';
+      if (st === 'lookback') icon = ICONS.back;
+      else if (st === 'lookup') icon = ICONS.up;
+      else if (st === 'lookforward') icon = ICONS.forward;
+      return `<button type="button" class="bi-step-pill${active}" onclick="setStep('${st}')">${icon}<span>${label}</span></button>`;
+    }).join('');
+  }
+
+  window.setStep = function(step) {
+    currentStep = step;
+    syncURL();
+    renderContent();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.closeModal = function() {
+    document.getElementById('bi-modal-backdrop').classList.remove('open');
+  };
+
+  window.openModal = function() {
+    const study1 = DATA.studies[lang1][currentStudyId] || {};
+    const study2 = DATA.studies[lang2][currentStudyId] || {};
+    const sessions1 = getAllSessions(study1);
+    const sessions2 = getAllSessions(study2);
+
+    document.getElementById('modal-eyebrow').innerText = `${study1.title || ''} / ${study2.title || ''}`;
+    document.getElementById('modal-title').innerText = getI18n(lang1, 'allSessions');
+
+    const completedKey = `dbs.progress.${currentStudyId}`;
+    let completed = {};
+    try { completed = JSON.parse(localStorage.getItem(completedKey)) || {}; } catch(e){}
+
+    document.getElementById('modal-sessions-list').innerHTML = sessions1.map((s, idx) => {
+      const s2 = sessions2[idx] || {};
+      const isDone = !!completed[s.id];
+      const isCurrent = String(s.id) === String(currentSessionId);
+      const border = isCurrent ? '2px solid var(--ink-900)' : '1px solid var(--ink-200)';
+      const bg = isCurrent ? 'var(--white)' : 'rgba(255,255,255,0.7)';
+      return `
+        <button type="button" onclick="selectSession('${s.id}');closeModal();" style="display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:12px;border:${border};background:${bg};cursor:pointer;text-align:left;width:100%;">
+          <span style="width:28px;height:28px;border-radius:50%;background:${isDone ? 'var(--positive)' : 'var(--cream-300)'};color:${isDone ? '#fff' : 'var(--ink-900)'};display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex:none;">${isDone ? ICONS.check : s.id}</span>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:15px;color:var(--ink-900);">${s.bonus ? '[Bonus] ' : ''}${s.title}</div>
+            ${lang1 !== lang2 && s2.title ? `<div style="font-size:13.5px;color:var(--ink-500);margin-top:2px;">${s2.title}</div>` : ''}
+            <div style="font-size:12px;color:var(--ink-400);margin-top:2px;">${(s.refs || []).join(', ')}</div>
+          </div>
+          <span style="font-size:18px;color:var(--ink-400);">&rarr;</span>
+        </button>
+      `;
+    }).join('');
+
+    document.getElementById('bi-modal-backdrop').classList.add('open');
+  };
+
+  window.selectSession = function(id) {
+    currentSessionId = id;
+    currentStep = 'cover';
+    populateSessionDropdown();
+    syncURL();
+    renderContent();
+  };
+
+  function langBadge(lang) {
+    return `<span class="bi-lang-pill">${LANG_SHORT[lang] || lang}</span>`;
+  }
+
+  function renderBilingualBlock(title, html1, html2, options = {}) {
+    return `
+      <div class="bi-card${options.onDark ? ' on-dark' : ''}">
+        ${title ? `<div class="eyebrow" style="margin-bottom:12px;">${title}</div>` : ''}
+        <div class="bi-grid ${layoutMode}">
+          <div class="bi-col">
+            <div class="bi-col-header">${langBadge(lang1)} <span>${DATA.languages.find(l=>l.code===lang1)?.name || lang1}</span></div>
+            <div class="${lang1.startsWith('zh') ? 'cjk-zh' : lang1 === 'ja' ? 'cjk-ja' : ''}">${html1 || ''}</div>
+          </div>
+          <div class="bi-col">
+            <div class="bi-col-header">${langBadge(lang2)} <span>${DATA.languages.find(l=>l.code===lang2)?.name || lang2}</span></div>
+            <div class="${lang2.startsWith('zh') ? 'cjk-zh' : lang2 === 'ja' ? 'cjk-ja' : ''}">${html2 || ''}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderParallelList(items1, items2, options = {}) {
+    const length = Math.max(items1.length, items2.length);
+    const rows = [];
+    for (let i = 0; i < length; i++) {
+      const q1 = items1[i] || '';
+      const q2 = items2[i] || '';
+      rows.push(`
+        <div class="bi-row-item">
+          <div style="display:flex;align-items:flex-start;gap:10px;">
+            <span style="width:24px;height:24px;border-radius:50%;background:var(--cream-300);color:var(--ink-900);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex:none;margin-top:2px;">${i+1}</span>
+            <div style="flex:1;">
+              <div class="bi-row-content">
+                <div class="${lang1.startsWith('zh') ? 'cjk-zh' : lang1 === 'ja' ? 'cjk-ja' : ''}">
+                  <span class="bi-lang-pill" style="font-size:10px;margin-right:4px;">${LANG_SHORT[lang1]}</span>
+                  <span style="font-size:15px;line-height:1.55;font-weight:500;">${q1}</span>
+                </div>
+                <div class="${lang2.startsWith('zh') ? 'cjk-zh' : lang2 === 'ja' ? 'cjk-ja' : ''}">
+                  <span class="bi-lang-pill" style="font-size:10px;margin-right:4px;">${LANG_SHORT[lang2]}</span>
+                  <span style="font-size:15px;line-height:1.55;font-weight:500;">${q2}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `);
+    }
+
+    return `
+      <div class="bi-card">
+        ${options.title ? `<div class="eyebrow" style="margin-bottom:12px;">${options.title}</div>` : ''}
+        ${options.note ? `<p class="leader-note" style="margin-bottom:12px;">${options.note}</p>` : ''}
+        <div>${rows.join('')}</div>
+      </div>
+    `;
+  }
+
+  function renderContent() {
+    const study1 = DATA.studies[lang1][currentStudyId] || {};
+    const study2 = DATA.studies[lang2][currentStudyId] || {};
+    const sessions1 = getAllSessions(study1);
+    const sessions2 = getAllSessions(study2);
+    const sessIndex = sessions1.findIndex(s => String(s.id) === String(currentSessionId));
+    const s1 = sessions1[sessIndex] || sessions1[0] || {};
+    const s2 = sessions2[sessIndex] || sessions2[0] || {};
+
+    const steps = getStepsForSession(s1);
+    if (!steps.includes(currentStep) && currentStep !== 'finish') {
+      currentStep = steps[0] || 'cover';
+    }
+
+    // Header theme
+    const darkTop = currentStep === 'cover';
+    document.getElementById('bi-topbar').className = `bi-topbar${darkTop ? ' on-dark' : ''}`;
+
+    renderStepper(steps);
+
+    // Update bottom bar
+    const stepIdx = steps.indexOf(currentStep);
+    const isFirstStep = stepIdx <= 0;
+    const isLastStep = stepIdx === steps.length - 1;
+
+    btnPrev.style.visibility = isFirstStep ? 'hidden' : 'visible';
+    lblPrev.innerText = getI18n(lang1, 'back');
+
+    if (currentStep === 'finish') {
+      btnNext.style.display = 'none';
+      stepProgress.innerText = getI18n(lang1, 'stepFinish');
+    } else {
+      btnNext.style.display = 'inline-flex';
+      const nextStepKey = isLastStep ? 'finish' : steps[stepIdx + 1];
+      const nextLabel = isLastStep ? getI18n(lang1, 'finish') : getStepLabel(nextStepKey, lang1);
+      lblNext.innerText = nextLabel;
+      stepProgress.innerText = `${getStepLabel(currentStep, lang1)} · ${stepIdx + 1} / ${steps.length}`;
+    }
+
+    btnPrev.onclick = () => {
+      if (stepIdx > 0) setStep(steps[stepIdx - 1]);
+    };
+
+    btnNext.onclick = () => {
+      if (isLastStep) {
+        // Mark complete
+        const completedKey = `dbs.progress.${currentStudyId}`;
+        let completed = {};
+        try { completed = JSON.parse(localStorage.getItem(completedKey)) || {}; } catch(e){}
+        completed[currentSessionId] = true;
+        localStorage.setItem(completedKey, JSON.stringify(completed));
+        setStep('finish');
+      } else {
+        setStep(steps[stepIdx + 1]);
+      }
+    };
+
+    // Render Step Content
+    let body = '';
+
+    // 1. COVER STEP
+    if (currentStep === 'cover') {
+      const kicker1 = `${s1.bonus ? '[Bonus] ' : ''}${getI18n(lang1, 'sessionLabel')} ${s1.id}`;
+      const kicker2 = `${s2.bonus ? '[Bonus] ' : ''}${getI18n(lang2, 'sessionLabel')} ${s2.id}`;
+      const pill1 = s1.stage ? `<div style="margin-bottom:6px;">${stagePill(s1.stage, true)}</div>` : '';
+      const pill2 = s2.stage ? `<div style="margin-bottom:6px;">${stagePill(s2.stage, true)}</div>` : '';
+
+      const title1 = `${pill1}<div class="display" style="font-size:38px;margin-top:4px;">${s1.title || ''}</div>${s1.fitsAfter ? `<p class="leader-note" style="margin-top:8px;">${s1.fitsAfter}</p>` : ''}<p class="lead" style="margin-top:12px;">${s1.summary || ''}</p>`;
+      const title2 = `${pill2}<div class="display" style="font-size:38px;margin-top:4px;">${s2.title || ''}</div>${s2.fitsAfter ? `<p class="leader-note" style="margin-top:8px;">${s2.fitsAfter}</p>` : ''}<p class="lead" style="margin-top:12px;">${s2.summary || ''}</p>`;
+
+      const ref1 = s1.refDisplay || (s1.refs || []).join(', ');
+      const ref2 = s2.refDisplay || (s2.refs || []).join(', ');
+
+      const mv1 = s1.memoryVerse ? `
+        <div class="bi-memory-card">
+          <div class="eyebrow" style="color:var(--ink-500);">${getI18n(lang1, 'memoryVerse')}</div>
+          <div class="bi-memory-text" style="margin-top:6px;">${s1.memoryVerse.text}</div>
+          <div class="bi-memory-ref">${s1.memoryVerse.ref}</div>
+        </div>` : '';
+
+      const mv2 = s2.memoryVerse ? `
+        <div class="bi-memory-card">
+          <div class="eyebrow" style="color:var(--ink-500);">${getI18n(lang2, 'memoryVerse')}</div>
+          <div class="bi-memory-text" style="margin-top:6px;">${s2.memoryVerse.text}</div>
+          <div class="bi-memory-ref">${s2.memoryVerse.ref}</div>
+        </div>` : '';
+
+      body = `
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          ${renderBilingualBlock(`${kicker1} &middot; ${kicker2}`, title1, title2, { onDark: true })}
+          ${renderBilingualBlock(
+            `${getI18n(lang1, 'readingVerse')} &middot; ${getI18n(lang2, 'readingVerse')}`,
+            `<div class="display" style="font-size:22px;margin-bottom:8px;">${ref1}</div>${mv1}`,
+            `<div class="display" style="font-size:22px;margin-bottom:8px;">${ref2}</div>${mv2}`
+          )}
+          <div style="text-align:center;margin-top:16px;">
+            <button type="button" class="pill solid" style="margin:0 auto;height:56px;padding:0 36px;font-size:16px;" onclick="setStep('lookback')">
+              ${getI18n(lang1, 'startSession')}
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // 2. LOOK BACK STEP
+    else if (currentStep === 'lookback') {
+      const def1 = DATA.defaults[lang1] || {};
+      const def2 = DATA.defaults[lang2] || {};
+      const qList1 = (s1.lookBack && s1.lookBack.questions) || study1.methodCopy?.lookBackDefaults || def1.lookBackQuestions || [];
+      const qList2 = (s2.lookBack && s2.lookBack.questions) || study2.methodCopy?.lookBackDefaults || def2.lookBackQuestions || [];
+
+      // Check if previous session had memory verse
+      const prev1 = sessIndex > 0 ? sessions1[sessIndex - 1] : null;
+      const prev2 = sessIndex > 0 ? sessions2[sessIndex - 1] : null;
+      let prevVerseBlock = '';
+      if (prev1 && prev1.memoryVerse && prev2 && prev2.memoryVerse) {
+        prevVerseBlock = renderBilingualBlock(
+          `${getI18n(lang1, 'lastVersePrompt')} &middot; ${getI18n(lang2, 'lastVersePrompt')}`,
+          `<div class="bi-memory-card">
+            <div class="eyebrow">${getI18n(lang1, 'memoryVerse')}</div>
+            <div class="bi-memory-text" style="margin-top:6px;">${prev1.memoryVerse.text}</div>
+            <div class="bi-memory-ref">${prev1.memoryVerse.ref}</div>
+          </div>`,
+          `<div class="bi-memory-card">
+            <div class="eyebrow">${getI18n(lang2, 'memoryVerse')}</div>
+            <div class="bi-memory-text" style="margin-top:6px;">${prev2.memoryVerse.text}</div>
+            <div class="bi-memory-ref">${prev2.memoryVerse.ref}</div>
+          </div>`
+        );
+      }
+
+      body = `
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="display lower" style="font-size:28px;display:flex;align-items:center;gap:8px;">
+            ${ICONS.back} <span>${getI18n(lang1, 'stepLookBack')} / ${getI18n(lang2, 'stepLookBack')}</span>
+          </div>
+          ${s1.lookBack && s1.lookBack.note ? renderBilingualBlock(
+            null,
+            `<p class="leader-note">${s1.lookBack.note}</p>`,
+            `<p class="leader-note">${s2.lookBack?.note || s1.lookBack.note}</p>`
+          ) : ''}
+          ${renderParallelList(qList1, qList2, {
+            title: `${getI18n(lang1, 'stepLookBack')} · ${getI18n(lang2, 'stepLookBack')}`,
+            note: getI18n(lang1, 'selectFewNote')
+          })}
+          ${prevVerseBlock}
+        </div>
+      `;
+    }
+
+    // 3. LOOK UP STEP
+    else if (currentStep === 'lookup') {
+      const def1 = DATA.defaults[lang1] || {};
+      const def2 = DATA.defaults[lang2] || {};
+      const discQ1 = s1.discoveryQuestions || study1.methodCopy?.discoveryQuestions || def1.discoveryQuestions || [];
+      const discQ2 = s2.discoveryQuestions || study2.methodCopy?.discoveryQuestions || def2.discoveryQuestions || [];
+
+      const prayer1 = s1.lookUpPrayer || def1.defaultLookUpPrayer || "Pray together";
+      const prayer2 = s2.lookUpPrayer || def2.defaultLookUpPrayer || "Pray together";
+
+      // Video Support
+      let readingContent1 = '';
+      let readingContent2 = '';
+
+      if (s1.video || s2.video) {
+        const v1 = s1.video || {};
+        const v2 = s2.video || v1;
+        readingContent1 = `
+          <div class="card" style="border-style:dashed;">
+            <span class="eyebrow">${getI18n(lang1, 'watchTogether')}</span>
+            <p style="font-size:14.5px;line-height:1.6;margin-top:8px;">${v1.desc || ''}</p>
+            <a class="pill solid" style="margin-top:14px;height:44px;font-size:14px;" href="${v1.url}" target="_blank" rel="noopener noreferrer">${v1.linkText || getI18n(lang1, 'watchFilm')} &rarr;</a>
+          </div>
+        `;
+        readingContent2 = `
+          <div class="card" style="border-style:dashed;">
+            <span class="eyebrow">${getI18n(lang2, 'watchTogether')}</span>
+            <p style="font-size:14.5px;line-height:1.6;margin-top:8px;">${v2.desc || v1.desc || ''}</p>
+            <a class="pill solid" style="margin-top:14px;height:44px;font-size:14px;" href="${v2.url || v1.url}" target="_blank" rel="noopener noreferrer">${v2.linkText || getI18n(lang2, 'watchFilm')} &rarr;</a>
+          </div>
+        `;
+      } else {
+        const ref1 = s1.refDisplay || (s1.refs || []).join(', ');
+        const ref2 = s2.refDisplay || (s2.refs || []).join(', ');
+
+        const storyBlock1 = s1.story ? `
+          <div style="margin-top:10px;padding:10px 14px;background:var(--cream-100);border-radius:10px;">
+            <div style="font-size:11px;font-weight:700;color:var(--ink-500);text-transform:uppercase;">${getI18n(lang1, 'readStory')}</div>
+            <div style="font-size:16px;font-weight:700;margin:2px 0 4px;">${(s1.story.refs || []).join(', ')}</div>
+            ${s1.story.note ? `<p style="font-size:13px;color:var(--ink-700);">${s1.story.note}</p>` : ''}
+          </div>` : '';
+
+        const storyBlock2 = s2.story ? `
+          <div style="margin-top:10px;padding:10px 14px;background:var(--cream-100);border-radius:10px;">
+            <div style="font-size:11px;font-weight:700;color:var(--ink-500);text-transform:uppercase;">${getI18n(lang2, 'readStory')}</div>
+            <div style="font-size:16px;font-weight:700;margin:2px 0 4px;">${(s2.story.refs || []).join(', ')}</div>
+            ${s2.story.note ? `<p style="font-size:13px;color:var(--ink-700);">${s2.story.note}</p>` : ''}
+          </div>` : '';
+
+        readingContent1 = `
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="font-size:20px;font-weight:700;color:var(--ink-900);">${ref1}</div>
+            ${storyBlock1}
+            ${s1.noBibleNote ? `<p class="leader-note">${s1.noBibleNote}</p>` : ''}
+            <div style="font-size:14.5px;line-height:1.5;">${getI18n(lang1, 'stepRead')}</div>
+            <div style="font-size:14.5px;line-height:1.5;">${getI18n(lang1, 'stepRetell')}</div>
+            <div style="font-size:14.5px;line-height:1.5;">${getI18n(lang1, 'stepCheck')}</div>
+          </div>
+        `;
+        readingContent2 = `
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="font-size:20px;font-weight:700;color:var(--ink-900);">${ref2}</div>
+            ${storyBlock2}
+            ${s2.noBibleNote ? `<p class="leader-note">${s2.noBibleNote}</p>` : ''}
+            <div style="font-size:14.5px;line-height:1.5;">${getI18n(lang2, 'stepRead')}</div>
+            <div style="font-size:14.5px;line-height:1.5;">${getI18n(lang2, 'stepRetell')}</div>
+            <div style="font-size:14.5px;line-height:1.5;">${getI18n(lang2, 'stepCheck')}</div>
+          </div>
+        `;
+      }
+
+      let leaderNoteBlock = '';
+      if (s1.leaderNote || s2.leaderNote) {
+        leaderNoteBlock = renderBilingualBlock(
+          `Background / 帶領者背景參考`,
+          `<p class="leader-note">${s1.leaderNote || ''}</p>`,
+          `<p class="leader-note">${s2.leaderNote || s1.leaderNote || ''}</p>`
+        );
+      }
+
+      body = `
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="display lower" style="font-size:28px;display:flex;align-items:center;gap:8px;">
+            ${ICONS.up} <span>${getI18n(lang1, 'stepLookUp')} / ${getI18n(lang2, 'stepLookUp')}</span>
+          </div>
+          ${renderBilingualBlock(
+            `${getI18n(lang1, 'prayTogether')}`,
+            `<p style="font-size:14.5px;line-height:1.6;">${prayer1}</p>`,
+            `<p style="font-size:14.5px;line-height:1.6;">${prayer2}</p>`
+          )}
+          ${renderBilingualBlock(
+            `${s1.story ? getI18n(lang1, 'readCommand') : getI18n(lang1, 'openBible')} / ${s2.story ? getI18n(lang2, 'readCommand') : getI18n(lang2, 'openBible')}`,
+            readingContent1,
+            readingContent2
+          )}
+          ${renderParallelList(discQ1, discQ2, {
+            title: `${getI18n(lang1, 'discover')} &middot; ${getI18n(lang2, 'discover')}`
+          })}
+          ${leaderNoteBlock}
+        </div>
+      `;
+    }
+
+    // 4. LOOK FORWARD STEP
+    else if (currentStep === 'lookforward') {
+      const def1 = DATA.defaults[lang1] || {};
+      const def2 = DATA.defaults[lang2] || {};
+      const respItems1 = study1.methodCopy?.respondItems || def1.respondItems || [];
+      const respItems2 = study2.methodCopy?.respondItems || def2.respondItems || [];
+
+      const ideaBlock = s1.lookForwardIdea ? renderBilingualBlock(
+        `${getI18n(lang1, 'oneIdea')} &middot; ${getI18n(lang2, 'oneIdea')}`,
+        `<p style="font-size:15px;line-height:1.6;">${s1.lookForwardIdea}</p>`,
+        `<p style="font-size:15px;line-height:1.6;">${s2.lookForwardIdea || s1.lookForwardIdea}</p>`
+      ) : '';
+
+      const templateBlock = study1.lookForwardTemplate ? renderBilingualBlock(
+        `${getI18n(lang1, 'turnIntoGoal')} &middot; ${getI18n(lang2, 'turnIntoGoal')}`,
+        `<p style="font-size:14.5px;line-height:1.55;font-style:italic;">${study1.lookForwardTemplate}</p>`,
+        `<p style="font-size:14.5px;line-height:1.55;font-style:italic;">${study2.lookForwardTemplate || study1.lookForwardTemplate}</p>`
+      ) : '';
+
+      const promiseBlock = s1.promiseVerse ? renderBilingualBlock(
+        `${getI18n(lang1, 'promiseVerse')} &middot; ${getI18n(lang2, 'promiseVerse')}`,
+        `<div class="bi-memory-card">
+          <div class="bi-memory-text">${s1.promiseVerse.text}</div>
+          <div class="bi-memory-ref">${s1.promiseVerse.ref}</div>
+        </div>`,
+        `<div class="bi-memory-card">
+          <div class="bi-memory-text">${s2.promiseVerse?.text || s1.promiseVerse.text}</div>
+          <div class="bi-memory-ref">${s2.promiseVerse?.ref || s1.promiseVerse.ref}</div>
+        </div>`
+      ) : '';
+
+      const practiceBlock = s1.trainingAction ? renderBilingualBlock(
+        `${getI18n(lang1, 'practice')} &middot; ${getI18n(lang2, 'practice')}`,
+        `<p style="font-size:14.5px;line-height:1.6;">${s1.trainingAction}</p>`,
+        `<p style="font-size:14.5px;line-height:1.6;">${s2.trainingAction || s1.trainingAction}</p>`
+      ) : '';
+
+      const shareBlock = renderBilingualBlock(
+        `${getI18n(lang1, 'shareIt')} &middot; ${getI18n(lang2, 'shareIt')}`,
+        `<p style="font-size:15px;font-weight:600;">${getI18n(lang1, 'shareQuestion')}</p>`,
+        `<p style="font-size:15px;font-weight:600;">${getI18n(lang2, 'shareQuestion')}</p>`
+      );
+
+      const prayerNote1 = s1.prayerNote || def1.defaultPrayerNote || "Pray for each other.";
+      const prayerNote2 = s2.prayerNote || def2.defaultPrayerNote || "Pray for each other.";
+      const prayerBlock = renderBilingualBlock(
+        `${getI18n(lang1, 'prayEachOther')} &middot; ${getI18n(lang2, 'prayEachOther')}`,
+        `<p style="font-size:14.5px;line-height:1.6;">${prayerNote1}</p>`,
+        `<p style="font-size:14.5px;line-height:1.6;">${prayerNote2}</p>`
+      );
+
+      body = `
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="display lower" style="font-size:28px;display:flex;align-items:center;gap:8px;">
+            ${ICONS.forward} <span>${getI18n(lang1, 'stepLookForward')} / ${getI18n(lang2, 'stepLookForward')}</span>
+          </div>
+          ${renderParallelList(respItems1, respItems2, {
+            title: `${getI18n(lang1, 'responsePrompt')} &middot; ${getI18n(lang2, 'responsePrompt')}`
+          })}
+          ${ideaBlock}
+          ${templateBlock}
+          ${promiseBlock}
+          ${practiceBlock}
+          ${shareBlock}
+          ${prayerBlock}
+        </div>
+      `;
+    }
+
+    // 5. BETWEEN SESSIONS READING STEP
+    else if (currentStep === 'reading') {
+      const bs1 = s1.betweenSessions || {};
+      const bs2 = s2.betweenSessions || {};
+      const days1 = bs1.days || (bs1.ref ? [{ ref: bs1.ref, desc: bs1.desc }] : []);
+      const days2 = bs2.days || (bs2.ref ? [{ ref: bs2.ref, desc: bs2.desc }] : []);
+
+      const daysRows = days1.map((d1, i) => {
+        const d2 = days2[i] || {};
+        return renderBilingualBlock(
+          `Day ${i+1}`,
+          `<div style="font-size:15px;line-height:1.6;"><strong>${d1.ref}.</strong> ${d1.desc}</div>`,
+          `<div style="font-size:15px;line-height:1.6;"><strong>${d2.ref || d1.ref}.</strong> ${d2.desc || d1.desc}</div>`
+        );
+      }).join('');
+
+      body = `
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="display lower" style="font-size:28px;">
+            ${getI18n(lang1, 'betweenTitle')} / ${getI18n(lang2, 'betweenTitle')}
+          </div>
+          ${daysRows}
+        </div>
+      `;
+    }
+
+    // 6. FINISH SCREEN
+    else if (currentStep === 'finish') {
+      const fin1 = study1.finishCopy || DATA.defaults[lang1]?.finishCopy || {};
+      const fin2 = study2.finishCopy || DATA.defaults[lang2]?.finishCopy || {};
+      const nextSess = sessions1[sessIndex + 1];
+
+      body = `
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          ${renderBilingualBlock(
+            `Course Complete &middot; 聚會完成`,
+            `<div class="display" style="font-size:36px;">${fin1.heading || 'Well Done'}</div><p class="lead" style="margin-top:14px;">${fin1.body || ''}</p>`,
+            `<div class="display" style="font-size:36px;">${fin2.heading || '做得好'}</div><p class="lead" style="margin-top:14px;">${fin2.body || ''}</p>`,
+            { onDark: true }
+          )}
+
+          ${renderBilingualBlock(
+            `Next Steps &middot; 下一步`,
+            `<p style="font-size:14.5px;line-height:1.6;">${fin1.leadSomeoneElse || ''}</p>`,
+            `<p style="font-size:14.5px;line-height:1.6;">${fin2.leadSomeoneElse || ''}</p>`
+          )}
+
+          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:16px;">
+            ${nextSess ? `
+              <button type="button" class="pill solid" style="height:54px;padding:0 30px;font-size:15px;" onclick="selectSession('${nextSess.id}')">
+                ${getI18n(lang1, 'nextSession')} (${nextSess.id})
+              </button>` : `
+              <button type="button" class="pill solid" style="height:54px;padding:0 30px;font-size:15px;" onclick="openModal()">
+                ${getI18n(lang1, 'courseComplete')}
+              </button>`}
+            <button type="button" class="pill ghost" style="height:54px;padding:0 26px;font-size:15px;" onclick="openModal()">
+              ${getI18n(lang1, 'allSessions')}
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    mainArea.innerHTML = body;
+  }
+
+  // Event Listeners
+  selLang1.value = lang1;
+  selLang2.value = lang2;
+  badgeLang1.innerText = LANG_SHORT[lang1];
+  badgeLang2.innerText = LANG_SHORT[lang2];
+
+  selLang1.addEventListener('change', () => {
+    lang1 = selLang1.value;
+    badgeLang1.innerText = LANG_SHORT[lang1];
+    localStorage.setItem('dbs.bilingual.lang1', lang1);
+    populateStudyDropdown();
+    populateSessionDropdown();
+    syncURL();
+    renderContent();
+  });
+
+  selLang2.addEventListener('change', () => {
+    lang2 = selLang2.value;
+    badgeLang2.innerText = LANG_SHORT[lang2];
+    localStorage.setItem('dbs.bilingual.lang2', lang2);
+    populateStudyDropdown();
+    populateSessionDropdown();
+    syncURL();
+    renderContent();
+  });
+
+  btnSwap.addEventListener('click', () => {
+    const tmp = lang1;
+    lang1 = lang2;
+    lang2 = tmp;
+    selLang1.value = lang1;
+    selLang2.value = lang2;
+    badgeLang1.innerText = LANG_SHORT[lang1];
+    badgeLang2.innerText = LANG_SHORT[lang2];
+    localStorage.setItem('dbs.bilingual.lang1', lang1);
+    localStorage.setItem('dbs.bilingual.lang2', lang2);
+    populateStudyDropdown();
+    populateSessionDropdown();
+    syncURL();
+    renderContent();
+  });
+
+  selStudy.addEventListener('change', () => {
+    currentStudyId = selStudy.value;
+    currentSessionId = '1';
+    currentStep = 'cover';
+    populateSessionDropdown();
+    syncURL();
+    renderContent();
+  });
+
+  selSession.addEventListener('change', () => {
+    currentSessionId = selSession.value;
+    currentStep = 'cover';
+    syncURL();
+    renderContent();
+  });
+
+  btnJourney.addEventListener('click', openModal);
+
+  function updateLayoutButton() {
+    if (layoutMode === 'side-by-side') {
+      layoutIcon.innerText = '☷';
+      layoutText.innerText = getI18n(lang1, 'sideBySide');
+      btnToggleLayout.classList.remove('active');
+    } else {
+      layoutIcon.innerText = '☰';
+      layoutText.innerText = getI18n(lang1, 'stacked');
+      btnToggleLayout.classList.add('active');
+    }
+  }
+
+  btnToggleLayout.addEventListener('click', () => {
+    layoutMode = layoutMode === 'side-by-side' ? 'stacked' : 'side-by-side';
+    localStorage.setItem('dbs.bilingual.layout', layoutMode);
+    updateLayoutButton();
+    syncURL();
+    renderContent();
+  });
+
+  btnToggleFont.addEventListener('click', () => {
+    fontSizeLarge = !fontSizeLarge;
+    if (fontSizeLarge) {
+      document.body.classList.add('font-large');
+      localStorage.setItem('dbs.bilingual.font', 'large');
+      btnToggleFont.classList.add('active');
+    } else {
+      document.body.classList.remove('font-large');
+      localStorage.setItem('dbs.bilingual.font', 'normal');
+      btnToggleFont.classList.remove('active');
+    }
+  });
+
+  // Keyboard navigation
+  window.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+    if (e.key === 'ArrowRight') {
+      btnNext.click();
+    } else if (e.key === 'ArrowLeft') {
+      btnPrev.click();
+    } else if (e.key === 's' || e.key === 'S') {
+      btnSwap.click();
+    }
+  });
+
+  // Initial setup
+  populateStudyDropdown();
+  populateSessionDropdown();
+  updateLayoutButton();
+  renderContent();
+
+})();
+</script>
+</body>
+</html>
