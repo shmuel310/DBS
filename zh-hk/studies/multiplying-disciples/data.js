@@ -66,15 +66,15 @@ window.STUDY = {
       ],
       "summary": "施洗約翰的兩個門徒聽見他的見證就跟從了耶穌。安得烈帶哥哥彼得來見耶穌，腓力帶拿但業來：『你們來看！』",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last week&rdquo; yet, so start here instead.",
+        "note": "仲未有「上個星期」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "How did you find the pre-reading, Jesus growing up, John preparing the way, his baptism and temptation?",
-          "What are you hoping to get out of these seventeen weeks together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "你讀完課前預備閱讀（耶穌成長、約翰預備道路、耶穌受洗與受試探）之後，有咩感受同體會？",
+          "你期望喺呢十七個星期中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰明白這個故事。",
       "leaderNote": "These disciples don&rsquo;t come from nowhere, Andrew and John were already John the Baptist&rsquo;s own disciples, and it&rsquo;s John himself who points them toward Jesus. &ldquo;Come and you will see&rdquo; becomes the pattern the rest of the chapter repeats: Andrew tells Peter, Philip tells Nathanael.",
       "lookForwardIdea": "an example to follow is Andrew and Philip, both of whom go straight and get someone else the moment they&rsquo;ve found Jesus themselves. Who&rsquo;s the first person you&rsquo;d want to say &ldquo;come and see&rdquo; to this week?",
       "memoryVerse": {

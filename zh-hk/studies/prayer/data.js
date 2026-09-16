@@ -35,15 +35,15 @@ window.STUDY = {
       ],
       "summary": "耶穌教導門徒不可像假冒為善的人愛站在十字路口禱告，要進內屋關上門禱告暗中的父。祂傳授了範本主禱文。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What does your own prayer life actually look like at the moment?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "你目前自己嘅禱告生活，實際上係點樣嘅？",
+          "你期望喺呢十次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this passage clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰領會這段經文。",
       "leaderNote": "The &ldquo;hypocrites&rdquo; Jesus describes were praying to be seen, on street corners, in synagogues, in public view. His alternative isn&rsquo;t a longer or fancier prayer, it&rsquo;s a shorter, plainer one, prayed in private. The forgiveness line (v14&ndash;15) isn&rsquo;t a footnote, Jesus circles back to underline it specifically.",
       "lookForwardIdea": "a command to obey is praying this prayer slowly, phrase by phrase, sometime this week rather than rushing past it. Which line in it actually cuts closest to home for you right now?",
       "memoryVerse": {

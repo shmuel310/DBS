@@ -22,10 +22,10 @@ window.STUDY = {
     "lookUpBlurb": "大声朗读经文，用自己的话重述故事，确保大家都掌握了完整情节，然后由核心问题引导深入发现。",
     "lookForwardBlurb": "将你所发现的转化为生命的实际回应：一项行为改变、一个信靠的应许、一个效法的榜样，或者一条顺服的命令，并为彼此祷告。",
     "lookBackDefaults": [
-      "What are you thankful for this week?",
-      "What&rsquo;s a challenge you&rsquo;re facing right now?",
-      "How did we go applying the insights from last time?",
-      "How did we go sharing our insights from last time?"
+      "这周你有什么感恩的事？",
+      "你现在正面临什么挑战或难处？",
+      "上次聚会的应用实践得怎么样？",
+      "上次的心得和他人分享得怎么样？"
     ]
   },
   "finishCopy": {
@@ -43,15 +43,15 @@ window.STUDY = {
       ],
       "summary": "前有红海后有埃及追兵，以色列民陷入绝境恐惧。摩西吩咐百姓：“不要惧怕，只管站住！看耶和华今天向你们所要施行的救恩。”神分开红海带领百姓走干地而过。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "还没有“上次聚会”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s something you&rsquo;re genuinely afraid of, big or small?",
-          "What are you hoping to get out of these twelve sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "无论大事小事，有什么事是你内心真正感到害怕的？",
+          "你期望在这一起度过的十二次聚会中有什么收获？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "从来没有出声祷告过？一句话就足够了。为刚才交流中提到的一件事感谢神，然后求圣灵帮助大家在读经时清晰地理解这个故事。",
       "leaderNote": "This is Israel&rsquo;s first major test of faith after leaving Egypt, trapped with a mountain range on one side, the sea on the other, and the most powerful army of their time closing in behind them. Notice the people&rsquo;s fear isn&rsquo;t treated as weakness, God moves in response to it, not in spite of them expressing it.",
       "lookForwardIdea": "a promise to trust is that God fights for you when you can&rsquo;t fight for yourself. What&rsquo;s the situation this week where you feel trapped, with no way forward?",
       "promiseVerse": {

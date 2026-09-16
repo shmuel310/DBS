@@ -31,13 +31,13 @@ window.STUDY = {
       ],
       "summary": "山上で弟子たちに教えられた八福：心の貧しい者、悲しむ者、柔和な者、義に飢え渇く者、あわれみ深い者、心の清い者、平和をつくる者、義のために迫害される者。天の御国の価値観です。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What led you to start following Jesus, or to want to learn more?",
-          "What are you hoping to get out of these eight sessions together?",
-          "What are you thankful for this week?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "何をきっかけにイエスに従い始めましたか？または、もっと知りたいと思うようになりましたか？",
+          "これから8回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "今週、感謝していることは何ですか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
       "leaderNote": "The Sermon on the Mount is delivered on a Galilean hillside, echoing Moses receiving the law on a mountain, but here Jesus teaches with his own authority, &ldquo;but I say to you.&rdquo; The Beatitudes aren&rsquo;t requirements to earn blessing, they&rsquo;re a description of what kingdom life already looks like.",

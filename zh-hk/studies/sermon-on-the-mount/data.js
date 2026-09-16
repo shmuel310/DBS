@@ -31,13 +31,13 @@ window.STUDY = {
       ],
       "summary": "耶穌上山開口教導門徒八福：虛心、哀慟、溫柔、飢渴慕義、憐恤人、清心、使人和睦、為義受逼迫。天國完全顛覆了世人的價值觀。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What led you to start following Jesus, or to want to learn more?",
-          "What are you hoping to get out of these eight sessions together?",
-          "What are you thankful for this week?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "係咩引導你開始跟隨耶穌，或者想了解更多？",
+          "你期望喺呢八次聚會中一齊有咩收穫？",
+          "今個星期你有咩感恩嘅事？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
       "leaderNote": "The Sermon on the Mount is delivered on a Galilean hillside, echoing Moses receiving the law on a mountain, but here Jesus teaches with his own authority, &ldquo;but I say to you.&rdquo; The Beatitudes aren&rsquo;t requirements to earn blessing, they&rsquo;re a description of what kingdom life already looks like.",

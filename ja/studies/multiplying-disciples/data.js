@@ -66,15 +66,15 @@ window.STUDY = {
       ],
       "summary": "バプテスマのヨハネの弟子二人がイエスに従います。アンデレは兄ペテロを連れて来て、ピリポはナタナエルに「来て、見なさい」と招きます。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last week&rdquo; yet, so start here instead.",
+        "note": "まだ「先週」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "How did you find the pre-reading, Jesus growing up, John preparing the way, his baptism and temptation?",
-          "What are you hoping to get out of these seventeen weeks together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "事前読書（イエスの成長、道を備えるヨハネ、バプテスマと荒野の誘惑）を読んでみて、どのように感じましたか？",
+          "これから17週間の歩みを共にする中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの物語を深く理解できるよう聖霊に助けを求めましょう。",
       "leaderNote": "These disciples don&rsquo;t come from nowhere, Andrew and John were already John the Baptist&rsquo;s own disciples, and it&rsquo;s John himself who points them toward Jesus. &ldquo;Come and you will see&rdquo; becomes the pattern the rest of the chapter repeats: Andrew tells Peter, Philip tells Nathanael.",
       "lookForwardIdea": "an example to follow is Andrew and Philip, both of whom go straight and get someone else the moment they&rsquo;ve found Jesus themselves. Who&rsquo;s the first person you&rsquo;d want to say &ldquo;come and see&rdquo; to this week?",
       "memoryVerse": {

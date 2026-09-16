@@ -22,10 +22,10 @@ window.STUDY = {
     "lookUpBlurb": "出聲朗讀經文，用自己嘅說話重述故事，確保大家都掌握整體情節，然後由核心問題引導深入發現。",
     "lookForwardBlurb": "將你所發現嘅轉化為生命嘅實際回應：一項行為改變、一個信靠嘅應許、一個效法嘅榜樣，或者一條順服嘅命令，並為彼此禱告。",
     "lookBackDefaults": [
-      "What are you thankful for this week?",
-      "What&rsquo;s a challenge you&rsquo;re facing right now?",
-      "How did we go applying the insights from last time?",
-      "How did we go sharing our insights from last time?"
+      "今個星期你有咩感恩嘅事？",
+      "你而家面對緊咩挑戰或難處？",
+      "上次實踐嘅心得，進行成點？",
+      "上次同人分享嘅心得，進行成點？"
     ]
   },
   "finishCopy": {
@@ -43,15 +43,15 @@ window.STUDY = {
       ],
       "summary": "前有紅海後有埃及追兵，以色列民陷入絕境恐懼。摩西吩咐百姓：「不要懼怕，只管站住！看耶和華今天向你們所要施行的救恩。」神分開紅海帶領百姓走乾地而過。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s something you&rsquo;re genuinely afraid of, big or small?",
-          "What are you hoping to get out of these twelve sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "無論事大事細，有咩事係你真正感到害怕嘅？",
+          "你期望喺呢十二次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰明白這個故事。",
       "leaderNote": "This is Israel&rsquo;s first major test of faith after leaving Egypt, trapped with a mountain range on one side, the sea on the other, and the most powerful army of their time closing in behind them. Notice the people&rsquo;s fear isn&rsquo;t treated as weakness, God moves in response to it, not in spite of them expressing it.",
       "lookForwardIdea": "a promise to trust is that God fights for you when you can&rsquo;t fight for yourself. What&rsquo;s the situation this week where you feel trapped, with no way forward?",
       "promiseVerse": {

@@ -35,15 +35,15 @@ window.STUDY = {
       ],
       "summary": "拿俄米在摩押地痛失丈夫與二子，決定返回伯利恆。兒婦路得定意跟隨，誓言：「你的國就是我的國，你的神就是我的神。」滿滿出去、空空回來的拿俄米在動盪中重踏故土。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "Have you ever had to start over somewhere unfamiliar? What was that like?",
-          "What are you hoping to get out of these five sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "你有冇試過喺一個陌生嘅地方重新開始？當時嘅經歷係點樣嘅？",
+          "你期望喺呢五次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰明白這個故事。",
       "leaderNote": "Moab and Israel had a long, hostile history, Ruth is about as much of an outsider as the story could choose. Naomi&rsquo;s own words frame the chapter: she went away full, and comes back empty, which is exactly the emptiness the rest of the book will slowly fill.",
       "lookForwardIdea": "an example to follow is Ruth&rsquo;s loyalty, choosing to stay when leaving would have been easier and safer. Is there a relationship right now where staying, rather than leaving, is the harder and more faithful choice?",
       "memoryVerse": {

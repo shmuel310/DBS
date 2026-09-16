@@ -22,10 +22,10 @@ window.STUDY = {
     "lookUpBlurb": "聖書を声に出して読み、自分の言葉で物語を言い直し、核心の問いを通して深く掘り下げます。",
     "lookForwardBlurb": "発見したことを実際の生活への応答へと変え、具体的な目標を立てて互いのために祈り合います。",
     "lookBackDefaults": [
-      "What are you thankful for this week?",
-      "What&rsquo;s a challenge you&rsquo;re facing right now?",
-      "How did we go applying the insights from last time?",
-      "How did we go sharing our insights from last time?"
+      "今週、感謝していることは何ですか？",
+      "今、直面している課題や困難は何ですか？",
+      "前回気づいたことを、どのように実践できましたか？",
+      "前回気づいたことを、誰かと分かち合えましたか？"
     ]
   },
   "finishCopy": {
@@ -43,15 +43,15 @@ window.STUDY = {
       ],
       "summary": "前に紅海、後ろにエジプト軍という絶体絶命の危機。モーセは民に語ります。「恐れてはならない。しっかり立って、今日あなた方のために行われる主の救いを見なさい。」主は海を分け、乾いた地を渡らせられました。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s something you&rsquo;re genuinely afraid of, big or small?",
-          "What are you hoping to get out of these twelve sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "大きなことでも小さなことでも、あなたが心から恐れていることは何ですか？",
+          "これから12回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの物語を深く理解できるよう聖霊に助けを求めましょう。",
       "leaderNote": "This is Israel&rsquo;s first major test of faith after leaving Egypt, trapped with a mountain range on one side, the sea on the other, and the most powerful army of their time closing in behind them. Notice the people&rsquo;s fear isn&rsquo;t treated as weakness, God moves in response to it, not in spite of them expressing it.",
       "lookForwardIdea": "a promise to trust is that God fights for you when you can&rsquo;t fight for yourself. What&rsquo;s the situation this week where you feel trapped, with no way forward?",
       "promiseVerse": {

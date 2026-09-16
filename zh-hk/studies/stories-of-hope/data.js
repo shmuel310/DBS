@@ -21,10 +21,10 @@ window.STUDY = {
     "lookUpBlurb": "出聲朗讀經文，用自己嘅說話重述故事，確保大家都掌握整體情節，然後由核心問題引導深入反思。",
     "lookForwardBlurb": "將你所發現嘅轉化為生命嘅實際回應：一項行為改變、一個信靠嘅應許、一個效法嘅榜樣，或者一條順服嘅命令，並為彼此禱告。",
     "lookBackDefaults": [
-      "What are you thankful for this week?",
-      "What&rsquo;s a challenge you&rsquo;re facing right now?",
-      "How did we go applying the insights from last time?",
-      "How did we go sharing our insights from last time?"
+      "今個星期你有咩感恩嘅事？",
+      "你而家面對緊咩挑戰或難處？",
+      "上次實踐嘅心得，進行成點？",
+      "上次同人分享嘅心得，進行成點？"
     ]
   },
   "finishCopy": {
@@ -42,15 +42,15 @@ window.STUDY = {
       ],
       "summary": "耶穌醫治癱子並赦免其罪，隨後呼召稅吏利未，並與罪人和稅吏一同坐席。祂宣明自己來本不是召義人，乃是召罪人。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What does &ldquo;hope&rdquo; mean to you right now, in this season of your life?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "喺你人生目前呢個階段，「盼望」對你嚟講意味著咩？",
+          "你期望喺呢十次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰明白這個故事。",
       "leaderNote": "Tax collectors were considered traitors, working for Rome and often skimming extra for themselves. Jesus doesn&rsquo;t wait for Levi to clean up his life first, he simply says &ldquo;follow me,&rdquo; and Levi throws a party.",
       "lookForwardIdea": "a promise to trust is that Jesus came for the sick, not the healthy, for sinners, not the righteous. Is there a part of you that&rsquo;s been keeping distance from Jesus because you don&rsquo;t feel &ldquo;good enough&rdquo; to come to the table?",
       "memoryVerse": {

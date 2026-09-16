@@ -38,13 +38,13 @@ window.STUDY = {
       ],
       "summary": "保罗在捆锁中为腓立比信徒欢欢喜喜地祈求，深信那在他们心里动了善工的，必成全这工，直到耶稣基督的日子。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last week&rdquo; yet, so start here instead.",
+        "note": "还没有“上周”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What led you to start following Jesus, or to want to learn more?",
-          "What are you hoping to get out of these six weeks together?",
-          "What are you thankful for this week?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "是什么引导你开始跟随耶稣，或是想要了解更多？",
+          "你期望在这一起度过的六周里有什么收获？",
+          "这周你有什么感恩的事？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
       "leaderNote": "Paul wrote this letter from prison to a church he loved, the Christians in the city of Philippi. He wasn&rsquo;t writing as a distant leader, he was writing as a close friend. Verse 6 is a promise, not a task list: the growth God has started in someone isn&rsquo;t a test they might fail, it&rsquo;s a project he&rsquo;s already guaranteed to finish.",

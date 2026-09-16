@@ -35,15 +35,15 @@ window.STUDY = {
       ],
       "summary": "耶和华向九十九岁的亚伯兰显现立约，改其名为亚伯拉罕，应许他作多国之父，国度从他而立，君王从他而出，神要做他和他后裔的神。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "还没有“上次聚会”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What comes to mind when you hear the phrase &ldquo;the kingdom of God&rdquo;?",
-          "What are you hoping to get out of these twelve sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "当你听到“神的国”这个词时，你脑海中首先浮现出什么？",
+          "你期望在这一起度过的十二次聚会中有什么收获？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this passage clearly.",
+      "lookUpPrayer": "从来没有出声祷告过？一句话就足够了。为刚才交流中提到的一件事感谢神，然后求圣灵帮助大家在读经时清晰地领会这段经文。",
       "leaderNote": "This is God committing himself to a specific family, and through them, eventually, a kingdom and a king. Everything that follows, Israel, David&rsquo;s throne, Jesus himself, traces back to this one covenant with one man.",
       "lookForwardIdea": "a promise to trust is that God keeps covenants across centuries, even when it looks impossible from where you&rsquo;re standing. What promise of God do you need to keep trusting even though you can&rsquo;t yet see how it plays out?",
       "memoryVerse": {

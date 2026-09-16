@@ -49,15 +49,15 @@ window.STUDY = {
       ],
       "summary": "神は土のちりで人を造り、命の息を吹き込み、園を耕し守るように置かれ、ふさわしい助け手として女性を創造されました。すべては甚だ良く、二人は裸であっても恥じらいませんでした。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "Why do you want to get to know God better? What have you already experienced with God?",
-          "What are your expectations? What do you hope to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "なぜ神をもっとよく知りたいと思いますか？これまでに神についてどのような体験をしてきましたか？",
+          "どのような期待を持っていますか？この10回のセッションを通して何を得たいですか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see him clearly as you read.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中で神をはっきりと知ることができるよう聖霊に助けを求めましょう。",
       "leaderNote": "Genesis 2 is a close-up on day six of creation: two intertwined trees (life, and the knowledge of good and evil), a garden to tend, and one command with real freedom attached. The word translated &ldquo;helper&rdquo; for the woman is the same word used elsewhere for God himself, it&rsquo;s a term of strength, not weakness.",
       "lookForwardIdea": "a promise to claim is that you&rsquo;re not an accident, God made you and called it very good. Where do you need to believe that about yourself this week?",
       "memoryVerse": {
@@ -153,14 +153,14 @@ window.STUDY = {
       "video": {
         "desc": "Watch a film telling the story of Jesus together, from his mission and teaching through to his trial and death. The JESUS Film runs about two hours, if you&rsquo;re short on time, starting from around the one-hour mark still covers his trial and death well.",
         "url": "https://www.jesusfilm.org/watch/jesus.html/english.html",
-        "linkText": "watch the JESUS film"
+        "linkText": "映画『JESUS（イエス）』を見る"
       },
       "discoveryQuestions": [
-        "What has impressed you about what Jesus has said or done?",
-        "How does Jesus describe his own mission or purpose?",
-        "What does Jesus say will happen to him?",
-        "What is Pilate&rsquo;s attitude toward Jesus, and why does he have him punished anyway?",
-        "What does it mean to you that Jesus suffered so much for you?"
+        "イエスが語られたことや行われたことの中で、何が印象に残りましたか？",
+        "イエスはご自身の使命や目的をどのように説明していますか？",
+        "イエスはご自身に何が起こると語っていますか？",
+        "ピラトはイエスに対してどのような態度をとっていましたか？それにもかかわらず、なぜイエスを処罰させたのでしょうか？",
+        "イエスがあなたのためにこれほどの苦しみを受けられたことは、あなたにとって何を意味しますか？"
       ],
       "leaderNote": "Watching together as a group, rather than everyone separately beforehand, makes for a much richer discussion. Other options besides the JESUS Film: Life of Jesus (the Gospel of John, word for word), Son of God, The Messiah (Bible Project), or The Passion of the Christ if your group is ready for its intensity.",
       "lookForwardIdea": "a command to obey is Jesus&rsquo; call to trust him. Do you want to place your trust in Jesus today? If so, tell someone this week, or use the &lsquo;take your next step&rsquo; link at the end of this course.",

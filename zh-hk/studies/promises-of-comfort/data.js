@@ -36,15 +36,15 @@ window.STUDY = {
       ],
       "summary": "保羅和西拉被毒打下在監牢內院，兩腳上了木狗。約在半夜，他們禱告唱詩讚美神，地大震動監門全開，禁卒全家信主得救。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s a promise, from anyone, that&rsquo;s actually held firm for you?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "有冇邊個人俾你嘅承諾，係至今仍然堅定不移、切實守住嘅？",
+          "你期望喺呢十次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰明白這個故事。",
       "leaderNote": "The peace on display here isn&rsquo;t the absence of danger, they&rsquo;re still in chains, in the dark, in pain, when they start singing. It&rsquo;s that response, not the earthquake, which the other prisoners notice first, and it&rsquo;s ultimately what saves the jailer&rsquo;s life and his household&rsquo;s.",
       "lookForwardIdea": "a promise to trust is that God&rsquo;s peace can hold inside a locked, painful situation, not just after it&rsquo;s over. Where do you need that kind of peace right now, in the middle of something rather than after it?",
       "promiseVerse": {

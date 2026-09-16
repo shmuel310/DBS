@@ -36,20 +36,20 @@ window.STUDY = {
       ],
       "summary": "耶稣开始传道宣告：日期满了，神的国近了！你们当悔改，信福音。这是一切门徒生命的起点。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "还没有“上次聚会”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s one thing Jesus has said that you find easy to admire but hard to actually do?",
-          "What are you hoping to get out of these fourteen sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "耶稣所说的话中，有什么是你觉得很令人赞赏、但实际去做却很难的？",
+          "你期望在这一起度过的十四次聚会中有什么收获？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this command clearly.",
+      "lookUpPrayer": "从来没有出声祷告过？一句话就足够了。为刚才交流中提到的一件事感谢神，然后求圣灵帮助大家在读经时清晰地领会这条命令。",
       "leaderNote": "This is Jesus&rsquo; first recorded public statement in Mark, a summary of his whole message before any of the specific teaching or miracles that follow. The story is set at a dinner party where a sinful woman crashes in to anoint Jesus&rsquo; feet, he contrasts her extravagant response with the host&rsquo;s cold politeness: the one forgiven much loves much.",
       "lookForwardIdea": "a command to obey is turning around: is there an area of your life you know needs to change direction, not just believing but repenting?",
       "story": {
         "refs": [
-          "Luke 7:36&ndash;50"
+          "路加福音 7:36&ndash;50"
         ],
         "note": "A woman known for her sin is forgiven and responds with extravagant love, exactly what repenting and believing looks like in a real life, not just a theory."
       },
@@ -70,7 +70,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is putting your own agenda down. What&rsquo;s one plan or comfort you&rsquo;re gripping tightly that following Jesus is asking you to let go of?",
       "story": {
         "refs": [
-          "Mark 10:17&ndash;31"
+          "马可福音 10:17&ndash;31"
         ],
         "note": "A rich man asks Jesus what he still lacks, then walks away sad when Jesus names the one thing he won&rsquo;t give up. It&rsquo;s a real-life picture of what refusing to deny yourself looks like."
       },
@@ -91,7 +91,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is this one, quite literally: if you haven&rsquo;t been baptised yet, what&rsquo;s stopping you? If you have, what would it look like to actually live like your old life is finished?",
       "story": {
         "refs": [
-          "Acts 8:26&ndash;39"
+          "使徒行传 8:26&ndash;39"
         ],
         "note": "Philip explains the good news to an Ethiopian official from a passage of Isaiah, and the man asks the obvious question the moment he sees water: why shouldn&rsquo;t I be baptised?"
       },
@@ -112,7 +112,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is loving a specific person this week, not people in general. Who&rsquo;s one person you find hard to love, and what would loving them actually look like?",
       "story": {
         "refs": [
-          "Luke 10:25&ndash;37"
+          "路加福音 10:25&ndash;37"
         ],
         "note": "Asked to define &ldquo;neighbour,&rdquo; Jesus tells a story where the hero is the person everyone in his audience would have least expected."
       },
@@ -133,7 +133,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is loving other believers the way Jesus loved you, not the way you naturally would. Is there someone in this group, or your wider church family, you need to love better?",
       "story": {
         "refs": [
-          "Acts 4:32&ndash;37"
+          "使徒行传 4:32&ndash;37"
         ],
         "note": "The believers hold everything loosely, selling property to make sure no one in the community goes without. Barnabas is named as one specific example."
       },
@@ -154,7 +154,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is checking your own plank before pointing at someone else&rsquo;s speck. Who have you been quick to judge lately, and what&rsquo;s your own equivalent fault?",
       "story": {
         "refs": [
-          "John 8:1&ndash;11"
+          "约翰福音 8:1&ndash;11"
         ],
         "note": "&ldquo;Let any one of you who is without sin be the first to throw a stone.&rdquo; One by one, her accusers walk away."
       },
@@ -175,7 +175,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is flipping the question: instead of asking what you deserve from someone, ask what you&rsquo;d want if you were them.",
       "story": {
         "refs": [
-          "1 Samuel 24:1&ndash;22"
+          "撒母耳记上 24:1&ndash;22"
         ],
         "note": "David finds Saul alone and unprotected in a cave, close enough to kill him, and spares his life instead."
       },
@@ -196,7 +196,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is seeking God&rsquo;s kingdom first. What&rsquo;s the worry crowding that out for you this week, and what would it look like to hand it over instead?",
       "story": {
         "refs": [
-          "1 Kings 17:8&ndash;16"
+          "列王纪上 17:8&ndash;16"
         ],
         "note": "A widow expecting to cook her last meal before she and her son starve is asked to feed the prophet Elijah first, and trust God for the rest. The flour and oil never run out."
       },
@@ -217,7 +217,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is staying connected, not just trying harder. What&rsquo;s one practical way you can stay close to Jesus this week rather than relying on your own effort?",
       "story": {
         "refs": [
-          "Ruth 1:6&ndash;18"
+          "路得记 1:6&ndash;18"
         ],
         "note": "Naomi urges Ruth to go back to her own people. Ruth refuses: &ldquo;Where you go I will go, and where you stay I will stay.&rdquo;"
       },
@@ -240,7 +240,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is actually praying, not just meaning to. When could you build a specific, unhurried time to pray this week?",
       "story": {
         "refs": [
-          "1 Samuel 1:9&ndash;20"
+          "撒母耳记上 1:9&ndash;20"
         ],
         "note": "Hannah pours out her grief and longing to God in prayer, so fervently that Eli the priest mistakes her for drunk. Her prayer is answered."
       },
@@ -261,7 +261,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is serving someone in a way that&rsquo;s a little beneath you. Who could you serve this week that you wouldn&rsquo;t normally think to?",
       "story": {
         "refs": [
-          "John 13:1&ndash;17"
+          "约翰福音 13:1&ndash;17"
         ],
         "note": "The full scene: Jesus, knowing exactly what&rsquo;s about to happen to him, kneels to wash the feet of the very disciples who will abandon him within hours."
       },
@@ -282,7 +282,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is letting your good works be seen, not hidden out of fear or false humility. Where have you been keeping your faith too quiet?",
       "story": {
         "refs": [
-          "Daniel 6:1&ndash;23"
+          "但以理书 6:1&ndash;23"
         ],
         "note": "Daniel keeps praying openly, visible through his window, even after it&rsquo;s made illegal and he knows exactly what it will cost him."
       },
@@ -303,7 +303,7 @@ window.STUDY = {
       "lookForwardIdea": "a command to obey is remembering, deliberately, not just going through the motions. Next time you take communion, what will you actually stop to remember?",
       "story": {
         "refs": [
-          "Luke 24:13&ndash;35"
+          "路加福音 24:13&ndash;35"
         ],
         "note": "Two disciples walk for miles with the risen Jesus without recognising him, until he breaks the bread, and suddenly they see exactly who he is."
       },
@@ -325,7 +325,7 @@ window.STUDY = {
       "prayerNote": "Pray for what came up in Look Back, for each person&rsquo;s Look Forward response, and for the person they&rsquo;ll share this passage with. This is your last session together, so take extra time.",
       "story": {
         "refs": [
-          "John 4:4&ndash;42"
+          "约翰福音 4:4&ndash;42"
         ],
         "note": "A Samaritan woman with a complicated history meets Jesus at a well, then goes and tells her whole town, many of whom come to believe because of what she said."
       },

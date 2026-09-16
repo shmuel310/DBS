@@ -36,15 +36,15 @@ window.STUDY = {
       ],
       "summary": "耶穌跨越種族與性別的深重隔閡，向撒瑪利亞婦人求水喝，並啟示自己就是賜下永生活水的彌賽亞。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s a barrier, social, cultural, or personal, you&rsquo;ve noticed yourself keeping up around certain people?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "你有冇留意到自己喺面對某啲人嗰陣，會築起某種隔閡（無論係社交、文化定係個人層面嘅藩籬）？",
+          "你期望喺呢十次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰明白這個故事。",
       "leaderNote": "Jews and Samaritans normally avoided each other entirely, and a rabbi speaking alone with a woman in public was itself unusual. John notes Jesus &ldquo;had to go through Samaria&rdquo;, the shortest route, but also a deliberate choice most Jews avoided.",
       "lookForwardIdea": "an example to follow is Jesus choosing the person and the place everyone else avoided. Who&rsquo;s the person or group you&rsquo;d normally steer around, and what would crossing that barrier actually look like?",
       "memoryVerse": {

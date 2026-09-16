@@ -36,15 +36,15 @@ window.STUDY = {
       ],
       "summary": "パウロとシラスは鞭打たれ牢の奥に入れられますが、真夜中に祈り賛美歌を歌います。大地震が起き牢の扉が開き、看守一家が救われます。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s a promise, from anyone, that&rsquo;s actually held firm for you?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "誰からのものであれ、あなたにとって「確かに守られた、頼りになった約束」はありますか？",
+          "これから10回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの物語を深く理解できるよう聖霊に助けを求めましょう。",
       "leaderNote": "The peace on display here isn&rsquo;t the absence of danger, they&rsquo;re still in chains, in the dark, in pain, when they start singing. It&rsquo;s that response, not the earthquake, which the other prisoners notice first, and it&rsquo;s ultimately what saves the jailer&rsquo;s life and his household&rsquo;s.",
       "lookForwardIdea": "a promise to trust is that God&rsquo;s peace can hold inside a locked, painful situation, not just after it&rsquo;s over. Where do you need that kind of peace right now, in the middle of something rather than after it?",
       "promiseVerse": {

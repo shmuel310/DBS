@@ -36,15 +36,15 @@ window.STUDY = {
       ],
       "summary": "カナの婚宴でぶどう酒が尽きたとき、イエスは水を最高のぶどう酒に変えられました。これが最初のしるしであり、栄光を現されました。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s one thing you already believe, or wonder, about who Jesus is?",
-          "What are you hoping to get out of these eight sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "「イエスとはどのような方か」について、あなたがすでに信じていること、あるいは疑問や興味を持っていることは何ですか？",
+          "これから8回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this sign clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこのしるしを深く理解できるよう聖霊に助けを求めましょう。",
       "leaderNote": "This is the first of John&rsquo;s seven signs, and the chapter says explicitly that it revealed Jesus&rsquo; glory and led his disciples to believe in him, that&rsquo;s the whole point of a &ldquo;sign&rdquo; in John&rsquo;s Gospel: not just a miracle, but a pointer to who Jesus is. The stone jars held twenty to thirty gallons each, Jesus doesn&rsquo;t just top up the wine, he provides an overwhelming abundance.",
       "lookForwardIdea": "an example to follow is Jesus meeting an ordinary, unglamorous need generously and without fanfare. Where is God asking you to trust him with something that feels too small or embarrassing to bring to him?",
       "memoryVerse": {

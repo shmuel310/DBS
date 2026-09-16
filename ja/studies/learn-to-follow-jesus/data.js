@@ -37,15 +37,15 @@ window.STUDY = {
       "refDisplay": "2 Corinthians 5:17&ndash;21; Acts 1:8",
       "summary": "キリストにある者は新しい被造物です。神は私たちに和解の務めを託され、聖霊の力を授けて地の果てまでご自身の証人とされます。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s one thing about following Jesus you feel confident about, and one thing you feel unsure of?",
-          "What are you hoping to get out of these eight sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "イエスに従うことについて、自信を持っていることと、よくわからない（不安に感じる）ことを1つずつ教えてください。",
+          "これから8回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this passage clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの聖書箇所を深く味わえるよう聖霊に助けを求めましょう。",
       "leaderNote": "These two passages work together: 2 Corinthians 5 explains why you&rsquo;d want to tell anyone anything, you&rsquo;ve been reconciled, and given a message of reconciliation to carry, and Acts 1:8 explains how it actually happens, not by your own effort, but by the Holy Spirit&rsquo;s power.",
       "lookForwardIdea": "a command to obey is being Christ&rsquo;s ambassador wherever you already are. Who&rsquo;s the one person nearest to you, geographically or relationally, that you could actually tell this week?",
       "trainingAction": "Practice a 15-second testimony: in one breath, tell someone briefly who you were before Jesus, what changed, and who you are now. Then try the &ldquo;3 Circles&rdquo; sketch (Design &rarr; Brokenness &rarr; Gospel &rarr; Life in Jesus) with each other before you try it with someone outside the group.",

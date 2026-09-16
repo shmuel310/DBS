@@ -36,15 +36,15 @@ window.STUDY = {
       ],
       "summary": "迦拿婚宴中酒用尽了，耶稣将六口石缸的水变为上好美酒。这是祂行的头一件神迹，显出祂的荣耀来，门徒就信了祂。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "还没有“上次聚会”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s one thing you already believe, or wonder, about who Jesus is?",
-          "What are you hoping to get out of these eight sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "关于“耶稣是谁”，有什么是你已经相信、或是感到好奇想要探究的？",
+          "你期望在这一起度过的八次聚会中有什么收获？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this sign clearly.",
+      "lookUpPrayer": "从来没有出声祷告过？一句话就足够了。为刚才交流中提到的一件事感谢神，然后求圣灵帮助大家在读经时清晰地理解这个神迹。",
       "leaderNote": "This is the first of John&rsquo;s seven signs, and the chapter says explicitly that it revealed Jesus&rsquo; glory and led his disciples to believe in him, that&rsquo;s the whole point of a &ldquo;sign&rdquo; in John&rsquo;s Gospel: not just a miracle, but a pointer to who Jesus is. The stone jars held twenty to thirty gallons each, Jesus doesn&rsquo;t just top up the wine, he provides an overwhelming abundance.",
       "lookForwardIdea": "an example to follow is Jesus meeting an ordinary, unglamorous need generously and without fanfare. Where is God asking you to trust him with something that feels too small or embarrassing to bring to him?",
       "memoryVerse": {

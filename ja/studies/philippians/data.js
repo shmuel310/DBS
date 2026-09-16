@@ -38,13 +38,13 @@ window.STUDY = {
       ],
       "summary": "獄中のパウロはピリピの信徒のために喜びをもって祈り、良い働きを始められた方が、キリスト・イエスの日までに完成してくださると確信しています。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last week&rdquo; yet, so start here instead.",
+        "note": "まだ「先週」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What led you to start following Jesus, or to want to learn more?",
-          "What are you hoping to get out of these six weeks together?",
-          "What are you thankful for this week?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "何をきっかけにイエスに従い始めましたか？または、もっと知りたいと思うようになりましたか？",
+          "これから6週間の歩みを共にする中で、どのようなことを期待していますか？",
+          "今週、感謝していることは何ですか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
       "leaderNote": "Paul wrote this letter from prison to a church he loved, the Christians in the city of Philippi. He wasn&rsquo;t writing as a distant leader, he was writing as a close friend. Verse 6 is a promise, not a task list: the growth God has started in someone isn&rsquo;t a test they might fail, it&rsquo;s a project he&rsquo;s already guaranteed to finish.",

@@ -35,15 +35,15 @@ window.STUDY = {
       ],
       "summary": "耶稣教导门徒不可像假冒为善的人爱站在十字路口祷告，要进内屋关上门祷告暗中的父。祂传授了范本主祷文。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "还没有“上次聚会”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What does your own prayer life actually look like at the moment?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "你目前自己的祷告生活，实际上是怎样的？",
+          "你期望在这一起度过的十次聚会中有什么收获？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this passage clearly.",
+      "lookUpPrayer": "从来没有出声祷告过？一句话就足够了。为刚才交流中提到的一件事感谢神，然后求圣灵帮助大家在读经时清晰地领会这段经文。",
       "leaderNote": "The &ldquo;hypocrites&rdquo; Jesus describes were praying to be seen, on street corners, in synagogues, in public view. His alternative isn&rsquo;t a longer or fancier prayer, it&rsquo;s a shorter, plainer one, prayed in private. The forgiveness line (v14&ndash;15) isn&rsquo;t a footnote, Jesus circles back to underline it specifically.",
       "lookForwardIdea": "a command to obey is praying this prayer slowly, phrase by phrase, sometime this week rather than rushing past it. Which line in it actually cuts closest to home for you right now?",
       "memoryVerse": {

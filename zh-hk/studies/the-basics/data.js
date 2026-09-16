@@ -49,15 +49,15 @@ window.STUDY = {
       ],
       "summary": "神用塵土造了第一個人，吹入生命氣息，安置在伊甸園中修理看守，並造女人作為平等的伴侶。一切都甚好，二人赤身露體並不羞恥。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "Why do you want to get to know God better? What have you already experienced with God?",
-          "What are your expectations? What do you hope to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "點解你想更深入認識上帝？喺過去你對上帝有過咩經歷？",
+          "你有咩期望？你希望喺呢十次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see him clearly as you read.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰認識祂。",
       "leaderNote": "Genesis 2 is a close-up on day six of creation: two intertwined trees (life, and the knowledge of good and evil), a garden to tend, and one command with real freedom attached. The word translated &ldquo;helper&rdquo; for the woman is the same word used elsewhere for God himself, it&rsquo;s a term of strength, not weakness.",
       "lookForwardIdea": "a promise to claim is that you&rsquo;re not an accident, God made you and called it very good. Where do you need to believe that about yourself this week?",
       "memoryVerse": {
@@ -153,14 +153,14 @@ window.STUDY = {
       "video": {
         "desc": "Watch a film telling the story of Jesus together, from his mission and teaching through to his trial and death. The JESUS Film runs about two hours, if you&rsquo;re short on time, starting from around the one-hour mark still covers his trial and death well.",
         "url": "https://www.jesusfilm.org/watch/jesus.html/english.html",
-        "linkText": "watch the JESUS film"
+        "linkText": "觀看《耶穌傳》電影"
       },
       "discoveryQuestions": [
-        "What has impressed you about what Jesus has said or done?",
-        "How does Jesus describe his own mission or purpose?",
-        "What does Jesus say will happen to him?",
-        "What is Pilate&rsquo;s attitude toward Jesus, and why does he have him punished anyway?",
-        "What does it mean to you that Jesus suffered so much for you?"
+        "耶穌所說的話或所做的事中，有咩令你印象深刻？",
+        "耶穌點樣描述祂自己嘅使命或目的？",
+        "耶穌話自己將會遭遇咩事？",
+        "彼拉多對耶穌持咩態度？點解佢最終仍然決定懲罰耶穌？",
+        "耶穌為你受咗咁多苦，對你嚟講意味著咩？"
       ],
       "leaderNote": "Watching together as a group, rather than everyone separately beforehand, makes for a much richer discussion. Other options besides the JESUS Film: Life of Jesus (the Gospel of John, word for word), Son of God, The Messiah (Bible Project), or The Passion of the Christ if your group is ready for its intensity.",
       "lookForwardIdea": "a command to obey is Jesus&rsquo; call to trust him. Do you want to place your trust in Jesus today? If so, tell someone this week, or use the &lsquo;take your next step&rsquo; link at the end of this course.",

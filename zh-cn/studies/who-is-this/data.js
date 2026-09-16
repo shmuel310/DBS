@@ -31,22 +31,22 @@ window.STUDY = {
         "马可福音 1:1–20"
       ],
       "summary": "耶稣受洗，在旷野受试探，并开始宣讲神的国近了。祂呼召了第一批门徒——平凡的渔夫；他们立刻撇下一切，跟从了祂。",
-      "noBibleNote": "No Bible yet? Use the free YouVersion app this week, and we&rsquo;ll get you a copy of your own.",
+      "noBibleNote": "还没有圣经？这周可以使用免费的 YouVersion 圣经 App，我们稍后也会为你准备一本属于你自己的圣经。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last week&rdquo; yet, so start here instead.",
+        "note": "还没有“上周”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What led you to start following Jesus, or to want to learn more?",
-          "What are you hoping to get out of these ten weeks together?",
-          "What are you thankful for this week?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "是什么引导你开始跟随耶稣，或是想要了解更多？",
+          "你期望在这一起度过的十周里有什么收获？",
+          "这周你有什么感恩的事？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see Jesus clearly as you read.",
+      "lookUpPrayer": "从来没有出声祷告过？一句话就足够了。为刚才交流中提到的一件事感谢神，然后求圣灵帮助大家在读经时清晰地看见耶稣。",
       "leaderNote": "Mark opens with no birth story, straight into John the Baptist, Jesus&rsquo; baptism, and his first followers. Notice how often Mark uses the word &ldquo;immediately,&rdquo; this Gospel moves fast. At that baptism, the Spirit comes down on Jesus, and it&rsquo;s that same Spirit you&rsquo;re relying on to help you read, discuss, and pray well together for the next ten weeks.",
       "lookForwardIdea": "the first disciples dropped everything immediately. Is there something you&rsquo;re delaying that following Jesus is asking of you now?",
       "betweenSessions": {
-        "ref": "Mark 1:21&ndash;45",
+        "ref": "马可福音 1:21&ndash;45",
         "desc": "Jesus casts out a demon in the Capernaum synagogue, heals Peter&rsquo;s mother-in-law and many others at evening, prays alone before dawn, then heals a man with leprosy.",
         "note": "Try reading it alone using the same rhythm: read it, retell it to yourself or someone else, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people."
       },
@@ -66,7 +66,7 @@ window.STUDY = {
       "leaderNote": "Houses in this period had flat roofs, reachable by an outside staircase, made of packed earth and branches over wooden beams, that&rsquo;s what the friends dug through.",
       "lookForwardIdea": "Jesus forgives completely, the first time he speaks. Is there something you need to receive forgiveness for this week?",
       "betweenSessions": {
-        "ref": "Mark 2:13&ndash;4:34",
+        "ref": "马可福音 2:13&ndash;4:34",
         "desc": "Levi the tax collector is called, Jesus eats with &ldquo;sinners,&rdquo; questions about fasting and the Sabbath, more healing on the Sabbath, the religious leaders plot against him, he appoints the Twelve, is accused of casting out demons by the devil&rsquo;s power, and teaches in parables about the Kingdom, including the sower and the mustard seed.",
         "note": "This is a bigger stretch, about two and a half chapters, worth spreading across a few sittings. It includes Bonus Sessions B1 (Called to Be With Him, Mark 3:13&ndash;19) and B2 (The Four Soils, Mark 4:1&ndash;20) at the back of this app. Try reading it using the same rhythm: read, retell, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people."
       },
@@ -86,7 +86,7 @@ window.STUDY = {
       "leaderNote": "Several of the disciples were experienced fishermen who knew the Sea of Galilee well, its sudden violent storms were dangerous even to them.",
       "lookForwardIdea": "a command to obey is &ldquo;why are you so afraid?&rdquo; What&rsquo;s the storm in your life this week where you need to trust him?",
       "betweenSessions": {
-        "ref": "Mark 5:1&ndash;20",
+        "ref": "马可福音 5:1&ndash;20",
         "desc": "The man freed from a legion of demons.",
         "note": "This is Bonus Session B3 (Set Free) at the back of this app. Read it alone this week using the rhythm, read, retell, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people, or do it together as a full extra session if your group would rather."
       },
@@ -106,7 +106,7 @@ window.STUDY = {
       "leaderNote": "The woman&rsquo;s bleeding made her ceremonially unclean, cut off from worship and touch for twelve years. Jairus was a respected synagogue leader. Mark deliberately sandwiches their stories together.",
       "lookForwardIdea": "an example to follow is the woman&rsquo;s simple reach for Jesus in faith. What&rsquo;s one step of faith, however small, you could take this week?",
       "betweenSessions": {
-        "ref": "Mark 6:1&ndash;8:26",
+        "ref": "马可福音 6:1&ndash;8:26",
         "desc": "Jesus is rejected in his hometown, sends out the Twelve, John the Baptist is executed, Jesus feeds five thousand and walks on water, teaches about what really makes someone unclean, heals a Gentile woman&rsquo;s daughter and a deaf man, feeds four thousand more, and heals a blind man in two stages.",
         "note": "This is the biggest single stretch in the course, about two and a half chapters, so pace it across the week. Try the same rhythm on each section: read, retell, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people."
       },
@@ -126,7 +126,7 @@ window.STUDY = {
       "leaderNote": "This moment is the hinge of Mark&rsquo;s whole Gospel, roughly the halfway point, where the story turns from &ldquo;who is Jesus&rdquo; toward the road to the cross.",
       "lookForwardIdea": "a command to obey is &ldquo;deny yourself, take up your cross.&rdquo; What&rsquo;s one place you&rsquo;re resisting following Jesus fully?",
       "betweenSessions": {
-        "ref": "Mark 9:1&ndash;10:16",
+        "ref": "马可福音 9:1&ndash;10:16",
         "desc": "The Transfiguration, healing a boy with an unclean spirit (&ldquo;I believe, help my unbelief&rdquo;), a second prediction of his death, the disciples arguing about who&rsquo;s the greatest, a warning about causing others to stumble, teaching on divorce, and blessing the children.",
         "note": "This includes Bonus Session B4 (The Mountain and the Voice, Mark 9:2&ndash;13) and Bonus Session B5 (Help My Unbelief, Mark 9:14&ndash;29) at the back of this app. Try the rhythm on your own: read, retell, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people."
       },
@@ -166,7 +166,7 @@ window.STUDY = {
       "leaderNote": "This is the third time in Mark that Jesus predicts his death, and each time the disciples respond by arguing about status instead. Verse 45 is one of the most important single verses in the whole Gospel.",
       "lookForwardIdea": "a behaviour to change is seeking status. Is there a way to serve someone this week without needing credit for it?",
       "betweenSessions": {
-        "ref": "Mark 10:46&ndash;12:27",
+        "ref": "马可福音 10:46&ndash;12:27",
         "desc": "Blind Bartimaeus healed, the Triumphal Entry into Jerusalem and the clearing of the temple, the cursed fig tree and a teaching on faith, a challenge to Jesus&rsquo; authority, the parable of the wicked tenants, and the question about paying taxes to Caesar.",
         "note": "This includes Bonus Session B6 (What Do You Want?, Mark 10:46&ndash;52) and Bonus Session B7 (The King Arrives, Mark 11:1&ndash;11, 15&ndash;19) at the back of this app. Try the rhythm on your own: read, retell, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people."
       },
@@ -186,7 +186,7 @@ window.STUDY = {
       "leaderNote": "This comes during a string of hostile questions from religious leaders trying to trap Jesus. This scribe&rsquo;s question is genuine, and it&rsquo;s the last question anyone dares ask him.",
       "lookForwardIdea": "an example to follow is picking one specific person this week and asking what loving them, the way Jesus describes, would actually look like.",
       "betweenSessions": {
-        "ref": "Mark 12:35&ndash;14:21",
+        "ref": "马可福音 12:35&ndash;14:21",
         "desc": "A question about David&rsquo;s son, a warning about religious show, the widow&rsquo;s offering, Jesus&rsquo; teaching about the future (all of Mark 13), the plot to kill him, a woman anointing him at Bethany, and Judas arranging the betrayal.",
         "note": "This includes all of Mark 13, the longest single teaching block in the book, so take your time. Try the rhythm on your own: read, retell, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people."
       },
@@ -207,7 +207,7 @@ window.STUDY = {
       "leaderNote": "This meal was the Passover, the annual Jewish remembrance of being rescued from slavery in Egypt. Jesus reinterprets its bread and wine around his own coming death.",
       "lookForwardIdea": "an example to follow is Jesus&rsquo; honest prayer in Gethsemane. Is there something hard you need to bring honestly to God instead of pretending it&rsquo;s fine?",
       "betweenSessions": {
-        "ref": "Mark 14:43&ndash;15:20",
+        "ref": "马可福音 14:43&ndash;15:20",
         "desc": "Jesus&rsquo; arrest, his trial before the religious council, Peter&rsquo;s three denials, and his trial before Pilate.",
         "note": "This includes Bonus Session B8 (Silence and Denial, Mark 14:53&ndash;72) at the back of this app. Try the rhythm on your own: read, retell, then ask what stands out, what&rsquo;s tricky, what it shows about God, and what it shows about people."
       },

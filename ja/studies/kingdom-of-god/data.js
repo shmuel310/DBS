@@ -35,15 +35,15 @@ window.STUDY = {
       ],
       "summary": "99歳のアブラムに主が現れて契約を結び、名をアブラハムと改め、多くの国民の父とすることを約束されます。諸国が彼から出、王たちが出て、主が彼の神となられます。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What comes to mind when you hear the phrase &ldquo;the kingdom of God&rdquo;?",
-          "What are you hoping to get out of these twelve sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "「神の国」という言葉を聞いたとき、最初にどんなことが思い浮かびますか？",
+          "これから12回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this passage clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの聖書箇所を深く味わえるよう聖霊に助けを求めましょう。",
       "leaderNote": "This is God committing himself to a specific family, and through them, eventually, a kingdom and a king. Everything that follows, Israel, David&rsquo;s throne, Jesus himself, traces back to this one covenant with one man.",
       "lookForwardIdea": "a promise to trust is that God keeps covenants across centuries, even when it looks impossible from where you&rsquo;re standing. What promise of God do you need to keep trusting even though you can&rsquo;t yet see how it plays out?",
       "memoryVerse": {

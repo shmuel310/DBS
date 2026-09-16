@@ -36,15 +36,15 @@ window.STUDY = {
       ],
       "summary": "耶稣跨越种族与性别的深重隔阂，向撒玛利亚妇人求水喝，并启示自己就是赐下永生活水的弥赛亚。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "还没有“上次聚会”，所以先从这里开始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s a barrier, social, cultural, or personal, you&rsquo;ve noticed yourself keeping up around certain people?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫什么名字？有什么是大家可能还不知道关于你的事？",
+          "你有没有注意到自己在面对某些人时，会筑起某种隔阂（无论是社交、文化还是个人层面的藩篱）？",
+          "你期望在这一起度过的十次聚会中有什么收获？",
+          "当我们开始这门课程时，我们可以怎样为你祷告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "从来没有出声祷告过？一句话就足够了。为刚才交流中提到的一件事感谢神，然后求圣灵帮助大家在读经时清晰地理解这个故事。",
       "leaderNote": "Jews and Samaritans normally avoided each other entirely, and a rabbi speaking alone with a woman in public was itself unusual. John notes Jesus &ldquo;had to go through Samaria&rdquo;, the shortest route, but also a deliberate choice most Jews avoided.",
       "lookForwardIdea": "an example to follow is Jesus choosing the person and the place everyone else avoided. Who&rsquo;s the person or group you&rsquo;d normally steer around, and what would crossing that barrier actually look like?",
       "memoryVerse": {

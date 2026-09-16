@@ -36,15 +36,15 @@ window.STUDY = {
       ],
       "summary": "イエスは民族と性別の深い壁を越えてサマリアの女に水を求め、永遠の渇きをいやす生ける水を与えるメシアであることを明かされます。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s a barrier, social, cultural, or personal, you&rsquo;ve noticed yourself keeping up around certain people?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "社会的、文化的、あるいは個人的なものなど、特定の人に対して自分が作ってしまっている「壁」や「隔たり」に気づいたことはありますか？",
+          "これから10回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの物語を深く理解できるよう聖霊に助けを求めましょう。",
       "leaderNote": "Jews and Samaritans normally avoided each other entirely, and a rabbi speaking alone with a woman in public was itself unusual. John notes Jesus &ldquo;had to go through Samaria&rdquo;, the shortest route, but also a deliberate choice most Jews avoided.",
       "lookForwardIdea": "an example to follow is Jesus choosing the person and the place everyone else avoided. Who&rsquo;s the person or group you&rsquo;d normally steer around, and what would crossing that barrier actually look like?",
       "memoryVerse": {

@@ -35,15 +35,15 @@ window.STUDY = {
       ],
       "summary": "ナオミはモアブの地で夫と二人の息子を亡くし、ベツレヘムへの帰還を決意します。嫁のルツは「あなたの民は私の民、あなたの神は私の神」と誓って従います。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "Have you ever had to start over somewhere unfamiliar? What was that like?",
-          "What are you hoping to get out of these five sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "見知らぬ場所でゼロからやり直さなければならなかった経験はありますか？それはどのような体験でしたか？",
+          "これから5回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this story clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの物語を深く理解できるよう聖霊に助けを求めましょう。",
       "leaderNote": "Moab and Israel had a long, hostile history, Ruth is about as much of an outsider as the story could choose. Naomi&rsquo;s own words frame the chapter: she went away full, and comes back empty, which is exactly the emptiness the rest of the book will slowly fill.",
       "lookForwardIdea": "an example to follow is Ruth&rsquo;s loyalty, choosing to stay when leaving would have been easier and safer. Is there a relationship right now where staying, rather than leaving, is the harder and more faithful choice?",
       "memoryVerse": {

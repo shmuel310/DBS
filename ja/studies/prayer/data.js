@@ -35,15 +35,15 @@ window.STUDY = {
       ],
       "summary": "人に見せるための祈りを戒め、奥まった部屋に入って戸を閉め、隠れたところにおられる父に祈りなさいと教えられます。主の祈りです。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "まだ「前回」はないので、まずはここから始めましょう。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What does your own prayer life actually look like at the moment?",
-          "What are you hoping to get out of these ten sessions together?",
-          "How can we pray for you as we start this course?"
+          "お名前と、このグループのメンバーがまだ知らないようなあなたについてのことを1つ教えてください。",
+          "あなた自身の現在の祈りの生活は、実際にはどのようなものですか？",
+          "これから10回のセッションを一緒に過ごす中で、どのようなことを期待していますか？",
+          "このコースを始めるにあたり、あなたのためにどのように祈ることができますか？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this passage clearly.",
+      "lookUpPrayer": "声に出して祈ったことがなくても大丈夫です。一言だけで十分です。先ほど出た感謝なことを1つ神に感謝し、聖書を読む中でこの聖書箇所を深く味わえるよう聖霊に助けを求めましょう。",
       "leaderNote": "The &ldquo;hypocrites&rdquo; Jesus describes were praying to be seen, on street corners, in synagogues, in public view. His alternative isn&rsquo;t a longer or fancier prayer, it&rsquo;s a shorter, plainer one, prayed in private. The forgiveness line (v14&ndash;15) isn&rsquo;t a footnote, Jesus circles back to underline it specifically.",
       "lookForwardIdea": "a command to obey is praying this prayer slowly, phrase by phrase, sometime this week rather than rushing past it. Which line in it actually cuts closest to home for you right now?",
       "memoryVerse": {

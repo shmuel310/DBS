@@ -37,15 +37,15 @@ window.STUDY = {
       "refDisplay": "2 Corinthians 5:17&ndash;21; Acts 1:8",
       "summary": "若有人在基督裡就是新造的人。神將使人和好的職分賜給我們，聖靈降臨賜下能力，差遣我們直到地極作主的見證。",
       "lookBack": {
-        "note": "There&rsquo;s no &ldquo;last time&rdquo; yet, so start here instead.",
+        "note": "仲未有「上次聚會」，所以今次先從呢度開始。",
         "questions": [
-          "What&rsquo;s your name, and one thing about you the group might not know?",
-          "What&rsquo;s one thing about following Jesus you feel confident about, and one thing you feel unsure of?",
-          "What are you hoping to get out of these eight sessions together?",
-          "How can we pray for you as we start this course?"
+          "你叫咩名？同埋有冇一件事係小組大家可能仲未知道嘅？",
+          "關於跟隨耶穌，有邊一點係你覺得好有把握嘅，又有邊一點係你感到唔太確定嘅？",
+          "你期望喺呢八次聚會中一齊有咩收穫？",
+          "當我哋開始呢個課程之際，我哋可以點樣為你禱告？"
         ]
       },
-      "lookUpPrayer": "Never prayed aloud before? One sentence is plenty. Thank God for one thing that came up just now, then ask the Holy Spirit to help you see this passage clearly.",
+      "lookUpPrayer": "從來未試過出聲禱告？一句起、兩句止就已經好足夠。為頭先交流中提到嘅一件事感謝上帝，然後求聖靈幫助你哋喺讀經時清晰領會這段經文。",
       "leaderNote": "These two passages work together: 2 Corinthians 5 explains why you&rsquo;d want to tell anyone anything, you&rsquo;ve been reconciled, and given a message of reconciliation to carry, and Acts 1:8 explains how it actually happens, not by your own effort, but by the Holy Spirit&rsquo;s power.",
       "lookForwardIdea": "a command to obey is being Christ&rsquo;s ambassador wherever you already are. Who&rsquo;s the one person nearest to you, geographically or relationally, that you could actually tell this week?",
       "trainingAction": "Practice a 15-second testimony: in one breath, tell someone briefly who you were before Jesus, what changed, and who you are now. Then try the &ldquo;3 Circles&rdquo; sketch (Design &rarr; Brokenness &rarr; Gospel &rarr; Life in Jesus) with each other before you try it with someone outside the group.",
