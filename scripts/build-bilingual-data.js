@@ -327,9 +327,18 @@ const output = {
   i18n
 };
 
-const outputPath = path.join(ROOT_DIR, '_engine/bilingual-data.js');
+const targetPaths = [
+  path.join(ROOT_DIR, '_engine/bilingual-data.js'),
+  path.join(ROOT_DIR, 'zh-hk/_engine/bilingual-data.js'),
+  path.join(ROOT_DIR, 'zh-cn/_engine/bilingual-data.js'),
+  path.join(ROOT_DIR, 'ja/_engine/bilingual-data.js')
+];
+
 const jsContent = `/* DBS Bilingual Dataset - Auto-generated on ${new Date().toISOString()} */\nwindow.BILINGUAL_DATA = ${JSON.stringify(output)};\n`;
 
-fs.writeFileSync(outputPath, jsContent, 'utf8');
-console.log(`Successfully generated ${outputPath}`);
-console.log(`File size: ${(fs.statSync(outputPath).size / 1024).toFixed(1)} KB`);
+for (const outputPath of targetPaths) {
+  fs.writeFileSync(outputPath, jsContent, 'utf8');
+  console.log(`Successfully generated ${outputPath}`);
+  console.log(`File size: ${(fs.statSync(outputPath).size / 1024).toFixed(1)} KB`);
+}
+
