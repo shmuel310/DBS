@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<title>運作方式 &middot; 發現式查經</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+</head>
+<body class="wide-page">
+<div id="app"></div>
+
+<script>
+function markSvg(size, color){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="display:block;color:${color};">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="68" r="5" fill="currentColor"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <circle cx="70" cy="32" r="5" fill="currentColor"/>
+  </svg>`;
+}
+
+const ICONS = {
+  back: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/></svg>',
+  up: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-1.5-1.2-3.6-2-6-2-1 0-2 .1-3 .4v13.6c1-.3 2-.4 3-.4 2.4 0 4.5.8 6 2 1.5-1.2 3.6-2 6-2 1 0 2 .1 3 .4V5.4C20 5.1 19 5 18 5c-2.4 0-4.5.8-6 2z"/><line x1="12" y1="7" x2="12" y2="21"/></svg>',
+  forward: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 4 21 9 16 9"/></svg>'
+};
+
+document.getElementById("app").innerHTML = `
+  <div class="wrap"><nav class="top">
+    <a class="brand" href="index.html" aria-label="Home">
+      ${markSvg(38, "var(--ink-900)")}
+      <span class="brand-name">發現式查經</span>
+    </a>
+    <div class="nav-links">
+      <a href="how-it-works.html">運作方式</a>
+      <a href="studies.html">查經庫</a>
+      <a href="../bilingual.html?lang1=zh-hk&lang2=en">雙語模式</a>
+      <a href="about.html">關於</a>
+      <div class="lang-switcher">
+        <span>🌐</span>
+        <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+          <option value="../how-it-works.html">English</option>
+          <option value="../zh-hk/how-it-works.html" selected>繁體中文（香港）</option>
+          <option value="../zh-cn/how-it-works.html">简体中文</option>
+          <option value="../ja/how-it-works.html">日本語</option>
+        </select>
+      </div>
+    </div>
+  </nav></div>
+  <div class="wrap"><div class="screen-light" style="padding-top:8px;">
+    <div class="eyebrow">運作方式</div>
+    <div class="display lower" style="font-size:40px;margin-top:10px;">發現式查經 (DBS)</div>
+    <p class="lead" style="margin-top:14px;">一種同其他人一齊讀聖經嘅簡單方法。整個小組一齊探索經文嘅含意，而唔係單方面聽講員講授。無需專家、無需事先培訓，只需要一本打開嘅聖經同幾條坦誠嘅探索問題。</p>
+
+    <!-- What it is -->
+    <div class="divider-label"><span class="line"></span><span class="txt">這究竟是什麼</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">發現式查經（Discovery Bible Study，簡稱 DBS），有時亦稱為發現式讀經（DBR），喺全球各地廣泛被採用，特別適用於帶領對信仰有興趣或初信嘅朋友。佢更幫助咗無數人第一次認識並信從耶穌。相比起由一個人講解聖經，DBS 係大家一齊閱讀同一小段經文，並一齊探討相同嘅五條問題。大家親自從經文中發現真理，這意味著大家會記得更牢、真正認同佢，並且更有可能喺生活中實踐出嚟。</p>
+    <div class="memory-block" style="margin-top:16px;">
+      <div class="ml">什麼是門徒？</div>
+      <div class="mv">門徒是耶穌的追隨者、學習者與學徒，他們藉著效法耶穌的方法、推動祂的運動，並引領人預備祂的再來，從而不斷倍增門徒。在各方面，門徒都是一個生命愈來愈像耶穌的人。</div>
+      <div class="mr">Peter Roennfeldt</div>
+    </div>
+
+    <p class="lead" style="font-size:14.5px;margin-top:12px;">每次聚會都遵從完全相同嘅節奏：</p>
+
+    <div class="card" style="margin-top:14px;">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.back}回顧 (Look Back)</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">溫暖坦誠嘅互相問候。過去一星期過得點樣？上次聚會發現嘅心得，實踐同分享嘅情況如何？</p>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.up}向上看 (Look Up)</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">出聲朗讀經文，用自己嘅說話重述一次，然後用五條核心問題展開討論：有咩係新嘅或特別觸動你？有咩令你驚訝？有咩唔明白？你會順服或實踐經文中嘅邊方面？今個星期你會同邊個分享？</p>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.forward}展望 (Look Forward)</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">轉化為生活行動。在下次見面前你會點樣回應這段經文？你會同邊個分享？這條問題刻意成為每次聚會不可或缺嘅一部分。</p>
+    </div>
+    <p class="leader-note" style="text-align:center;">以上五條核心發現問題由 Peter Roennfeldt 設計。 <a href="https://www.following-jesus.com/resources/discovery-bible-reading/" target="_blank" rel="noopener noreferrer" style="color:inherit;">了解更多關於他的事工 &rarr;</a></p>
+
+    <!-- How to use it -->
+    <div class="divider-label"><span class="line"></span><span class="txt">使用指引</span><span class="line"></span></div>
+    <div class="card">
+      <ol>
+        <li><span class="num dot"></span><span><strong>一對一或小組聚會。</strong> 兩種形式都同樣有效。兩位朋友喺咖啡館交流，或者幾個人圍坐喺餐桌旁。</span></li>
+        <li><span class="num dot"></span><span><strong>隨時隨地。</strong> 咖啡店、客廳、午餐休息時間。你只需要這個網頁工具同一本聖經（或免費的 YouVersion 聖經 App）。</span></li>
+        <li><span class="num dot"></span><span><strong>無需事先培訓。</strong> 問題本身會帶動整個過程。你唔係老師，你只係協助推動流程嘅協調者。</span></li>
+        <li><span class="num dot"></span><span><strong>遇到唔識答嘅問題，坦白承認。</strong> 「問得好好，我哋寫低佢，先繼續讀落去」係最好嘅回應。讓經文本身成為權威，而唔係你個人。</span></li>
+        <li><span class="num dot"></span><span><strong>時刻回歸聖經文本。</strong> 如果討論開始偏離焦點，可以問大家：「大家喺這段經文邊度睇到呢點呢？」</span></li>
+        <li><span class="num dot"></span><span><strong>如果有些內容暫時想唔通，切忌爭論。</strong> 繼續讀落去，隨住時間推進同更多閱讀，經文往往會變得愈來愈清晰。</span></li>
+        <li><span class="num dot"></span><span><strong>邀請身邊朋友加入，</strong> 並鼓勵佢哋日後自己開展屬於佢哋嘅小組。</span></li>
+      </ol>
+    </div>
+
+    <!-- For participants -->
+    <div class="divider-label"><span class="line"></span><span class="txt">參加者須知</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">即使你對聖經毫無認識，亦完全可以輕鬆參與。你絕對唔會被刁難，如果你唔想出聲讀經亦唔會勉強。呢度冇愚蠢嘅問題，亦冇標準答案需要你「表演」。帶住好奇心，真誠投入，睇下你會有咩新發現。無論你係第一次探索基督信仰，還係跟隨咗耶穌好多年，呢度都有豐富嘅恩典等緊你。</p>
+
+    <!-- Save to home screen -->
+    <div class="divider-label"><span class="line"></span><span class="txt">加到手機主畫面</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">由於你每星期都會用到，建議將本站加到手機主畫面。打開時就同原生 App 一樣流暢，無需去 App Store 下載。</p>
+    <div class="card" style="margin-top:14px;">
+      <span class="eyebrow" style="color:var(--ink-700);">在 iPhone 上</span>
+      <ol style="margin-top:8px;">
+        <li><span class="num dot"></span><span>在 Safari 瀏覽器中，點擊底部的<strong>分享</strong>按鈕（帶有向上箭頭的方框）。</span></li>
+        <li><span class="num dot"></span><span>向下滾動並點擊<strong>加入主畫面</strong>。</span></li>
+        <li><span class="num dot"></span><span>點擊右上角的<strong>加入</strong>。</span></li>
+      </ol>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="color:var(--ink-700);">在 Android 上</span>
+      <ol style="margin-top:8px;">
+        <li><span class="num dot"></span><span>在 Chrome 瀏覽器中，點擊右上角的<strong>選單</strong>（三個點）。</span></li>
+        <li><span class="num dot"></span><span>點擊<strong>加至主畫面</strong>（或安裝應用程式）。</span></li>
+        <li><span class="num dot"></span><span>點擊<strong>新增</strong>確認。</span></li>
+      </ol>
+    </div>
+
+    <div style="flex:1;"></div>
+    <a class="pill solid" style="margin-top:28px;" href="studies.html">揀選一個查經課程 &rarr;</a>
+    <a class="pill ghost" style="margin-top:10px;" href="about.html">關於本資源庫 &rarr;</a>
+  </div></div>
+`;
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>运作方式 &middot; 发现式查经</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+</head>
+<body class="wide-page">
+<div id="app"></div>
+
+<script>
+function markSvg(size, color){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="display:block;color:${color};">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="68" r="5" fill="currentColor"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <circle cx="70" cy="32" r="5" fill="currentColor"/>
+  </svg>`;
+}
+
+const ICONS = {
+  back: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/></svg>',
+  up: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-1.5-1.2-3.6-2-6-2-1 0-2 .1-3 .4v13.6c1-.3 2-.4 3-.4 2.4 0 4.5.8 6 2 1.5-1.2 3.6-2 6-2 1 0 2 .1 3 .4V5.4C20 5.1 19 5 18 5c-2.4 0-4.5.8-6 2z"/><line x1="12" y1="7" x2="12" y2="21"/></svg>',
+  forward: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 4 21 9 16 9"/></svg>'
+};
+
+document.getElementById("app").innerHTML = `
+  <div class="wrap"><nav class="top">
+    <a class="brand" href="index.html" aria-label="Home">
+      ${markSvg(38, "var(--ink-900)")}
+      <span class="brand-name">发现式查经</span>
+    </a>
+    <div class="nav-links">
+      <a href="how-it-works.html">运作方式</a>
+      <a href="studies.html">查经库</a>
+      <a href="../bilingual.html?lang1=zh-cn&lang2=en">双语模式</a>
+      <a href="about.html">关于</a>
+      <div class="lang-switcher">
+        <span>🌐</span>
+        <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+          <option value="../how-it-works.html">English</option>
+          <option value="../zh-hk/how-it-works.html">繁體中文（香港）</option>
+          <option value="../zh-cn/how-it-works.html" selected>简体中文</option>
+          <option value="../ja/how-it-works.html">日本語</option>
+        </select>
+      </div>
+    </div>
+  </nav></div>
+  <div class="wrap"><div class="screen-light" style="padding-top:8px;">
+    <div class="eyebrow">运作方式</div>
+    <div class="display lower" style="font-size:40px;margin-top:10px;">发现式查经 (DBS)</div>
+    <p class="lead" style="margin-top:14px;">一种与他人一起读圣经的简单方法。整个小组一同探索经文的含义，而不是单方面听老师讲课。无需专家、无需事先培训，只需一本打开的圣经和几道坦诚的发现问题。</p>
+
+    <!-- What it is -->
+    <div class="divider-label"><span class="line"></span><span class="txt">这究竟是什么</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">发现式查经（Discovery Bible Study，简称 DBS），有时也称为发现式读经（DBR），在全世界被广泛使用，特别适用于带领对信仰好奇或刚接触信仰的朋友。它更帮助了无数人第一次认识并信靠耶稣。与一个人单向讲解圣经不同，DBS 是大家一起阅读同一小段经文，并一同探讨相同的五道问题。大家亲自从经文中发现真理，这意味着大家能记得更牢、发自内心认同，并且更有可能在生活中付诸实践。</p>
+    <div class="memory-block" style="margin-top:16px;">
+      <div class="ml">什么是门徒？</div>
+      <div class="mv">门徒是耶稣的追随者、学习者与学徒，他们借着效法耶稣的方法、推动祂的运动，并引领人预备祂的再来，从而不断倍增门徒。在各方面，门徒都是一个生命越来越像耶稣的人。</div>
+      <div class="mr">Peter Roennfeldt</div>
+    </div>
+
+    <p class="lead" style="font-size:14.5px;margin-top:12px;">每次聚会都遵循完全相同的节奏：</p>
+
+    <div class="card" style="margin-top:14px;">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.back}回顾 (Look Back)</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">温暖坦诚的相互问候。过去一周过得如何？上次聚会发现的心得，应用与分享的情况怎么样？</p>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.up}向上看 (Look Up)</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">出声朗读经文，用自己的话复述一遍，然后用五道核心问题展开探讨：有什么是新的或吸引你的注意？有什么令你惊讶？有什么不明白？你会顺服或应用经文中的哪一方面？这周你会和谁分享？</p>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="display:flex;align-items:center;gap:6px;color:var(--ink-700);">${ICONS.forward}向前看 (Look Forward)</span>
+      <p style="font-size:14px;line-height:1.55;margin-top:8px;">转化为生活行动。在下次聚会前你会怎样回应这段经文？你会与谁分享？这道问题特意成为每次聚会不可或缺的一部分。</p>
+    </div>
+    <p class="leader-note" style="text-align:center;">以上五道核心发现问题由 Peter Roennfeldt 设计。 <a href="https://www.following-jesus.com/resources/discovery-bible-reading/" target="_blank" rel="noopener noreferrer" style="color:inherit;">了解更多关于他的事工 &rarr;</a></p>
+
+    <!-- How to use it -->
+    <div class="divider-label"><span class="line"></span><span class="txt">使用指南</span><span class="line"></span></div>
+    <div class="card">
+      <ol>
+        <li><span class="num dot"></span><span><strong>一对一或小组聚会。</strong> 两种形式都同样有效。两位朋友在咖啡馆交流，或者几个人围坐在餐桌旁。</span></li>
+        <li><span class="num dot"></span><span><strong>随时随地。</strong> 咖啡厅、客厅、午休时间。你只需要这个网页工具和一本圣经（或免费的 YouVersion 圣经 App）。</span></li>
+        <li><span class="num dot"></span><span><strong>无需事先培训。</strong> 问题本身会带动整个过程。你不是老师，你只是协助推进流程的引导者。</span></li>
+        <li><span class="num dot"></span><span><strong>遇到不知如何回答的问题，坦诚相告。</strong> “问得很好，我们先记下来，继续读下去”是极好的回应。让圣经经文成为权威，而不是你个人。</span></li>
+        <li><span class="num dot"></span><span><strong>时刻回归圣经文本。</strong> 如果讨论开始偏离主题，可以问大家：“大家在这段经文哪里看到这一点呢？”</span></li>
+        <li><span class="num dot"></span><span><strong>若有些内容暂时没有完全想通，切忌争辩。</strong> 继续读下去，随着更多阅读与时间沉淀，经文往往会变得越来越清晰。</span></li>
+        <li><span class="num dot"></span><span><strong>邀请身边的朋友加入，</strong> 并鼓励他们日后自己开启属于他们的小组。</span></li>
+      </ol>
+    </div>
+
+    <!-- For participants -->
+    <div class="divider-label"><span class="line"></span><span class="txt">参与者须知</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">即使你对圣经毫无了解，也完全可以轻松参与。你绝不会被刁难，如果你不想出声朗读也不会勉强。这里没有愚蠢的问题，也没有必须表现的正确答案。带着好奇心，真诚投入，看看你会有什么新发现。无论你是第一次探索基督信仰，还是跟随耶稣多年的信徒，这里都有丰富的收获等待着你。</p>
+
+    <!-- Save to home screen -->
+    <div class="divider-label"><span class="line"></span><span class="txt">保存到手机主屏幕</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">因为你每周都会用到，建议将本站添加到手机主屏幕。打开时如同原生 App 一样流畅，无需前往 App Store 下载。</p>
+    <div class="card" style="margin-top:14px;">
+      <span class="eyebrow" style="color:var(--ink-700);">在 iPhone 上</span>
+      <ol style="margin-top:8px;">
+        <li><span class="num dot"></span><span>在 Safari 浏览器中，点击底部的<strong>分享</strong>按钮（带向上箭头的方框）。</span></li>
+        <li><span class="num dot"></span><span>向下滚动并点击<strong>添加到主屏幕</strong>。</span></li>
+        <li><span class="num dot"></span><span>点击右上角的<strong>添加</strong>。</span></li>
+      </ol>
+    </div>
+    <div class="card">
+      <span class="eyebrow" style="color:var(--ink-700);">在 Android 上</span>
+      <ol style="margin-top:8px;">
+        <li><span class="num dot"></span><span>在 Chrome 浏览器中，点击右上角的<strong>菜单</strong>（三个点）。</span></li>
+        <li><span class="num dot"></span><span>点击<strong>添加到主屏幕</strong>（或安装应用）。</span></li>
+        <li><span class="num dot"></span><span>点击<strong>添加</strong>确认。</span></li>
+      </ol>
+    </div>
+
+    <div style="flex:1;"></div>
+    <a class="pill solid" style="margin-top:28px;" href="studies.html">挑选一个查经课程 &rarr;</a>
+    <a class="pill ghost" style="margin-top:10px;" href="about.html">关于本资源库 &rarr;</a>
+  </div></div>
+`;
+</script>
+</body>
+</html>

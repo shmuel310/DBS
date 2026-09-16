@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<title>查經庫 &middot; 發現式查經</title>
+<meta name="description" content="揀選一個課程，按照自己嘅節奏獨自閱讀或同其他人一齊進行。每個課程都遵從相同嘅簡單節奏：回顧、向上看、展望。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0E0E0E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="發現式查經">
+<meta property="og:type" content="website">
+<meta property="og:title" content="查經庫 &middot; 發現式查經">
+<meta property="og:description" content="揀選一個課程，按照自己嘅節奏獨自閱讀或同其他人一齊進行。每個課程都遵從相同嘅簡單節奏：回顧、向上看、展望。">
+<meta property="og:image" content="_engine/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="查經庫 &middot; 發現式查經">
+<meta name="twitter:description" content="揀選一個課程，按照自己嘅節奏獨自閱讀或同其他人一齊進行。每個課程都遵從相同嘅簡單節奏：回顧、向上看、展望。">
+<meta name="twitter:image" content="_engine/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+</head>
+<body class="hub-page">
+<div id="app"></div>
+
+<script>
+const STUDIES = [
+  {
+    "id": "who-is-this",
+    "title": "這是誰？",
+    "subtitle": "馬可福音門徒探索之旅",
+    "audience": [
+      "初學入門",
+      "探索信仰"
+    ],
+    "categories": [
+      "福音書"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 8,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "為期十週嘅馬可福音之旅。每週讀一小段，發現耶穌到底係邊個，以小組或一對一形式一齊跟隨祂。",
+    "url": "studies/who-is-this/index.html"
+  },
+  {
+    "id": "the-basics",
+    "title": "信仰基石",
+    "subtitle": "從創造到十字架",
+    "audience": [
+      "初學入門",
+      "探索信仰"
+    ],
+    "categories": [
+      "整本聖經"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "十次聚會貫通成部聖經大故事，從創世到十字架以至永恆。適合任何初信者或希望掌握全景嘅人。",
+    "url": "studies/the-basics/index.html"
+  },
+  {
+    "id": "stories-of-hope",
+    "title": "10 個盼望故事",
+    "subtitle": "十次相遇，同一個邀請",
+    "audience": [
+      "初學入門",
+      "探索信仰"
+    ],
+    "categories": [
+      "福音書",
+      "專題研讀"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "與耶穌十次真實嘅相遇，從稅吏家嘅筵席到井邊婦人，每段對話都近距離顯明真正嘅盼望係點樣嘅。",
+    "url": "studies/stories-of-hope/index.html"
+  },
+  {
+    "id": "signs-of-john",
+    "title": "約翰福音的神蹟神諭",
+    "subtitle": "七個神蹟與空的墳墓",
+    "audience": [
+      "探索信仰"
+    ],
+    "categories": [
+      "福音書"
+    ],
+    "sessionCount": 8,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "八次聚會深入約翰福音中記載嘅非凡神蹟，從變水為酒到耶穌復活，每一個神蹟都為使你信靠而寫。",
+    "url": "studies/signs-of-john/index.html"
+  },
+  {
+    "id": "overcoming-fear",
+    "title": "勝過恐懼",
+    "subtitle": "十二個信心的真實故事",
+    "audience": [
+      "探索信仰",
+      "初信栽培"
+    ],
+    "categories": [
+      "專題研讀"
+    ],
+    "sessionCount": 12,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "橫跨成部聖經嘅十二個故事，每個故事均配搭一句應許金句，探討點樣以信靠上帝代替恐懼。",
+    "url": "studies/overcoming-fear/index.html"
+  },
+  {
+    "id": "philippians",
+    "title": "新生命，真喜樂",
+    "subtitle": "六週腓立比書初信成長課程",
+    "audience": [
+      "初信栽培"
+    ],
+    "categories": [
+      "書信"
+    ],
+    "sessionCount": 6,
+    "bonusCount": 0,
+    "time": "60&ndash;70 分鐘",
+    "blurb": "新約聖經中最溫暖書信之一：涵蓋初信者所需的一切——基督是誰、恩典真諦、點樣禱告，以及患難中不失喜樂。",
+    "url": "studies/philippians/index.html"
+  },
+  {
+    "id": "ruth",
+    "title": "路得記",
+    "subtitle": "你往哪裡去，我也往哪裡去",
+    "audience": [
+      "初信栽培"
+    ],
+    "categories": [
+      "舊約"
+    ],
+    "sessionCount": 5,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "一個短小完整嘅動人故事：異族寡婦嘅堅定忠誠，以及一份默默彰顯嘅恩慈，成就了大衛王以至耶穌基督家譜嘅起點。",
+    "url": "studies/ruth/index.html"
+  },
+  {
+    "id": "learn-to-follow-jesus",
+    "title": "學習跟隨耶穌",
+    "subtitle": "每個門徒必備的八項操練",
+    "audience": [
+      "初信栽培",
+      "深度進深"
+    ],
+    "categories": [
+      "專題研讀"
+    ],
+    "sessionCount": 8,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "八次聚會將核心真理與具體實踐結合，從洗禮同禱告到聖餐同合一，在實際操練中跟隨耶穌。",
+    "url": "studies/learn-to-follow-jesus/index.html"
+  },
+  {
+    "id": "commands-of-jesus",
+    "title": "耶穌的命令",
+    "subtitle": "祂切實吩咐我們遵行的十四件事",
+    "audience": [
+      "初信栽培",
+      "深度進深"
+    ],
+    "categories": [
+      "專題研讀",
+      "福音書"
+    ],
+    "sessionCount": 14,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "十四次聚會逐一落實耶穌對跟隨者提出嘅具體吩咐，從悔改相信到走出去使萬民作門徒。",
+    "url": "studies/commands-of-jesus/index.html"
+  },
+  {
+    "id": "multiplying-disciples",
+    "title": "接觸、得著、建立、培訓、差遣",
+    "subtitle": "耶穌如何建立祂的門徒倍增運動",
+    "audience": [
+      "深度進深"
+    ],
+    "categories": [
+      "福音書",
+      "專題研讀"
+    ],
+    "sessionCount": 17,
+    "bonusCount": 0,
+    "time": "60&ndash;75 分鐘",
+    "blurb": "按歷史年表展開嘅 17 週耶穌生平研讀：接觸人、得著人、建立同裝備門徒，最後差遣佢哋做同樣嘅事。",
+    "url": "studies/multiplying-disciples/index.html"
+  },
+  {
+    "id": "crossing-barriers",
+    "title": "跨越隔閡",
+    "subtitle": "與上帝和好，並與人和睦",
+    "audience": [
+      "深度進深"
+    ],
+    "categories": [
+      "專題研讀"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "十次聚會探討上帝為了尋找我們而主動跨越嘅障礙，以及祂呼召我們去跨越嘅人際與文化隔閡。",
+    "url": "studies/crossing-barriers/index.html"
+  },
+  {
+    "id": "promises-of-comfort",
+    "title": "10 個安慰的應許",
+    "subtitle": "十個應許，以及印證它們的故事",
+    "audience": [
+      "探索信仰",
+      "初信栽培"
+    ],
+    "categories": [
+      "專題研讀"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "上帝在聖經中賜予嘅十個寶貴應許，從平安與供應到赦免與喜樂，每個應許都配搭經文及印證故事。",
+    "url": "studies/promises-of-comfort/index.html"
+  },
+  {
+    "id": "prayer",
+    "title": "求教我們禱告",
+    "subtitle": "十次聚會學習真正禱告",
+    "audience": [
+      "初信栽培",
+      "深度進深"
+    ],
+    "categories": [
+      "專題研讀"
+    ],
+    "sessionCount": 10,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "橫跨聖經十處經文探討禱告真諦：耶穌親自教導、堅持祈求嘅寡婦、危機中同心祈求嘅教會同客西馬尼園中嘅禱告。",
+    "url": "studies/prayer/index.html"
+  },
+  {
+    "id": "kingdom-of-god",
+    "title": "上帝的國度",
+    "subtitle": "從創世記到啟示錄",
+    "audience": [
+      "深度進深"
+    ],
+    "categories": [
+      "整本聖經",
+      "專題研讀"
+    ],
+    "sessionCount": 12,
+    "bonusCount": 0,
+    "time": "60&ndash;90 分鐘",
+    "blurb": "十二次聚會追溯上帝國度嘅脈絡，從亞伯拉罕嘅應許到耶穌嘅比喻，直到啟示錄中天國嘅最終降臨。",
+    "url": "studies/kingdom-of-god/index.html"
+  },
+  {
+    "id": "sermon-on-the-mount",
+    "title": "登山寶訓",
+    "subtitle": "天國子民的生命倫理",
+    "audience": [
+      "探索信仰",
+      "初信栽培"
+    ],
+    "categories": [
+      "福音書",
+      "專題研讀"
+    ],
+    "sessionCount": 8,
+    "bonusCount": 0,
+    "time": "75&ndash;90 分鐘",
+    "blurb": "八次聚會研讀馬太福音 5&ndash;7 章歷史上最著名嘅講道：八福、主禱文，以及將生命建立在磐石上嘅真實樣貌。",
+    "url": "studies/sermon-on-the-mount/index.html"
+  }
+];
+const AUDIENCES = ["全部", "初學入門", "探索信仰", "初信栽培", "深度進深"];
+
+function markSvg(size, color){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="display:block;color:${color};">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="68" r="5" fill="currentColor"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <circle cx="70" cy="32" r="5" fill="currentColor"/>
+  </svg>`;
+}
+
+function hasProgress(id){
+  try { return Object.keys(JSON.parse(localStorage.getItem(`dbs.${id}.zh-HK.progress.v1`)) || {}).length > 0; }
+  catch(e){ return false; }
+}
+
+let activeAudience = "全部";
+
+function render(){
+  const filtered = activeAudience === "全部" ? STUDIES : STUDIES.filter(s => s.audience.includes(activeAudience));
+
+  const filterPills = AUDIENCES.map(a =>
+    `<button class="hub-pill${a === activeAudience ? ' active' : ''}" aria-pressed="${a === activeAudience}" onclick="activeAudience='${a}';render();">${a}</button>`
+  ).join("");
+
+  const cards = filtered.map(s => `
+    <a class="hub-card" href="${s.url}">
+      <div class="hc-top">
+        <div class="hc-cat">${s.categories.join(" &middot; ")}</div>
+        ${s.audience.includes("初學入門") ? `<span class="hc-badge">初學入門</span>` : ""}
+      </div>
+      <div class="hc-title lower">${s.title}</div>
+      <div class="hc-sub">${s.subtitle}</div>
+      <p class="hc-blurb">${s.blurb}</p>
+      ${hasProgress(s.id)
+        ? `<div class="hc-continue">繼續上次的進度 &rarr;</div>`
+        : `<div class="hc-meta">${s.sessionCount} ${'zh-HK' === 'ja' ? '回' : '次聚会'}${s.bonusCount ? ` &middot; ${s.bonusCount} ${'zh-HK' === 'ja' ? 'ボーナス' : '延伸'}` : ""} &middot; ${s.time}</div>`}
+    </a>`).join("");
+
+  document.getElementById("app").innerHTML = `
+    <div class="wrap"><nav class="top">
+      <a class="brand" href="index.html" aria-label="Home">
+        ${markSvg(38, "var(--ink-900)")}
+        <span class="brand-name">發現式查經</span>
+      </a>
+      <div class="nav-links">
+        <a href="how-it-works.html">運作方式</a>
+        <a href="studies.html">查經庫</a>
+        <a href="../bilingual.html?lang1=zh-hk&lang2=en">雙語模式</a>
+        <a href="about.html">關於</a>
+        <div class="lang-switcher">
+          <span>🌐</span>
+          <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+            <option value="../studies.html">English</option>
+            <option value="../zh-hk/studies.html" selected>繁體中文（香港）</option>
+            <option value="../zh-cn/studies.html">简体中文</option>
+            <option value="../ja/studies.html">日本語</option>
+          </select>
+        </div>
+      </div>
+    </nav></div>
+    <div class="hub-wrap" style="padding-top:8px;">
+      <div class="display lower" style="font-size:40px;">揀選查經課程</div>
+      <p class="lead" style="margin-top:10px;max-width:480px;">揀選一個課程，按照自己嘅節奏獨自閱讀或同其他人一齊進行。每個課程都遵從相同嘅簡單節奏：回顧、向上看、展望。</p>
+      <div style="margin-top:16px;padding:14px 18px;background:var(--white);border:1px solid var(--ink-200);border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div style="font-size:13.5px;color:var(--ink-700);">
+          <strong style="color:var(--ink-900);">想同朋友跨語言一齊查經？</strong> 可以使用雙語對照模式，同時並排閱讀英文、繁體中文、簡體中文或日文。
+        </div>
+        <a href="../bilingual.html?lang1=zh-hk&lang2=en" class="btn btn-solid" style="padding:8px 18px;font-size:13px;border-radius:999px;text-decoration:none;">開啟雙語模式 &rarr;</a>
+      </div>
+      <div class="hub-filters">${filterPills}</div>
+      ${filtered.length ? `<div class="hub-grid">${cards}</div>` : `<p class="lead" style="margin-top:24px;">暫時未有符合此篩選條件嘅課程。請嘗試其他選項，或喺上方瀏覽全部課程。</p>`}
+    </div>
+  `;
+}
+
+render();
+</script>
+</body>
+</html>

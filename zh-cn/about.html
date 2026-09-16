@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>关于 &middot; 发现式查经</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_engine/styles.css">
+<style>
+  .about-links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .about-link{
+    font-family:var(--font-body); font-weight:500; font-size:12.5px; color:var(--ink-700);
+    background:var(--white); border:1px solid var(--ink-200); border-radius:999px;
+    padding:8px 15px; text-decoration:none; white-space:nowrap;
+  }
+  .about-link:active{ background:var(--cream-100); }
+  .inline-link{ color:var(--ink-900); font-weight:600; text-decoration:none; border-bottom:1.5px solid var(--ink-300); }
+</style>
+</head>
+<body class="wide-page">
+<div id="app"></div>
+
+<script>
+function markSvg(size, color){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="display:block;color:${color};">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M30 68 Q40 40 50 50 Q60 60 70 32" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="68" r="5" fill="currentColor"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <circle cx="70" cy="32" r="5" fill="currentColor"/>
+  </svg>`;
+}
+
+document.getElementById("app").innerHTML = `
+  <div class="wrap"><nav class="top">
+    <a class="brand" href="index.html" aria-label="Home">
+      ${markSvg(38, "var(--ink-900)")}
+      <span class="brand-name">发现式查经</span>
+    </a>
+    <div class="nav-links">
+      <a href="how-it-works.html">运作方式</a>
+      <a href="studies.html">查经库</a>
+      <a href="../bilingual.html?lang1=zh-cn&lang2=en">双语模式</a>
+      <a href="about.html">关于</a>
+      <div class="lang-switcher">
+        <span>🌐</span>
+        <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+          <option value="../about.html">English</option>
+          <option value="../zh-hk/about.html">繁體中文（香港）</option>
+          <option value="../zh-cn/about.html" selected>简体中文</option>
+          <option value="../ja/about.html">日本語</option>
+        </select>
+      </div>
+    </div>
+  </nav></div>
+  <div class="wrap"><div class="screen-light" style="padding-top:8px;">
+    <div class="eyebrow">关于</div>
+    <div class="display lower" style="font-size:40px;margin-top:10px;">关于本查经库</div>
+
+    <p class="lead" style="margin-top:16px;font-size:15px;">我是 Darren Rowse，澳大利亚墨尔本 <a class="inline-link" href="https://one.org.au" target="_blank" rel="noopener noreferrer">One Church</a> 的牧师。</p>
+    <p class="lead" style="margin-top:14px;font-size:15px;">不久前，我为我们教会编写了一套发现式查经课程：一种让任何人都能与他人一同阅读圣经、共同发现其中真理的简单方式，无需成为圣经专家或接受任何培训。这种方法在全世界被广泛使用，特别适用于门训对圣经充满好奇的初信者，并帮助了许多人第一次认识并信靠耶稣。</p>
+    <p class="lead" style="margin-top:14px;font-size:15px;">当我向参与服侍的牧者朋友展示时，许多人都希望在自己的群体中使用。因此，我将其搭建成了这个平台：一个任何教会或小组都能直接拿来运行、完全免费、无需注册且无需安装任何软件的轻量查经库。我特意保持了品牌的中立性，让它能成为属于你们的工具，而不仅属于我们。</p>
+    <p class="lead" style="margin-top:14px;font-size:15px;">请随意使用、根据你的具体处境进行调整，并把它分享传递出去。这正是这个工具的核心初衷。</p>
+    <p class="lead" style="margin-top:14px;font-size:15px;">发现式查经并不是我发明的。这是一种简单、可重复传递的读经方式，有时也称为发现式读经（DBR），已经存在并流传了许多年。我只是在此基础上精心设计了一系列查经课程，并致力于让它们在手机上变得极易使用，无论你们在何处相聚。</p>
+
+    <!-- Get in touch -->
+    <div class="divider-label"><span class="line"></span><span class="txt">联系交流</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">有任何意见反馈、纠错建议，或是希望看到的新查经主题？非常期待收到你的来信。</p>
+    <div class="about-links">
+      <a class="about-link" href="mailto:darren@one.org.au">Email</a>
+      <a class="about-link" href="https://darrenrowse.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+      <a class="about-link" href="https://x.com/problogger" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+      <a class="about-link" href="https://www.threads.com/@darrenrowse" target="_blank" rel="noopener noreferrer">Threads</a>
+      <a class="about-link" href="https://ko-fi.com/darrenrowse" target="_blank" rel="noopener noreferrer">Buy me a coffee</a>
+    </div>
+
+    <!-- Also from Darren -->
+    <div class="divider-label"><span class="line"></span><span class="txt">Darren 的其他圣经工具</span><span class="line"></span></div>
+    <p class="lead" style="font-size:14.5px;">我制作的其他几款免费圣经应用程序，欢迎使用：</p>
+    <div class="about-links">
+      <a class="about-link" href="https://chapterbychapter.app" target="_blank" rel="noopener noreferrer">Chapter by Chapter</a>
+      <a class="about-link" href="https://bible-adventure.pages.dev" target="_blank" rel="noopener noreferrer">Bible Adventure</a>
+      <a class="about-link" href="https://harmony.darrenrowse.com" target="_blank" rel="noopener noreferrer">Gospel Harmony</a>
+    </div>
+
+    <div style="flex:1;"></div>
+    <a class="pill solid" style="margin-top:28px;" href="studies.html">挑选一个查经课程 &rarr;</a>
+    <a class="pill ghost" style="margin-top:10px;" href="how-it-works.html">了解运作方式 &rarr;</a>
+  </div></div>
+`;
+</script>
+</body>
+</html>

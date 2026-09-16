@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>时间轴 &middot; 接触、得着、建立、培训、差遣</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="本课程十七周在耶稣三年半事奉历程中的时间分布与背景解析。">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Hanken+Grotesk:wght@0,600;0,700;0,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../_engine/styles.css">
+<style>
+:root{
+  --cream:#ECEADD; --cream-100:#F1EFE6; --cream-300:#DEDBCB; --cream-400:#C9C5B2;
+  --white:#FFFFFF; --ink-900:#0E0E0E; --ink-700:#2B2B28; --ink-500:#5C5B54;
+  --ink-400:#8A887E; --ink-300:#B6B3A6; --ink-200:#D8D5C9;
+  --font-display:'Hanken Grotesk', system-ui, sans-serif;
+  --font-body:'Poppins', system-ui, sans-serif;
+  --connect:#1A6B6B; --win:#E8441A; --build:#7A0F2E; --train:#7B68BD; --send:#1DB37A;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ background:var(--cream); color:var(--ink-900); font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
+.wrap{ max-width:720px; margin:0 auto; padding:0 20px 90px; }
+
+/* header */
+.back{ display:inline-flex; align-items:center; gap:7px; margin:26px 0 0; font-size:13px; font-weight:500; color:var(--ink-500); text-decoration:none; }
+.back:hover{ color:var(--ink-900); }
+.eyebrow{ font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-400); }
+h1{ font-family:var(--font-display); font-weight:800; letter-spacing:-.03em; line-height:.95;
+    font-size:clamp(34px,8vw,52px); margin:10px 0 14px; }
+.lead{ font-size:15.5px; line-height:1.65; color:var(--ink-500); max-width:56ch; }
+header{ padding:22px 0 26px; }
+
+/* the strip */
+.strip-card{ background:var(--white); border:1px solid var(--cream-300); border-radius:16px; padding:20px 20px 14px; margin-bottom:14px; }
+.strip-title{ font-size:12px; font-weight:600; color:var(--ink-700); margin-bottom:18px; }
+.strip{ position:relative; height:88px; }
+.strip-line{ position:absolute; left:0; right:0; top:40px; height:2px; background:var(--cream-300); }
+.strip-final{ position:absolute; top:34px; height:14px; border-radius:7px; background:rgba(14,14,14,.09); }
+.strip-yr{ position:absolute; top:57px; font-size:9.5px; font-weight:600; color:var(--ink-400); transform:translateX(-50%); white-space:nowrap; }
+.strip-yr.start{ transform:none; left:0 !important; }
+.strip-yr i{ position:absolute; left:50%; top:-13px; width:1px; height:9px; background:var(--cream-400); }
+.strip-yr.start i{ left:2px; }
+.strip-note{ position:absolute; top:74px; right:0; font-size:9px; font-weight:600; color:var(--ink-300); white-space:nowrap; }
+.strip-dot{ position:absolute; top:34px; width:14px; height:14px; border-radius:50%; transform:translateX(-50%);
+  border:2.5px solid var(--white); cursor:pointer; transition:transform .15s; }
+.strip-dot:hover{ transform:translateX(-50%) scale(1.4); }
+.strip-lab{ position:absolute; font-size:9px; font-weight:700; color:var(--ink-400); transform:translateX(-50%); pointer-events:none; }
+.strip-hint{ font-size:10.5px; color:var(--ink-300); margin-top:6px; }
+
+/* legend + toggle */
+.bar{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:0 0 22px; padding:0 4px; }
+.lg{ display:flex; align-items:center; gap:6px; font-size:11px; font-weight:500; color:var(--ink-500); }
+.lg span{ width:9px; height:9px; border-radius:50%; }
+.toggle{ margin-left:auto; display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:500;
+  color:var(--ink-500); background:var(--white); border:1px solid var(--cream-300); border-radius:999px;
+  padding:7px 14px; cursor:pointer; font-family:var(--font-body); }
+.toggle.on{ background:var(--ink-900); color:var(--cream); border-color:var(--ink-900); }
+
+/* the story */
+.section-head{ display:flex; align-items:baseline; gap:10px; margin:30px 0 12px; flex-wrap:wrap; }
+.section-head h2{ font-family:var(--font-display); font-weight:700; font-size:17px; letter-spacing:-.02em; }
+.section-head p{ font-size:12px; color:var(--ink-400); }
+
+.gap{ display:flex; align-items:center; gap:11px; padding:9px 0 9px 26px; }
+.gap i{ width:1px; height:22px; border-left:2px dotted var(--cream-400); }
+.gap span{ font-size:11.5px; font-weight:500; color:var(--ink-400); font-style:italic; }
+
+.week{ position:relative; background:var(--white); border:1px solid var(--cream-300); border-radius:14px;
+  padding:15px 18px 15px 20px; border-left-width:4px; border-left-style:solid; }
+.week-top{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.wnum{ font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-300); }
+.wtitle{ font-family:var(--font-display); font-weight:700; font-size:19px; letter-spacing:-.02em; flex:1; min-width:0; }
+.stage{ font-size:9.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; padding:3px 9px; border-radius:999px; color:var(--white); }
+.wref{ font-size:14px; font-weight:600; margin-top:5px; }
+.wwhen{ display:inline-flex; align-items:center; gap:7px; margin-top:8px;
+  background:var(--cream-100); border:1px solid var(--cream-300); border-radius:999px; padding:4px 12px; }
+.wwhen b{ font-size:12px; font-weight:600; color:var(--ink-900); }
+.wwhen i{ font-size:11.5px; font-style:normal; color:var(--ink-400); }
+.wsum{ font-size:13px; line-height:1.6; color:var(--ink-500); margin-top:10px; }
+
+.reads{ margin:8px 0 0 26px; border-left:2px solid var(--cream-300); padding:2px 0 2px 16px; }
+.reads-lab{ font-size:9.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-300); margin:8px 0 6px; }
+.read{ display:flex; gap:10px; align-items:baseline; padding:5px 0; }
+.read-ref{ font-size:12.5px; font-weight:600; color:var(--ink-700); white-space:nowrap; }
+.read-desc{ font-size:12px; color:var(--ink-400); line-height:1.5; }
+.read-when{ font-size:11px; color:var(--ink-300); margin-left:auto; white-space:nowrap; padding-left:8px; }
+.read-when.mark{ color:var(--ink-500); font-weight:600; }
+.reads.hide{ display:none; }
+@media (max-width:560px){
+  .read{ flex-wrap:wrap; gap:4px; }
+  .read-when{ margin-left:0; padding-left:0; width:100%; }
+}
+
+/* footer note */
+.note{ background:var(--cream-100); border:1px solid var(--cream-300); border-radius:16px; padding:20px 22px; margin-top:34px; }
+.note h3{ font-family:var(--font-display); font-weight:700; font-size:15px; margin-bottom:9px; }
+.note p{ font-size:13px; line-height:1.65; color:var(--ink-500); margin-bottom:9px; }
+.note p:last-child{ margin-bottom:0; }
+.note a{ color:var(--ink-900); font-weight:500; text-decoration:underline; text-underline-offset:2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:20px;">
+  <a class="back" href="index.html#journey" style="margin-top:0;">&larr; 返回旅程</a>
+  <div class="lang-switcher" style="margin-bottom:16px;">
+    <span>🌐</span>
+    <select onchange="if(this.value) location.href=this.value;" aria-label="Language selector">
+      <option value="../../../studies/multiplying-disciples/timeline.html">English</option>
+      <option value="../../../zh-hk/studies/multiplying-disciples/timeline.html">繁體中文（香港）</option>
+      <option value="../../../zh-cn/studies/multiplying-disciples/timeline.html" selected>简体中文</option>
+      <option value="../../../ja/studies/multiplying-disciples/timeline.html">日本語</option>
+    </select>
+  </div>
+</div>
+
+<header>
+  <div class="eyebrow">接触 &middot; 得着 &middot; 建立 &middot; 培训 &middot; 差遣</div>
+  <h1>时间轴</h1>
+  <p class="lead">本课程的十七周分布在耶稣约三年半的传道事奉中，本页展示了每一周大概所处的历史位置。约翰福音以四次逾越节及几个具名的节期确立了故事的时间锚点，福音书作者也不时提到“次日”或“过了六天”，因此这些时间点相当明确。其间的事件顺序清晰，但间隔时间则为推算。请将此视为这几年间事态如何展开的参考指引，而非确切的日期记录：足以展示门徒建造的历程递进，并以耶稣受洗而非任何公历年份作为起算点。</p>
+</header>
+
+<div class="strip-card">
+  <div class="strip-title">三年半事奉历程中的十七周</div>
+  <div class="strip" id="strip"></div>
+  <div class="strip-hint">将鼠标悬停在圆点上可查看周数，点击即可跳转至该周。</div>
+</div>
+
+<div class="bar" id="bar"></div>
+
+<div id="story"></div>
+
+<div class="note">
+  <h3>次序与时间的考证说明</h3>
+  <p>事件的先后次序参考了 Cox 与 Easley 的《福音书合参》（Harmony of the Gospels），这也是本课程所采用的架构。该合参将马太、马可、路加与约翰四卷福音书中的全部 184 个历史事件完整对照，在线版本可参阅 <a href="https://harmony.darrenrowse.com" target="_blank" rel="noopener noreferrer">harmony.darrenrowse.com</a>。</p>
+  <p>福音书原著中从未标注公历年份，而圣经学者对历史具体年份的推算有高达三年的差异，因此本时间轴完全省略公历年份。所有时间均以耶稣受洗之日为起算基准，因为所有福音书记述皆一致以此作为传道事奉的起点。</p>
+  <p>三年半的时间跨度源于约翰福音。约翰提到了三次逾越节：洁净圣殿、五饼二鱼神迹，以及十字架受难前的最后一次。他还在此第 5 章提到了一个节期（未具体指明哪一个），有充分的理由表明该段时间包含第四次逾越节。这正是为何耶稣的事奉约为三年半，而非两年半。这些时间锚点，加上第 7 章的住棚节以及第 10 章的修殿节（冬季节期），成为贯穿整个历史历程的重要支柱。</p>
+  <p>时间跨度的推算依据 Harold Hoehner 在该合参附录中的年代学研究：推断受洗发生在某年夏末或初秋，而十字架受难则发生在三年半后的一个星期五。值得留意的是，该书编者对十字架事件的估计比 Hoehner 早约三年。同一本书收录两种学术观点，恰好反映出学界对此问题的探讨现状，这也是本页选择从受洗日起算而非标注绝对年份的原因。</p>
+  <p>在这些时间锚点之间，事件的先后顺序是确定的，但具体天数间隔属于学术推算。当看到“约 2 年 9 个月”时，请理解为“大约在这个历史区间”，而非绝对的测量日期。每周之间的间隔与事态发展的先后次序，才是最值得学习与默想的核心所在。</p>
+</div>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+const CROSS = 1284, ASCENSION = 1325, ENTRY = 1279;
+
+const SESSION_T = {
+  1:47, 2:212, 3:453, 4:508, 5:537, 6:606, 7:614, 8:796, 9:1015,
+  10:1023, 11:1025, 12:1046, 13:1054, 14:1112,
+  15:1283.2, 16:1304, 17:1315
+};
+
+const SESSION_MARK = {
+  15:'十字架前夕的最后一夜',
+  16:'复活后的数周内',
+  17:'即将升天之前'
+};
+
+const READ_T = {
+  1:  [ {t:139}, {t:197, mark:'第一次逾越节'} ],
+  2:  [ {t:267} ],
+  3:  [ {t:475}, {t:490}, {t:497} ],
+  4:  [ {t:515}, {t:522}, {t:533} ],
+  5:  [ {t:553, mark:'耶路撒冷的一个节期'}, {t:580, mark:'第二次逾越节前后'}, {t:591} ],
+  7:  [ {t:617}, {t:636}, {t:734} ],
+  8:  [ {t:934, mark:'第三次逾越节'}, {t:938}, {t:974} ],
+  9:  [ {t:1017} ],
+  10: [ {t:1023} ],
+  11: [ {t:1037} ],
+  12: [ {t:1048} ],
+  13: [ {t:1081}, {t:1088, mark:'住棚节'}, {t:1096} ],
+  14: [ {t:1121}, {t:1234}, {t:1264}, {t:1277}, {t:1279, mark:'棕树主日'} ],
+  15: [ {t:1283.3, mark:'周四傍晚'}, {t:1283.4, mark:'周四傍晚'},
+        {t:1283.6, mark:'周四深夜'}, {t:1284.4, mark:'周四深夜至周五清晨'},
+        {t:1286.5, mark:'主日及随后一周'} ]
+};
+
+const PRE_MARK = [
+  '故事开启前',
+  '出生满四十天',
+  '十二岁时',
+  '受洗前数月',
+  '受洗之日'
+];
+
+const STRIP_TICKS = [
+  {t:0,    lab:'耶稣受洗', start:true},
+  {t:365,  lab:'1 年'},
+  {t:730,  lab:'2 年'},
+  {t:1095, lab:'3 年'}
+];
+
+const STAGES = ['connect','win','build','train','send'];
+const STAGES_LABELS = {"connect":"接触","win":"得着","build":"建立","train":"培训","send":"差遣"};
+const S = window.STUDY;
+
+function inLabel(t) {
+  if(t >= ENTRY) return '最后一周';
+  const m = Math.round(t / 30.44);
+  if(m < 1) return '最初几周';
+  if(m < 12) return "约第 " + m + " 个月";
+  const y = Math.floor(m/12), r = m % 12;
+  return "约第 " + y + " 年" + (r ? (" " + r + " 个月") : "");
+}
+
+function elapsed(a, b) {
+  const d = b - a;
+  if(d <= 0.05) return '同一场景';
+  if(d < 1) return '同日稍后';
+  if(d < 2) return '次日';
+  if(d < 14) return Math.round(d) + ' 天后';
+  if(d < 60) return Math.round(d/7) + ' 周后';
+  if(d < 730) return Math.round(d/30.44) + ' 个月后';
+  return (d/365).toFixed(1) + ' 年后';
+}
+
+function el(tag, cls, html) {
+  const e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(html != null) e.innerHTML = html;
+  return e;
+}
+
+function buildStrip() {
+  const strip = document.getElementById('strip');
+  const pct = t => (t / ASCENSION * 100);
+  strip.appendChild(el('div','strip-line'));
+
+  const band = el('div','strip-final');
+  band.style.left = pct(ENTRY) + '%';
+  band.style.right = '0';
+  band.title = '最后一周与受难复活后四十天';
+  strip.appendChild(band);
+  strip.appendChild(el('div','strip-note', '最后一周与受难复活后四十天 &rarr;'));
+
+  STRIP_TICKS.forEach(t => {
+    const d = el('div', 'strip-yr' + (t.start ? ' start' : ''), '<i></i>' + t.lab);
+    d.style.left = pct(t.t) + '%';
+    strip.appendChild(d);
+  });
+
+  const width = strip.offsetWidth || 640;
+  const rows = [-999, -999];
+  S.sessions.forEach(s => {
+    const t = SESSION_T[s.id];
+    if(t == null) return;
+    const x = pct(t);
+    const d = el('div','strip-dot');
+    d.style.left = x + '%';
+    d.style.background = `var(--${s.stage})`;
+    d.title = `第 ${s.id}: ${s.title.replace(/&[a-z]+;/g,"'")} — ${SESSION_MARK[s.id] || inLabel(t)}`;
+    d.addEventListener('click', () => {
+      document.getElementById('week-' + s.id).scrollIntoView({behavior:'smooth', block:'center'});
+    });
+    strip.appendChild(d);
+
+    const xpx = x / 100 * width;
+    const row = rows.findIndex(last => xpx - last > 15);
+    if(row === -1) return;
+    rows[row] = xpx;
+    const lab = el('div','strip-lab', s.id);
+    lab.style.left = x + '%';
+    lab.style.top = (row === 0 ? 18 : 2) + 'px';
+    strip.appendChild(lab);
+  });
+}
+
+let showReads = true;
+function buildBar() {
+  const bar = document.getElementById('bar');
+  STAGES.forEach(k => bar.appendChild(el('div','lg', `<span style="background:var(--${k})"></span>${STAGES_LABELS[k] || k}`)));
+  const btn = el('button','toggle on','自选通读经文：已显示');
+  btn.addEventListener('click', () => {
+    showReads = !showReads;
+    btn.classList.toggle('on', showReads);
+    btn.textContent = showReads ? '自选通读经文：已显示' : '自选通读经文：已隐藏';
+    document.querySelectorAll('.reads').forEach(r => r.classList.toggle('hide', !showReads));
+  });
+  bar.appendChild(btn);
+}
+
+function buildStory() {
+  const story = document.getElementById('story');
+
+  const h1 = el('div','section-head');
+  h1.appendChild(el('h2', null, '事奉开启之前'));
+  h1.appendChild(el('p', null, '行前自选阅读：五段经文走过三十年'));
+  story.appendChild(h1);
+
+  const pre = el('div','reads');
+  pre.style.marginLeft = '0';
+  S.preReading.days.forEach((d, i) => {
+    const r = el('div','read');
+    r.appendChild(el('div','read-ref', d.ref));
+    r.appendChild(el('div','read-desc', d.desc));
+    r.appendChild(el('div','read-when', PRE_MARK[i] || ''));
+    pre.appendChild(r);
+  });
+  story.appendChild(pre);
+
+  const h2 = el('div','section-head');
+  h2.appendChild(el('h2', null, '十七周的历程'));
+  h2.appendChild(el('p', null, '按事件发生次序排列，以受洗之日为起点计算'));
+  story.appendChild(h2);
+
+  let prev = null;
+  S.sessions.forEach(s => {
+    const t = SESSION_T[s.id];
+    const reads = (s.betweenSessions || {}).days || [];
+    const readT = READ_T[s.id] || [];
+
+    if(prev) {
+      const g = el('div','gap');
+      g.appendChild(el('i'));
+      g.appendChild(el('span', null, elapsed(prev.t, t)));
+      story.appendChild(g);
+    }
+
+    const card = el('div','week');
+    card.id = 'week-' + s.id;
+    card.style.borderLeftColor = `var(--${s.stage})`;
+    const top = el('div','week-top');
+    top.appendChild(el('div','wnum', '第 ' + s.id));
+    top.appendChild(el('div','wtitle', s.title));
+    const tag = el('div','stage', STAGES_LABELS[s.stage] || s.stage);
+    tag.style.background = `var(--${s.stage})`;
+    top.appendChild(tag);
+    card.appendChild(top);
+    card.appendChild(el('div','wref', s.refs.join(' &middot; ')));
+
+    const when = el('div','wwhen');
+    const mark = SESSION_MARK[s.id];
+    when.appendChild(el('b', null, mark || inLabel(t)));
+    if(mark && t < CROSS) when.appendChild(el('i', null, inLabel(1278)));
+    card.appendChild(when);
+
+    if(s.summary) card.appendChild(el('div','wsum', s.summary));
+    story.appendChild(card);
+
+    if(reads.length) {
+      const box = el('div','reads');
+      box.appendChild(el('div','reads-lab', '第 ' + (+s.id + 1)));
+      reads.forEach((d, i) => {
+        const info = readT[i] || {};
+        const r = el('div','read');
+        r.appendChild(el('div','read-ref', d.ref));
+        r.appendChild(el('div','read-desc', d.desc));
+        r.appendChild(el('div','read-when' + (info.mark ? ' mark' : ''),
+          info.mark || (info.t != null ? inLabel(info.t) : '')));
+        box.appendChild(r);
+      });
+      story.appendChild(box);
+    }
+    prev = { t, id:s.id };
+  });
+}
+
+if(S && S.sessions) { buildStrip(); buildBar(); buildStory(); }
+else { document.getElementById('story').innerHTML = '<p class="lead">無法載入課程數據 (data.js)。</p>'; }
+</script>
+</body>
+</html>
