@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Timeline &middot; Connect, Win, Build, Train, Send</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Where each of the seventeen weeks of Connect, Win, Build, Train, Send falls in the three and a half years of Jesus' public ministry.">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2249%22%20fill%3D%22%23ECEADD%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2246%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%223%22/%3E%3Cpath%20d%3D%22M30%2068%20Q40%2040%2050%2050%20Q60%2060%2070%2032%22%20fill%3D%22none%22%20stroke%3D%22%230E0E0E%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2268%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22%230E0E0E%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Hanken+Grotesk:wght@0,600;0,700;0,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#ECEADD; --cream-100:#F1EFE6; --cream-300:#DEDBCB; --cream-400:#C9C5B2;
+  --white:#FFFFFF; --ink-900:#0E0E0E; --ink-700:#2B2B28; --ink-500:#5C5B54;
+  --ink-400:#8A887E; --ink-300:#B6B3A6; --ink-200:#D8D5C9;
+  --font-display:'Hanken Grotesk', system-ui, sans-serif;
+  --font-body:'Poppins', system-ui, sans-serif;
+  --connect:#1A6B6B; --win:#E8441A; --build:#7A0F2E; --train:#7B68BD; --send:#1DB37A;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ background:var(--cream); color:var(--ink-900); font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
+.wrap{ max-width:720px; margin:0 auto; padding:0 20px 90px; }
+
+/* header */
+.back{ display:inline-flex; align-items:center; gap:7px; margin:26px 0 0; font-size:13px; font-weight:500; color:var(--ink-500); text-decoration:none; }
+.back:hover{ color:var(--ink-900); }
+.eyebrow{ font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-400); }
+h1{ font-family:var(--font-display); font-weight:800; letter-spacing:-.03em; line-height:.95;
+    font-size:clamp(34px,8vw,52px); text-transform:lowercase; margin:10px 0 14px; }
+.lead{ font-size:15.5px; line-height:1.65; color:var(--ink-500); max-width:56ch; }
+header{ padding:22px 0 26px; }
+
+/* the strip */
+.strip-card{ background:var(--white); border:1px solid var(--cream-300); border-radius:16px; padding:20px 20px 14px; margin-bottom:14px; }
+.strip-title{ font-size:12px; font-weight:600; color:var(--ink-700); margin-bottom:18px; }
+.strip{ position:relative; height:88px; }
+.strip-line{ position:absolute; left:0; right:0; top:40px; height:2px; background:var(--cream-300); }
+.strip-final{ position:absolute; top:34px; height:14px; border-radius:7px; background:rgba(14,14,14,.09); }
+.strip-yr{ position:absolute; top:57px; font-size:9.5px; font-weight:600; color:var(--ink-400); transform:translateX(-50%); white-space:nowrap; }
+.strip-yr.start{ transform:none; left:0 !important; }
+.strip-yr i{ position:absolute; left:50%; top:-13px; width:1px; height:9px; background:var(--cream-400); }
+.strip-yr.start i{ left:2px; }
+.strip-note{ position:absolute; top:74px; right:0; font-size:9px; font-weight:600; color:var(--ink-300); white-space:nowrap; }
+.strip-dot{ position:absolute; top:34px; width:14px; height:14px; border-radius:50%; transform:translateX(-50%);
+  border:2.5px solid var(--white); cursor:pointer; transition:transform .15s; }
+.strip-dot:hover{ transform:translateX(-50%) scale(1.4); }
+.strip-lab{ position:absolute; font-size:9px; font-weight:700; color:var(--ink-400); transform:translateX(-50%); pointer-events:none; }
+.strip-hint{ font-size:10.5px; color:var(--ink-300); margin-top:6px; }
+
+/* legend + toggle */
+.bar{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:0 0 22px; padding:0 4px; }
+.lg{ display:flex; align-items:center; gap:6px; font-size:11px; font-weight:500; color:var(--ink-500); text-transform:lowercase; }
+.lg span{ width:9px; height:9px; border-radius:50%; }
+.toggle{ margin-left:auto; display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:500;
+  color:var(--ink-500); background:var(--white); border:1px solid var(--cream-300); border-radius:999px;
+  padding:7px 14px; cursor:pointer; font-family:var(--font-body); }
+.toggle.on{ background:var(--ink-900); color:var(--cream); border-color:var(--ink-900); }
+
+/* the story */
+.section-head{ display:flex; align-items:baseline; gap:10px; margin:30px 0 12px; flex-wrap:wrap; }
+.section-head h2{ font-family:var(--font-display); font-weight:700; font-size:17px; letter-spacing:-.02em; text-transform:lowercase; }
+.section-head p{ font-size:12px; color:var(--ink-400); }
+
+.gap{ display:flex; align-items:center; gap:11px; padding:9px 0 9px 26px; }
+.gap i{ width:1px; height:22px; border-left:2px dotted var(--cream-400); }
+.gap span{ font-size:11.5px; font-weight:500; color:var(--ink-400); font-style:italic; }
+
+.week{ position:relative; background:var(--white); border:1px solid var(--cream-300); border-radius:14px;
+  padding:15px 18px 15px 20px; border-left-width:4px; border-left-style:solid; }
+.week-top{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.wnum{ font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-300); }
+.wtitle{ font-family:var(--font-display); font-weight:700; font-size:19px; letter-spacing:-.02em; flex:1; min-width:0; }
+.stage{ font-size:9.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; padding:3px 9px; border-radius:999px; color:var(--white); }
+.wref{ font-size:14px; font-weight:600; margin-top:5px; }
+.wwhen{ display:inline-flex; align-items:center; gap:7px; margin-top:8px;
+  background:var(--cream-100); border:1px solid var(--cream-300); border-radius:999px; padding:4px 12px; }
+.wwhen b{ font-size:12px; font-weight:600; color:var(--ink-900); }
+.wwhen i{ font-size:11.5px; font-style:normal; color:var(--ink-400); }
+.wsum{ font-size:13px; line-height:1.6; color:var(--ink-500); margin-top:10px; }
+
+.reads{ margin:8px 0 0 26px; border-left:2px solid var(--cream-300); padding:2px 0 2px 16px; }
+.reads-lab{ font-size:9.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-300); margin:8px 0 6px; }
+.read{ display:flex; gap:10px; align-items:baseline; padding:5px 0; }
+.read-ref{ font-size:12.5px; font-weight:600; color:var(--ink-700); white-space:nowrap; }
+.read-desc{ font-size:12px; color:var(--ink-400); line-height:1.5; }
+.read-when{ font-size:11px; color:var(--ink-300); margin-left:auto; white-space:nowrap; padding-left:8px; }
+.read-when.mark{ color:var(--ink-500); font-weight:600; }
+.reads.hide{ display:none; }
+@media (max-width:560px){
+  .read{ flex-wrap:wrap; gap:4px; }
+  .read-when{ margin-left:0; padding-left:0; width:100%; }
+}
+
+/* footer note */
+.note{ background:var(--cream-100); border:1px solid var(--cream-300); border-radius:16px; padding:20px 22px; margin-top:34px; }
+.note h3{ font-family:var(--font-display); font-weight:700; font-size:15px; text-transform:lowercase; margin-bottom:9px; }
+.note p{ font-size:13px; line-height:1.65; color:var(--ink-500); margin-bottom:9px; }
+.note p:last-child{ margin-bottom:0; }
+.note a{ color:var(--ink-900); font-weight:500; text-decoration:underline; text-underline-offset:2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html#journey">&larr; back to the journey</a>
+
+<header>
+  <div class="eyebrow">connect &middot; win &middot; build &middot; train &middot; send</div>
+  <h1>the timeline</h1>
+  <p class="lead">The seventeen weeks of this course are spread across about three and a half years of
+  Jesus' ministry, and this page shows roughly where each one falls. John's Gospel anchors the story with
+  four Passovers and a couple of named feasts, and here and there a writer tells us "the next day" or
+  "after six days", so those points are reasonably firm. In between them the order is clear but the
+  spacing is an estimate. Read it as a guide to how those years may have unfolded rather than a record of
+  dates: enough to show the progression, and measured from the baptism rather than any calendar.</p>
+</header>
+
+<div class="strip-card">
+  <div class="strip-title">The seventeen weeks across three and a half years of ministry</div>
+  <div class="strip" id="strip"></div>
+  <div class="strip-hint">Hover a dot for the week, or click to jump to it.</div>
+</div>
+
+<div class="bar" id="bar"></div>
+
+<div id="story"></div>
+
+<div class="note">
+  <h3>how the order and the timing are worked out</h3>
+  <p>The order of events follows Cox and Easley's <em>Harmony of the Gospels</em>, which is the same
+  ordering the course itself uses. The full harmony, all 184 events laid out across Matthew, Mark, Luke
+  and John, is online at <a href="https://harmony.darrenrowse.com" target="_blank" rel="noopener noreferrer">harmony.darrenrowse.com</a>.</p>
+  <p>The gospels never give a date, and scholars disagree about the calendar years by as much as three,
+  so this timeline leaves calendar dates out altogether. Everything is measured from the baptism instead,
+  which is the one thing all the accounts agree begins the story.</p>
+  <p>The length comes from John's Gospel. John names three Passovers: the temple clearing, the feeding
+  of the five thousand, and the last one at the crucifixion. He also mentions a feast in chapter 5
+  without saying which one, and there are good reasons to think a fourth Passover falls in that stretch.
+  That is what stretches the ministry to about three and a half years rather than two and a half. Those
+  points, plus Tabernacles in chapter 7 and the winter festival in chapter 10, are the pegs everything
+  else hangs between.</p>
+  <p>The timing follows Harold Hoehner's chronology in the appendix to the same harmony, which puts the
+  baptism in the summer or autumn of one year and the crucifixion on a Friday three and a half years
+  later. Worth knowing that the harmony's own editors prefer a crucifixion about three years earlier
+  than Hoehner does. Two views in the one book is a fair picture of the state of the question, and
+  another reason this page counts from the baptism rather than naming years.</p>
+  <p>Inside those pegs the order is firm, but the spacing is an estimate. When you see "about 2 years
+  9 months in", read it as "somewhere in this stretch of the story", not as a measured date. The gaps
+  between the weeks and the order of events are the parts worth teaching from.</p>
+</div>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+// ── Where each passage sits, in days since the baptism ──────────────
+// Built from the Gospel Harmony chronology: the four Passovers in John, Tabernacles,
+// the Feast of Dedication, and the time markers in the text ("the next day", "after
+// six days", "four months until harvest"). No calendar dates involved.
+const CROSS = 1284, ASCENSION = 1325, ENTRY = 1279;
+
+const SESSION_T = {
+  1:47, 2:212, 3:453, 4:508, 5:537, 6:606, 7:614, 8:796, 9:1015,
+  10:1023, 11:1025, 12:1046, 13:1054, 14:1112,
+  15:1283.2, 16:1304, 17:1315
+};
+// overrides for the final week and the appearances, where "months in" says less than the day does
+const SESSION_MARK = {
+  15:'the last night before the cross',
+  16:'in the weeks after the resurrection',
+  17:'just before the ascension'
+};
+
+// in-between readings, keyed by the week they follow, in the order they appear there
+const READ_T = {
+  1:  [ {t:139}, {t:197, mark:'the first Passover'} ],
+  2:  [ {t:267} ],
+  3:  [ {t:475}, {t:490}, {t:497} ],
+  4:  [ {t:515}, {t:522}, {t:533} ],
+  5:  [ {t:553, mark:'a feast in Jerusalem'}, {t:580, mark:'around the second Passover'}, {t:591} ],
+  7:  [ {t:617}, {t:636}, {t:734} ],
+  8:  [ {t:934, mark:'the third Passover'}, {t:938}, {t:974} ],
+  9:  [ {t:1017} ],
+  10: [ {t:1023} ],
+  11: [ {t:1037} ],
+  12: [ {t:1048} ],
+  13: [ {t:1081}, {t:1088, mark:'Tabernacles'}, {t:1096} ],
+  14: [ {t:1121}, {t:1234}, {t:1264}, {t:1277}, {t:1279, mark:'Palm Sunday'} ],
+  15: [ {t:1283.3, mark:'Thursday evening'}, {t:1283.4, mark:'Thursday evening'},
+        {t:1283.6, mark:'Thursday night'}, {t:1284.4, mark:'Thursday night into Friday'},
+        {t:1286.5, mark:'Sunday, and the week after'} ]
+};
+
+// the pre-reading sits before the ministry starts, so it is measured against his life instead
+const PRE_MARK = [
+  'before the story begins',
+  'forty days old',
+  'aged twelve',
+  'months before the baptism',
+  'the baptism itself'
+];
+
+const STRIP_TICKS = [
+  {t:0,    lab:'the baptism', start:true},
+  {t:365,  lab:'1 year'},
+  {t:730,  lab:'2 years'},
+  {t:1095, lab:'3 years'}
+];
+
+const STAGES = ['connect','win','build','train','send'];
+const S = window.STUDY;
+
+// ── helpers ───────────────────────────────────────────
+function inLabel(t) {
+  if(t >= ENTRY) return 'the final week';
+  const m = Math.round(t / 30.44);
+  if(m < 1) return 'the first weeks';
+  if(m < 12) return `${m} month${m===1?'':'s'} in`;
+  const y = Math.floor(m/12), r = m % 12;
+  return `${y} year${y===1?'':'s'}${r ? ` ${r} month${r===1?'':'s'}` : ''} in`;
+}
+function elapsed(a, b) {
+  const d = b - a;
+  if(d <= 0.05) return 'the same scene';
+  if(d < 1) return 'later the same day';
+  if(d < 2) return 'the next day';
+  if(d < 14) return `${Math.round(d)} days later`;
+  if(d < 60) return `about ${Math.round(d/7)} weeks later`;
+  if(d < 730) return `about ${Math.round(d/30.44)} months later`;
+  return `about ${(d/365).toFixed(1)} years later`;
+}
+function el(tag, cls, html) {
+  const e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(html != null) e.innerHTML = html;
+  return e;
+}
+
+// ── the proportional strip ────────────────────────────
+function buildStrip() {
+  const strip = document.getElementById('strip');
+  const pct = t => (t / ASCENSION * 100);
+  strip.appendChild(el('div','strip-line'));
+
+  const band = el('div','strip-final');
+  band.style.left = pct(ENTRY) + '%';
+  band.style.right = '0';
+  band.title = 'The final week, and the forty days after the resurrection';
+  strip.appendChild(band);
+  strip.appendChild(el('div','strip-note', 'the final week &amp; after &rarr;'));
+
+  STRIP_TICKS.forEach(t => {
+    const d = el('div', 'strip-yr' + (t.start ? ' start' : ''), '<i></i>' + t.lab);
+    d.style.left = pct(t.t) + '%';
+    strip.appendChild(d);
+  });
+
+  // dots, with week numbers on two rows so the clusters stay readable
+  const width = strip.offsetWidth || 640;
+  const rows = [-999, -999];
+  S.sessions.forEach(s => {
+    const t = SESSION_T[s.id];
+    if(t == null) return;
+    const x = pct(t);
+    const d = el('div','strip-dot');
+    d.style.left = x + '%';
+    d.style.background = `var(--${s.stage})`;
+    d.title = `Week ${s.id}: ${s.title.replace(/&[a-z]+;/g,"'")} — ${SESSION_MARK[s.id] || inLabel(t)}`;
+    d.addEventListener('click', () => {
+      document.getElementById('week-' + s.id).scrollIntoView({behavior:'smooth', block:'center'});
+    });
+    strip.appendChild(d);
+
+    const xpx = x / 100 * width;
+    const row = rows.findIndex(last => xpx - last > 15);
+    if(row === -1) return;                    // no room: the tooltip still names it
+    rows[row] = xpx;
+    const lab = el('div','strip-lab', s.id);
+    lab.style.left = x + '%';
+    lab.style.top = (row === 0 ? 18 : 2) + 'px';
+    strip.appendChild(lab);
+  });
+}
+
+// ── legend + reading toggle ───────────────────────────
+let showReads = true;
+function buildBar() {
+  const bar = document.getElementById('bar');
+  STAGES.forEach(k => bar.appendChild(el('div','lg', `<span style="background:var(--${k})"></span>${k}`)));
+  const btn = el('button','toggle on','in-between readings: shown');
+  btn.addEventListener('click', () => {
+    showReads = !showReads;
+    btn.classList.toggle('on', showReads);
+    btn.textContent = 'in-between readings: ' + (showReads ? 'shown' : 'hidden');
+    document.querySelectorAll('.reads').forEach(r => r.classList.toggle('hide', !showReads));
+  });
+  bar.appendChild(btn);
+}
+
+// ── the story ─────────────────────────────────────────
+function buildStory() {
+  const story = document.getElementById('story');
+
+  const h1 = el('div','section-head');
+  h1.appendChild(el('h2', null, 'before any of it'));
+  h1.appendChild(el('p', null, 'the pre-reading, thirty years in five passages'));
+  story.appendChild(h1);
+
+  const pre = el('div','reads');
+  pre.style.marginLeft = '0';
+  S.preReading.days.forEach((d, i) => {
+    const r = el('div','read');
+    r.appendChild(el('div','read-ref', d.ref));
+    r.appendChild(el('div','read-desc', d.desc));
+    r.appendChild(el('div','read-when', PRE_MARK[i] || ''));
+    pre.appendChild(r);
+  });
+  story.appendChild(pre);
+
+  const h2 = el('div','section-head');
+  h2.appendChild(el('h2', null, 'the seventeen weeks'));
+  h2.appendChild(el('p', null, 'in the order they happened, timed from the baptism'));
+  story.appendChild(h2);
+
+  let prev = null;
+  S.sessions.forEach(s => {
+    const t = SESSION_T[s.id];
+    const reads = (s.betweenSessions || {}).days || [];
+    const readT = READ_T[s.id] || [];
+
+    if(prev) {
+      const g = el('div','gap');
+      g.appendChild(el('i'));
+      g.appendChild(el('span', null, elapsed(prev.t, t)));
+      story.appendChild(g);
+    }
+
+    const card = el('div','week');
+    card.id = 'week-' + s.id;
+    card.style.borderLeftColor = `var(--${s.stage})`;
+    const top = el('div','week-top');
+    top.appendChild(el('div','wnum', 'week ' + s.id));
+    top.appendChild(el('div','wtitle', s.title));
+    const tag = el('div','stage', s.stage);
+    tag.style.background = `var(--${s.stage})`;
+    top.appendChild(tag);
+    card.appendChild(top);
+    card.appendChild(el('div','wref', s.refs.join(' &middot; ')));
+
+    const when = el('div','wwhen');
+    const mark = SESSION_MARK[s.id];
+    when.appendChild(el('b', null, mark || inLabel(t)));
+    if(mark && t < CROSS) when.appendChild(el('i', null, 'about ' + inLabel(1278).replace(' in','') + ' in'));
+    card.appendChild(when);
+
+    if(s.summary) card.appendChild(el('div','wsum', s.summary));
+    story.appendChild(card);
+
+    if(reads.length) {
+      const box = el('div','reads');
+      box.appendChild(el('div','reads-lab', 'then read before week ' + (+s.id + 1)));
+      reads.forEach((d, i) => {
+        const info = readT[i] || {};
+        const r = el('div','read');
+        r.appendChild(el('div','read-ref', d.ref));
+        r.appendChild(el('div','read-desc', d.desc));
+        r.appendChild(el('div', 'read-when' + (info.mark ? ' mark' : ''),
+          info.mark || (info.t != null ? inLabel(info.t) : '')));
+        box.appendChild(r);
+      });
+      story.appendChild(box);
+    }
+    prev = { t, id:s.id };
+  });
+}
+
+if(S && S.sessions) { buildStrip(); buildBar(); buildStory(); }
+else { document.getElementById('story').innerHTML =
+  '<p class="lead">Could not load the course data (data.js).</p>'; }
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"e24e789937b74330b82dcd4dec28a4e1","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
